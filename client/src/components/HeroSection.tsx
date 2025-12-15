@@ -40,16 +40,16 @@ export default function HeroSection({
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-32 md:py-40 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-primary font-semibold text-sm md:text-base tracking-wide uppercase mb-4">
-            Startup Growth Partner
+            Local Startup Growth Partner
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            스타트업 성장의
+            지역의 혁신을
             <br />
-            <span className="text-primary">파트너</span>
+            <span className="text-primary">빛나게 합니다</span>
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            전국 300팀 이상의 로컬 스타트업 컨설팅 및 26팀 투자 유치 성공 경험을
-            기반으로 지역 스타트업의 성장을 지원합니다.
+            전국 300팀 이상의 로컬 스타트업 컨설팅 경험과 26팀 투자 유치 성공을 기반으로,
+            BM 고도화부터 IR 전략, 투자 연결까지 로컬 맞춤형 성장 전략을 제공합니다.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -59,7 +59,7 @@ export default function HeroSection({
               className="gap-2 px-8"
               data-testid="button-hero-contact"
             >
-              상담 신청하기
+              문의하기
               <ArrowRight className="w-4 h-4" />
             </Button>
             <Button
