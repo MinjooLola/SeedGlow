@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import slide1 from "@assets/3_1765811788897.jpg";
-import slide2 from "@assets/DSC01771_1765811788912.JPG";
-import slide3 from "@assets/DSC03786_1765811788914.JPG";
-import slide4 from "@assets/DSC09875_1765811788916.JPG";
-import slide5 from "@assets/KakaoTalk_20250523_104833739_03_1765811788918.jpg";
-import slide6 from "@assets/KakaoTalk_20250523_104936309_01_1765811788920.jpg";
-import slide7 from "@assets/KakaoTalk_20250523_104936309_03_1765811788922.jpg";
-import slide8 from "@assets/M4J01787_1765811788923.jpg";
-import slide9 from "@assets/TalkMedia_i_a41z74.jpg_1765811788925.jpg";
-import slide10 from "@assets/모더레이터(4)_1765811788926.jpg";
 
-const heroImages = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10];
+const heroImages = [
+  "/attached_assets/3_1765811788897.jpg",
+  "/attached_assets/DSC01771_1765811788912.JPG",
+  "/attached_assets/DSC03786_1765811788914.JPG",
+  "/attached_assets/DSC09875_1765811788916.JPG",
+  "/attached_assets/KakaoTalk_20250523_104833739_03_1765811788918.jpg",
+  "/attached_assets/KakaoTalk_20250523_104936309_01_1765811788920.jpg",
+  "/attached_assets/KakaoTalk_20250523_104936309_03_1765811788922.jpg",
+  "/attached_assets/M4J01787_1765811788923.jpg",
+  "/attached_assets/TalkMedia_i_a41z74.jpg_1765811788925.jpg",
+  "/attached_assets/모더레이터(4)_1765811788926.jpg",
+];
 
 interface HeroSectionProps {
   onContactClick?: () => void;
