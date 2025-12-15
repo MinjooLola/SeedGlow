@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TrendingUp, Users, Award, Briefcase } from "lucide-react";
+import { TrendingUp, Users, Award, Coins } from "lucide-react";
 
 interface Metric {
   value: number;
@@ -11,8 +11,8 @@ interface Metric {
 const metrics: Metric[] = [
   { value: 300, suffix: "+", label: "컨설팅 스타트업", icon: Users },
   { value: 26, suffix: "팀", label: "투자 유치 성공", icon: TrendingUp },
-  { value: 50, suffix: "억+", label: "누적 투자 유치액", icon: Briefcase },
-  { value: 8, suffix: "년", label: "업계 경험", icon: Award },
+  { value: 50, suffix: "억+", label: "누적 투자 유치 연계", icon: Coins },
+  { value: 40, suffix: "+", label: "창업 강의/심사", icon: Award },
 ];
 
 function AnimatedCounter({

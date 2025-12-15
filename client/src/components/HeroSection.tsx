@@ -1,29 +1,27 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { Link } from "wouter";
+import slide1 from "@assets/3_1765811788897.jpg";
+import slide2 from "@assets/KakaoTalk_20250523_104833739_03_1765811788918.jpg";
+import slide3 from "@assets/KakaoTalk_20250523_104936309_01_1765811788920.jpg";
+import slide4 from "@assets/KakaoTalk_20250523_104936309_03_1765811788922.jpg";
+import slide5 from "@assets/M4J01787_1765811788923.jpg";
 
 const heroImages = [
-  "/attached_assets/3_1765811788897.jpg",
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
   "/attached_assets/DSC01771_1765811788912.JPG",
   "/attached_assets/DSC03786_1765811788914.JPG",
   "/attached_assets/DSC09875_1765811788916.JPG",
-  "/attached_assets/KakaoTalk_20250523_104833739_03_1765811788918.jpg",
-  "/attached_assets/KakaoTalk_20250523_104936309_01_1765811788920.jpg",
-  "/attached_assets/KakaoTalk_20250523_104936309_03_1765811788922.jpg",
-  "/attached_assets/M4J01787_1765811788923.jpg",
   "/attached_assets/TalkMedia_i_a41z74.jpg_1765811788925.jpg",
   "/attached_assets/모더레이터(4)_1765811788926.jpg",
 ];
 
-interface HeroSectionProps {
-  onContactClick?: () => void;
-  onSuccessStoriesClick?: () => void;
-}
-
-export default function HeroSection({
-  onContactClick,
-  onSuccessStoriesClick,
-}: HeroSectionProps) {
+export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -33,33 +31,16 @@ export default function HeroSection({
     return () => clearInterval(interval);
   }, []);
 
-  const handleContactClick = () => {
-    if (onContactClick) {
-      onContactClick();
-    } else {
-      const element = document.querySelector("#contact");
-      if (element) element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleSuccessClick = () => {
-    if (onSuccessStoriesClick) {
-      onSuccessStoriesClick();
-    } else {
-      const element = document.querySelector("#success");
-      if (element) element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
       {heroImages.map((image, index) => (
-        <div
+        <img
           key={index}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+          src={image}
+          alt={`SeedGlow 활동 ${index + 1}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
-          style={{ backgroundImage: `url(${image})` }}
         />
       ))}
       <div className="absolute inset-0 bg-black/75" />
@@ -80,25 +61,27 @@ export default function HeroSection({
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              onClick={handleContactClick}
-              className="gap-2 px-8"
-              data-testid="button-hero-contact"
-            >
-              문의하기
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={handleSuccessClick}
-              className="gap-2 px-8 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
-              data-testid="button-hero-success"
-            >
-              <Play className="w-4 h-4" />
-              성공 사례 보기
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="gap-2 px-8"
+                data-testid="button-hero-contact"
+              >
+                문의하기
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+            <Link href="/testimonials">
+              <Button
+                variant="outline"
+                size="lg"
+                className="gap-2 px-8 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
+                data-testid="button-hero-success"
+              >
+                <Play className="w-4 h-4" />
+                컨설팅 후기 보기
+              </Button>
+            </Link>
           </div>
 
           <div className="flex justify-center gap-2 mt-8">

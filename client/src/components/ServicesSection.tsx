@@ -2,8 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Lightbulb,
+  Palette,
   TrendingUp,
-  Handshake,
   MapPin,
   Network,
   Rocket,
@@ -21,17 +21,17 @@ const roadmapSteps = [
   },
   {
     step: 2,
-    icon: TrendingUp,
-    title: "IR 전략 수립",
-    description: "투자자가 이해하고 매력을 느끼는 IR 자료와 피칭 전략을 수립합니다.",
-    details: ["IR 덱 작성 및 스토리텔링", "투자 포인트 도출", "피칭 스킬 코칭"],
+    icon: Palette,
+    title: "로컬 브랜딩",
+    description: "지역의 고유한 자원과 문화를 반영한 브랜드 아이덴티티를 수립하고, 로컬 시장에 최적화된 브랜딩 전략을 구축합니다.",
+    details: ["로컬 스토리텔링 개발", "지역 특화 브랜드 포지셔닝", "로컬 마케팅 전략 수립"],
   },
   {
     step: 3,
-    icon: Handshake,
-    title: "투자 연결",
-    description: "스타트업의 단계와 특성에 맞는 투자자를 연결하고 딜 클로징까지 지원합니다.",
-    details: ["투자자 네트워크 연결", "투자 조건 협상 지원", "후속 투자 전략 수립"],
+    icon: TrendingUp,
+    title: "IR 전략 수립 및 투자 연계",
+    description: "투자자가 이해하고 매력을 느끼는 IR 자료와 피칭 전략을 수립하고, 적합한 투자자를 연결합니다.",
+    details: ["IR 덱 작성 및 스토리텔링", "투자 포인트 도출 및 피칭 코칭", "투자자 네트워크 연결"],
   },
 ];
 

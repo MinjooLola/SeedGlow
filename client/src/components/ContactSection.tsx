@@ -11,8 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
-import officeImage from "@assets/generated_images/modern_office_interior_view.png";
+import { MapPin, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { SiLinkedin, SiInstagram } from "react-icons/si";
 import { useToast } from "@/hooks/use-toast";
 
 interface FormData {
@@ -28,17 +28,12 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "주소",
-    value: "서울특별시 강남구 테헤란로 123, 8층",
-  },
-  {
-    icon: Phone,
-    label: "전화",
-    value: "02-1234-5678",
+    value: "서울특별시 도봉구 해등로 242-11",
   },
   {
     icon: Mail,
     label: "이메일",
-    value: "contact@seedglow.co.kr",
+    value: "minjoo.kim.biz@gmail.com",
   },
   {
     icon: Clock,
@@ -47,11 +42,24 @@ const contactInfo = [
   },
 ];
 
+const socialLinks = [
+  {
+    icon: SiLinkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/lolajjoo/",
+  },
+  {
+    icon: SiInstagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/seedglow_/",
+  },
+];
+
 const inquiryTypes = [
   { value: "consulting", label: "비즈니스 컨설팅" },
   { value: "investment", label: "투자 유치 지원" },
-  { value: "team", label: "팀 빌딩" },
-  { value: "marketing", label: "마케팅 전략" },
+  { value: "branding", label: "로컬 브랜딩" },
+  { value: "ir", label: "IR 전략" },
   { value: "other", label: "기타 문의" },
 ];
 
@@ -246,15 +254,7 @@ export default function ContactSection() {
           </Card>
 
           <div className="space-y-6">
-            <div className="rounded-md overflow-hidden">
-              <img
-                src={officeImage}
-                alt="SeedGlow 오피스"
-                className="w-full h-48 md:h-64 object-cover"
-              />
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
@@ -270,6 +270,25 @@ export default function ContactSection() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="p-4 bg-background rounded-md">
+              <p className="text-sm text-muted-foreground mb-3">소셜 미디어</p>
+              <div className="flex gap-4">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                    data-testid={`link-social-${social.label.toLowerCase()}`}
+                  >
+                    <social.icon className="w-5 h-5" />
+                    <span className="text-sm">{social.label}</span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
