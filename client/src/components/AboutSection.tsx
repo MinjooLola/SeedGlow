@@ -100,35 +100,44 @@ export default function AboutSection() {
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-16 space-y-8">
           <Card>
             <CardContent className="p-6 md:p-8">
+              <h3 className="text-xl font-bold mb-4 text-primary">SeedGlow의 의미</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                SeedGlow는 '씨앗(seed)'과 '빛(glow)'을 결합한 이름입니다. 이는 스타트업의 시드 단계(seed stage)를 의미하는 동시에, 지역 곳곳에서 자라나는 작은 혁신의 씨앗들이 스스로 빛날 수 있도록 돕는다는 뜻을 담고 있습니다.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-6 md:p-8">
+              <h3 className="text-xl font-bold mb-4 text-primary">미션과 전략</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  SeedGlow는 '씨앗(seed)'과 '빛(glow)'을 결합한 이름입니다. 이는 스타트업의 시드 단계(seed stage)를 의미하는 동시에, 지역 곳곳에서 자라나는 작은 혁신의 씨앗들이 스스로 빛날 수 있도록 돕는다는 뜻을 담고 있습니다.
+                  각 지역은 고유의 산업 구조, 인재 풀, 소비 문화가 다릅니다. 서울의 전략을 그대로 적용해서는 지속가능한 성장을 만들 수 없습니다.
                 </p>
                 <p>
-                  SeedGlow는 로컬의 산업·문화적 특성을 기반으로 비즈니스 모델 확립 및 고도화 → IR 전략 → 투자 연결까지 지역 맞춤형 성장 로드맵을 함께 설계합니다.
-                </p>
-                <p>
-                  지역의 스타트업들을 만날 때마다 서울/수도권에 비해 정보나 지원이 여전히 부족하다는 것을 정말 많이 느낍니다.
-                </p>
-                <p>
-                  뿐만 아니라 각 지역은 고유의 산업 구조, 인재 풀, 소비 문화가 다릅니다. 서울의 전략을 그대로 적용해서는 지속가능한 성장을 만들 수 없습니다.
+                  SeedGlow는 로컬의 산업·문화적 특성을 기반으로 비즈니스 모델 확립 및 고도화 → 로컬 브랜딩 → IR 전략 → 투자 연결까지 지역 맞춤형 성장 로드맵을 함께 설계합니다.
                 </p>
                 <div className="pl-4 border-l-2 border-primary my-6">
-                  <p className="mb-2">SeedGlow는</p>
-                  <ol className="list-decimal list-inside space-y-1">
-                    <li>각 로컬의 시장 구조와 자원 흐름을 분석하고,</li>
-                    <li>로컬 투자자·기관과의 네트워크를 연결하며,</li>
-                    <li>초기 스타트업이 반드시 점검해야 할 실행 전략을 함께 수립합니다.</li>
-                  </ol>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      각 로컬의 시장 구조와 자원 흐름을 분석하고,
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      로컬 투자자·기관과의 네트워크를 연결하며,
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      초기 스타트업이 반드시 점검해야 할 실행 전략을 함께 수립합니다.
+                    </li>
+                  </ul>
                 </div>
-                <p>
-                  SeedGlow는 단순히 자문을 넘어 로컬 스타트업이 스스로 빛날 수 있는 생태계를 만드는 플랫폼이 되고자 합니다.
-                </p>
                 <p className="font-medium text-foreground">
-                  지역에서 시작해도, 글로벌로 확장할 수 있다는 가능성을 더 많은 창업가와 함께 증명하고 싶습니다.
+                  SeedGlow는 단순히 자문을 넘어 로컬 스타트업이 스스로 빛날 수 있는 생태계를 만드는 플랫폼이 되고자 합니다.
                 </p>
               </div>
             </CardContent>

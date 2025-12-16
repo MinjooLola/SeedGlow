@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import { Link } from "wouter";
 import slide1 from "@assets/3_1765811788897.jpg";
 import slide2 from "@assets/KakaoTalk_20250523_104833739_03_1765811788918.jpg";
 import slide3 from "@assets/KakaoTalk_20250523_104936309_01_1765811788920.jpg";
@@ -30,6 +29,13 @@ export default function HeroSection() {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -61,27 +67,25 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="gap-2 px-8"
-                data-testid="button-hero-contact"
-              >
-                문의하기
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
-            <Link href="/testimonials">
-              <Button
-                variant="outline"
-                size="lg"
-                className="gap-2 px-8 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
-                data-testid="button-hero-success"
-              >
-                <Play className="w-4 h-4" />
-                컨설팅 후기 보기
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              className="gap-2 px-8"
+              onClick={() => scrollToSection("#contact")}
+              data-testid="button-hero-contact"
+            >
+              문의하기
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="gap-2 px-8 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
+              onClick={() => scrollToSection("#success")}
+              data-testid="button-hero-success"
+            >
+              <Play className="w-4 h-4" />
+              컨설팅 후기 보기
+            </Button>
           </div>
 
           <div className="flex justify-center gap-2 mt-8">
