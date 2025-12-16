@@ -1,35 +1,7 @@
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import slide1 from "@assets/3_1765811788897.jpg";
-import slide2 from "@assets/KakaoTalk_20250523_104833739_03_1765811788918.jpg";
-import slide3 from "@assets/KakaoTalk_20250523_104936309_01_1765811788920.jpg";
-import slide4 from "@assets/KakaoTalk_20250523_104936309_03_1765811788922.jpg";
-import slide5 from "@assets/M4J01787_1765811788923.jpg";
-
-const heroImages = [
-  slide1,
-  slide2,
-  slide3,
-  slide4,
-  slide5,
-  "/attached_assets/DSC01771_1765811788912.JPG",
-  "/attached_assets/DSC03786_1765811788914.JPG",
-  "/attached_assets/DSC09875_1765811788916.JPG",
-  "/attached_assets/TalkMedia_i_a41z74.jpg_1765811788925.jpg",
-  "/attached_assets/모더레이터(4)_1765811788926.jpg",
-];
 
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -39,17 +11,16 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-      {heroImages.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          alt={`SeedGlow 활동 ${index + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
-      <div className="absolute inset-0 bg-black/75" />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/attached_assets/추가_김민주대표_1765920434120.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black/60" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-32 md:py-40 text-center">
         <div className="max-w-4xl mx-auto">
@@ -86,19 +57,6 @@ export default function HeroSection() {
               <Play className="w-4 h-4" />
               컨설팅 후기 보기
             </Button>
-          </div>
-
-          <div className="flex justify-center gap-2 mt-8">
-            {heroImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? "bg-primary w-6" : "bg-white/40"
-                }`}
-                data-testid={`button-hero-dot-${index}`}
-              />
-            ))}
           </div>
         </div>
       </div>
