@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoImage from "@assets/1_1765810147291.png";
+import logoImage from "@assets/로고_1767060435670.png";
 
 interface NavItem {
   label: string;
@@ -51,19 +51,14 @@ export default function Navigation() {
         <nav className="flex items-center justify-between gap-4 h-16 md:h-20">
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2"
+            className="flex items-center"
             data-testid="link-logo"
           >
             <img
               src={logoImage}
               alt="SeedGlow"
-              className="h-10 md:h-14 w-auto"
+              className="h-8 md:h-10 w-auto"
             />
-            <span className={`text-xl md:text-2xl font-bold ${
-              isScrolled ? "text-foreground" : "text-white"
-            }`}>
-              SeedGlow
-            </span>
           </button>
 
           <div className="hidden md:flex items-center gap-8">
