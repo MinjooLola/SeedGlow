@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoImage from "@assets/로고_1767060435670.png";
+import logoImage from "@assets/Frame_1_1767061064709.png";
 
 interface NavItem {
   label: string;
