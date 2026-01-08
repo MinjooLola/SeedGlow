@@ -42,7 +42,6 @@ export default function HeroSection() {
             </p>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" data-testid="text-hero-title">
-              <span className="text-primary">SeedGlow</span><br />
               지역 스타트업의<br />
               비즈니스 성장을 구조화합니다
             </h1>

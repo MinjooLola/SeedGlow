@@ -82,12 +82,62 @@ const coreActivities = [
   },
 ];
 
+function GrowthGraph() {
+  return (
+    <div className="flex justify-center mb-16">
+      <div className="relative w-full max-w-2xl">
+        <svg viewBox="0 0 400 120" className="w-full h-auto">
+          <defs>
+            <linearGradient id="graphGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.8" />
+            </linearGradient>
+          </defs>
+          
+          <path
+            d="M 20 100 Q 80 95 120 80 Q 160 65 200 55 Q 260 40 320 25 L 380 15"
+            fill="none"
+            stroke="hsl(43, 96%, 56%)"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+          
+          <path
+            d="M 20 100 Q 80 95 120 80 Q 160 65 200 55 Q 260 40 320 25 L 380 15 L 380 100 L 20 100 Z"
+            fill="url(#graphGradient)"
+          />
+          
+          <circle cx="120" cy="80" r="8" fill="hsl(43, 96%, 56%)" />
+          <circle cx="200" cy="55" r="8" fill="hsl(43, 96%, 56%)" />
+          <circle cx="320" cy="25" r="8" fill="hsl(43, 96%, 56%)" />
+          
+          <text x="120" y="110" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">01</text>
+          <text x="200" y="110" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">02</text>
+          <text x="320" y="110" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">03</text>
+        </svg>
+        
+        <div className="flex justify-between px-8 mt-2">
+          <div className="text-center flex-1">
+            <p className="text-xs text-amber-200/70">BM 확립</p>
+          </div>
+          <div className="text-center flex-1">
+            <p className="text-xs text-amber-200/70">로컬 브랜딩</p>
+          </div>
+          <div className="text-center flex-1">
+            <p className="text-xs text-amber-200/70">IR/투자</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ServicesSection() {
   return (
     <section id="services" className="bg-gradient-to-b from-amber-950 to-amber-900">
       <div className="py-20 md:py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-16 md:mb-20">
+          <div className="text-center mb-12">
             <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
               GROWTH ROADMAP
             </Badge>
@@ -99,68 +149,50 @@ export default function ServicesSection() {
             </p>
           </div>
 
-          <div className="relative mb-20 md:mb-28">
-            <div className="hidden lg:block absolute top-32 left-[16.67%] right-[16.67%] h-1 bg-gradient-to-r from-primary via-primary to-primary/50 z-0">
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
-              <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
-            </div>
+          <GrowthGraph />
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {roadmapSteps.map((step, index) => (
-                <div
-                  key={index}
-                  className="group relative"
-                  data-testid={`card-roadmap-${index}`}
-                >
-                  <div className="hidden lg:flex flex-col items-center mb-6">
-                    <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-amber-950 font-bold text-2xl z-10">
-                      {step.step}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20 md:mb-28">
+            {roadmapSteps.map((step, index) => (
+              <div
+                key={index}
+                className="group relative"
+                data-testid={`card-roadmap-${index}`}
+              >
+                <div className="p-8 rounded-md bg-amber-900/50 border border-amber-700/50 hover-elevate h-full">
+                  <div className="flex items-start gap-4 mb-6">
+                    <span className="text-5xl font-bold text-primary/80">{step.step}</span>
+                    <div className="p-3 rounded-md bg-primary/10 mt-2">
+                      <step.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <div className="mt-2 text-white font-semibold text-center">{step.title}</div>
                   </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
+                  <p className="text-primary/80 text-sm mb-4">{step.subtitle}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {step.details.map((detail, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-amber-100">
+                        <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
 
-                  <div className="p-8 rounded-md bg-amber-900/50 border border-amber-700/50 hover-elevate lg:mt-4">
-                    <div className="flex items-start gap-4 mb-6 lg:hidden">
-                      <span className="text-5xl font-bold text-primary/80">{step.step}</span>
-                      <div className="p-3 rounded-md bg-primary/10 mt-2">
-                        <step.icon className="w-6 h-6 text-primary" />
-                      </div>
+                  <div className="pt-4 border-t border-amber-700/50">
+                    <div className="flex items-center gap-2 mb-3">
+                      <FileText className="w-4 h-4 text-primary" />
+                      <span className="text-sm font-medium text-white">결과물</span>
                     </div>
-                    <div className="hidden lg:flex items-center gap-3 mb-4">
-                      <div className="p-3 rounded-md bg-primary/10">
-                        <step.icon className="w-6 h-6 text-primary" />
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 lg:hidden">{step.title}</h3>
-                    <p className="text-primary/80 text-sm mb-4">{step.subtitle}</p>
-                    
-                    <ul className="space-y-2 mb-6">
-                      {step.details.map((detail, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-amber-100">
-                          <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                          {detail}
+                    <ul className="space-y-1">
+                      {step.results.map((result, i) => (
+                        <li key={i} className="text-sm text-amber-200/70">
+                          • {result}
                         </li>
                       ))}
                     </ul>
-
-                    <div className="pt-4 border-t border-amber-700/50">
-                      <div className="flex items-center gap-2 mb-3">
-                        <FileText className="w-4 h-4 text-primary" />
-                        <span className="text-sm font-medium text-white">결과물</span>
-                      </div>
-                      <ul className="space-y-1">
-                        {step.results.map((result, i) => (
-                          <li key={i} className="text-sm text-amber-200/70">
-                            • {result}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           <div className="text-center mb-12">

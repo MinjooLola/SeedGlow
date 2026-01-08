@@ -29,6 +29,8 @@ const partners = [
   "고려대학교",
   "행정안전부",
   "제주더큰내일센터",
+  "유디임팩트",
+  "창업진흥원",
 ];
 
 export default function PartnersSection() {
@@ -39,7 +41,7 @@ export default function PartnersSection() {
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
             PARTNERS
           </Badge>
-          <h3 className="text-2xl md:text-3xl font-bold">{partners.length}+ 협력기관과 함께합니다</h3>
+          <h3 className="text-2xl md:text-3xl font-bold">30+ 협력기관과 함께합니다</h3>
         </div>
 
         <div className="flex flex-wrap justify-center gap-3">

@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, Target, CheckCircle, Mic, GraduationCap, ClipboardCheck } from "lucide-react";
+import { Mic, GraduationCap, ClipboardCheck } from "lucide-react";
 import profileImage from "@assets/김민주_프로필_240525_1765811099605.png";
 
 const lectures = [
@@ -63,6 +63,13 @@ const judging = [
   "한국임업진흥원 포레스트 소셜챌린저 심사",
 ];
 
+const coreWork = [
+  "BM 고도화",
+  "로컬 브랜딩",
+  "IR 전략",
+  "투자 연계",
+];
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 md:py-28 lg:py-36 bg-card">
@@ -77,66 +84,43 @@ export default function AboutSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
-          <div className="flex flex-col items-center lg:items-start order-2 lg:order-1">
+          <div className="flex flex-col items-center lg:items-start">
             <div className="relative w-full max-w-md">
               <img
                 src={profileImage}
                 alt="김민주 대표"
                 className="w-full rounded-md object-cover aspect-[4/5]"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-md">
-                <h3 className="text-2xl font-bold text-white mb-1">김민주</h3>
-                <p className="text-primary font-medium">대표 / 컨설턴트</p>
-              </div>
             </div>
           </div>
 
-          <div className="space-y-8 order-1 lg:order-2">
-            <div className="p-8 rounded-md bg-background border border-border">
-              <div className="flex items-center gap-3 mb-4">
-                <Sparkles className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-bold">시드글로우(SeedGlow)</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+          <div className="space-y-6">
+            <div>
+              <p className="text-primary font-semibold text-lg mb-1">현) 시드글로우(SeedGlow) 대표 / 컨설턴트</p>
+              <p className="text-muted-foreground">(전) 스타트업 투자사·액셀러레이터 팀장/선임연구원</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold mb-2">김민주</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다. 시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
               </p>
-              <div className="pt-4 border-t border-border">
-                <p className="text-muted-foreground text-sm">(전) 스타트업 투자사/액셀러레이터 팀장</p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-3">핵심 업무</h4>
+              <div className="flex flex-wrap gap-2">
+                {coreWork.map((work, i) => (
+                  <Badge key={i} variant="secondary">{work}</Badge>
+                ))}
               </div>
             </div>
 
-            <div className="p-8 rounded-md bg-background border border-border">
-              <div className="flex items-center gap-3 mb-4">
-                <Target className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-bold">우리가 하는 일의 기준</h3>
-              </div>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다. 서울의 공식은 로컬에서 통하지 않습니다.
-                </p>
-                <p className="font-medium text-foreground">SeedGlow는</p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                    지역 시장 구조 분석
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                    로컬 자원 기반 BM 설계
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                    실행 가능한 성장 전략
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                    투자로 이어지는 IR 구조
-                  </li>
-                </ul>
-                <p>
-                  를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
-                </p>
-              </div>
+            <div className="p-6 rounded-md bg-background border border-border">
+              <h4 className="font-semibold mb-3">우리가 하는 일의 기준</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다. 서울의 공식은 로컬에서 통하지 않습니다. SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계, 실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
+              </p>
             </div>
           </div>
         </div>
@@ -149,7 +133,7 @@ export default function AboutSection() {
               </div>
               <h4 className="font-bold text-lg">강의</h4>
             </div>
-            <ul className="space-y-2 max-h-80 overflow-y-auto">
+            <ul className="space-y-2">
               {lectures.map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
@@ -166,7 +150,7 @@ export default function AboutSection() {
               </div>
               <h4 className="font-bold text-lg">컨설팅</h4>
             </div>
-            <ul className="space-y-2 max-h-80 overflow-y-auto">
+            <ul className="space-y-2">
               {consulting.map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
@@ -183,7 +167,7 @@ export default function AboutSection() {
               </div>
               <h4 className="font-bold text-lg">심사</h4>
             </div>
-            <ul className="space-y-2 max-h-80 overflow-y-auto">
+            <ul className="space-y-2">
               {judging.map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
