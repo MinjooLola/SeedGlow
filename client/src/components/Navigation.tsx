@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logoImage from "@assets/Frame_1_1767061064709.png";
 
@@ -78,24 +77,13 @@ export default function Navigation() {
             ))}
           </div>
 
-          <div className="hidden md:block">
-            <Button
-              onClick={() => scrollToSection("#contact")}
-              data-testid="button-cta-header"
-            >
-              상담 신청하기
-            </Button>
-          </div>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className={`md:hidden ${isScrolled ? "" : "text-white"}`}
+          <button
+            className={`md:hidden p-2 rounded-md ${isScrolled ? "text-foreground" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="button-mobile-menu"
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </Button>
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </nav>
 
         {isMobileMenuOpen && (
@@ -111,15 +99,6 @@ export default function Navigation() {
                   {item.label}
                 </button>
               ))}
-              <div className="px-3 pt-2">
-                <Button
-                  className="w-full"
-                  onClick={() => scrollToSection("#contact")}
-                  data-testid="button-cta-mobile"
-                >
-                  상담 신청하기
-                </Button>
-              </div>
             </div>
           </div>
         )}

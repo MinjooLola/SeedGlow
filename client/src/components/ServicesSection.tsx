@@ -6,8 +6,6 @@ import {
   MapPin,
   Network,
   Rocket,
-  CheckCircle,
-  FileText,
 } from "lucide-react";
 
 const roadmapSteps = [
@@ -82,51 +80,80 @@ const coreActivities = [
   },
 ];
 
-function GrowthGraph() {
+function GrowthGraphHorizontal() {
   return (
-    <div className="flex justify-center mb-16">
-      <div className="relative w-full max-w-2xl">
-        <svg viewBox="0 0 400 120" className="w-full h-auto">
-          <defs>
-            <linearGradient id="graphGradient" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.8" />
-            </linearGradient>
-          </defs>
-          
-          <path
-            d="M 20 100 Q 80 95 120 80 Q 160 65 200 55 Q 260 40 320 25 L 380 15"
-            fill="none"
-            stroke="hsl(43, 96%, 56%)"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          
-          <path
-            d="M 20 100 Q 80 95 120 80 Q 160 65 200 55 Q 260 40 320 25 L 380 15 L 380 100 L 20 100 Z"
-            fill="url(#graphGradient)"
-          />
-          
-          <circle cx="120" cy="80" r="8" fill="hsl(43, 96%, 56%)" />
-          <circle cx="200" cy="55" r="8" fill="hsl(43, 96%, 56%)" />
-          <circle cx="320" cy="25" r="8" fill="hsl(43, 96%, 56%)" />
-          
-          <text x="120" y="110" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">01</text>
-          <text x="200" y="110" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">02</text>
-          <text x="320" y="110" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">03</text>
-        </svg>
-        
-        <div className="flex justify-between px-8 mt-2">
-          <div className="text-center flex-1">
-            <p className="text-xs text-amber-200/70">BM 확립</p>
-          </div>
-          <div className="text-center flex-1">
-            <p className="text-xs text-amber-200/70">로컬 브랜딩</p>
-          </div>
-          <div className="text-center flex-1">
-            <p className="text-xs text-amber-200/70">IR/투자</p>
-          </div>
+    <div className="mb-16">
+      <div className="flex justify-center mb-8">
+        <div className="relative w-full max-w-4xl">
+          <svg viewBox="0 0 600 100" className="w-full h-auto">
+            <defs>
+              <linearGradient id="graphGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.8" />
+              </linearGradient>
+            </defs>
+            
+            <path
+              d="M 50 80 Q 150 70 200 55 Q 300 35 400 25 L 550 10"
+              fill="none"
+              stroke="hsl(43, 96%, 56%)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            
+            <path
+              d="M 50 80 Q 150 70 200 55 Q 300 35 400 25 L 550 10 L 550 80 L 50 80 Z"
+              fill="url(#graphGradient)"
+            />
+            
+            <circle cx="150" cy="65" r="10" fill="hsl(43, 96%, 56%)" />
+            <circle cx="300" cy="40" r="10" fill="hsl(43, 96%, 56%)" />
+            <circle cx="480" cy="15" r="10" fill="hsl(43, 96%, 56%)" />
+            
+            <text x="150" y="95" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">01</text>
+            <text x="300" y="95" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">02</text>
+            <text x="480" y="95" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">03</text>
+          </svg>
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {roadmapSteps.map((step, index) => (
+          <div
+            key={index}
+            className="text-center p-6 rounded-md bg-amber-900/30 border border-amber-700/30"
+            data-testid={`card-roadmap-${index}`}
+          >
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <span className="text-3xl font-bold text-primary">{step.step}</span>
+              <div className="p-2 rounded-md bg-primary/10">
+                <step.icon className="w-5 h-5 text-primary" />
+              </div>
+            </div>
+            <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
+            <p className="text-primary/80 text-sm mb-4">{step.subtitle}</p>
+            
+            <ul className="text-left space-y-1 mb-4">
+              {step.details.map((detail, i) => (
+                <li key={i} className="text-xs text-amber-100/80 flex items-start gap-2">
+                  <span className="text-primary mt-0.5">-</span>
+                  {detail}
+                </li>
+              ))}
+            </ul>
+
+            <div className="pt-3 border-t border-amber-700/30 text-left">
+              <p className="text-xs font-medium text-white mb-2">결과물</p>
+              <ul className="space-y-1">
+                {step.results.map((result, i) => (
+                  <li key={i} className="text-xs text-amber-200/60">
+                    - {result}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -149,53 +176,9 @@ export default function ServicesSection() {
             </p>
           </div>
 
-          <GrowthGraph />
+          <GrowthGraphHorizontal />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20 md:mb-28">
-            {roadmapSteps.map((step, index) => (
-              <div
-                key={index}
-                className="group relative"
-                data-testid={`card-roadmap-${index}`}
-              >
-                <div className="p-8 rounded-md bg-amber-900/50 border border-amber-700/50 hover-elevate h-full">
-                  <div className="flex items-start gap-4 mb-6">
-                    <span className="text-5xl font-bold text-primary/80">{step.step}</span>
-                    <div className="p-3 rounded-md bg-primary/10 mt-2">
-                      <step.icon className="w-6 h-6 text-primary" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-primary/80 text-sm mb-4">{step.subtitle}</p>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {step.details.map((detail, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-amber-100">
-                        <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="pt-4 border-t border-amber-700/50">
-                    <div className="flex items-center gap-2 mb-3">
-                      <FileText className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-medium text-white">결과물</span>
-                    </div>
-                    <ul className="space-y-1">
-                      {step.results.map((result, i) => (
-                        <li key={i} className="text-sm text-amber-200/70">
-                          • {result}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 mt-20">
             <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
               CORE APPROACH
             </Badge>

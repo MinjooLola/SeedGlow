@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { SiLinkedin, SiInstagram } from "react-icons/si";
 import { Link } from "wouter";
-import logoImage from "@assets/1_1765810147291.png";
+import logoImage from "@assets/Frame_1_1767061064709.png";
 
 const footerLinks = {
   services: [
@@ -36,7 +36,6 @@ export default function Footer() {
                 alt="SeedGlow"
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-bold text-white">SeedGlow</span>
             </div>
             <p className="text-amber-200/70 mb-6 max-w-sm">
               로컬 스타트업의 성장을 함께하는 파트너, SeedGlow입니다. 전국 300팀

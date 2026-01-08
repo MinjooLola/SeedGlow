@@ -25,15 +25,109 @@ const targetAudiences = [
   },
 ];
 
-function PentagonIcon({ className }: { className?: string }) {
+function LargePentagonWithPoints() {
+  const centerX = 200;
+  const centerY = 180;
+  const outerRadius = 150;
+  const innerRadius = 85;
+  
+  const getPoint = (index: number, radius: number) => {
+    const angle = (index * 72 - 90) * (Math.PI / 180);
+    return {
+      x: centerX + radius * Math.cos(angle),
+      y: centerY + radius * Math.sin(angle),
+    };
+  };
+
+  const pentagonPoints = Array.from({ length: 5 }, (_, i) => getPoint(i, outerRadius));
+  const pentagonPath = pentagonPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
+
   return (
-    <svg 
-      viewBox="0 0 100 100" 
-      className={className}
-      fill="currentColor"
-    >
-      <polygon points="50,5 95,38 77,90 23,90 5,38" />
-    </svg>
+    <div className="flex justify-center mb-12">
+      <div className="relative w-full max-w-lg">
+        <svg viewBox="0 0 400 360" className="w-full h-auto">
+          <defs>
+            <linearGradient id="pentagonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.15" />
+              <stop offset="100%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.05" />
+            </linearGradient>
+          </defs>
+          
+          <path
+            d={pentagonPath}
+            fill="url(#pentagonGradient)"
+            stroke="hsl(43, 96%, 56%)"
+            strokeWidth="2"
+            strokeOpacity="0.5"
+          />
+          
+          {pentagonPoints.map((point, index) => (
+            <g key={index}>
+              <line
+                x1={centerX}
+                y1={centerY}
+                x2={point.x}
+                y2={point.y}
+                stroke="hsl(43, 96%, 56%)"
+                strokeWidth="1"
+                strokeOpacity="0.3"
+              />
+              
+              <circle
+                cx={point.x}
+                cy={point.y}
+                r="32"
+                fill="hsl(var(--card))"
+                stroke="hsl(43, 96%, 56%)"
+                strokeWidth="2"
+              />
+              
+              <text
+                x={point.x}
+                y={point.y}
+                textAnchor="middle"
+                dominantBaseline="central"
+                fill="hsl(43, 96%, 56%)"
+                fontSize="11"
+                fontWeight="bold"
+              >
+                {targetAudiences[index].title}
+              </text>
+            </g>
+          ))}
+          
+          <circle
+            cx={centerX}
+            cy={centerY}
+            r="40"
+            fill="hsl(43, 96%, 56%)"
+            fillOpacity="0.15"
+            stroke="hsl(43, 96%, 56%)"
+            strokeWidth="2"
+          />
+          <text
+            x={centerX}
+            y={centerY - 8}
+            textAnchor="middle"
+            fill="hsl(43, 96%, 56%)"
+            fontSize="12"
+            fontWeight="bold"
+          >
+            성장
+          </text>
+          <text
+            x={centerX}
+            y={centerY + 8}
+            textAnchor="middle"
+            fill="hsl(43, 96%, 56%)"
+            fontSize="12"
+            fontWeight="bold"
+          >
+            정체
+          </text>
+        </svg>
+      </div>
+    </div>
   );
 }
 
@@ -56,18 +150,16 @@ export default function TargetAudienceSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        <LargePentagonWithPoints />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
           {targetAudiences.map((item, index) => (
             <div
               key={index}
-              className="group p-6 rounded-md bg-card border border-border hover-elevate text-center"
+              className="p-4 rounded-md bg-card border border-border text-center"
               data-testid={`card-target-${index}`}
             >
-              <div className="mx-auto w-16 h-16 mb-4 flex items-center justify-center">
-                <PentagonIcon className="w-14 h-14 text-primary/80 group-hover:text-primary transition-colors" />
-              </div>
-              <h3 className="font-bold text-lg mb-3 text-foreground">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-xs leading-relaxed">
                 {item.description}
               </p>
             </div>

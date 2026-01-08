@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroImage from "@assets/hero-image.jpg";
 
 const metrics = [
@@ -12,11 +12,6 @@ const metrics = [
 export default function HeroSection() {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToAbout = () => {
-    const element = document.getElementById("about");
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -37,18 +32,18 @@ export default function HeroSection() {
       <div className="relative z-10 flex-1 flex items-center">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-32 md:py-40 w-full">
           <div className="max-w-2xl">
-            <p className="text-sm md:text-base text-primary font-medium tracking-wide uppercase mb-4" data-testid="text-hero-tagline">
+            <p className="text-xs md:text-sm text-primary font-medium tracking-wide uppercase mb-6" data-testid="text-hero-tagline">
               Local Startup Growth Partner
             </p>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" data-testid="text-hero-title">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-8" data-testid="text-hero-title">
               지역 스타트업의<br />
               비즈니스 성장을 구조화합니다
             </h1>
             
-            <p className="text-lg md:text-xl text-amber-100/90 leading-relaxed mb-8" data-testid="text-hero-description">
-              서울 중심의 일반론이 아닌,<br />
-              지역의 산업 구조·시장 규모·자원 흐름을 기준으로<br />
+            <p className="text-base md:text-lg text-amber-100/90 leading-loose mb-10" data-testid="text-hero-description">
+              서울 중심의 일반론이 아닌,<br /><br />
+              지역의 산업 구조·시장 규모·자원 흐름을 기준으로<br /><br />
               로컬 스타트업의 BM, 실행 전략, IR, 투자 연결까지 설계합니다.
             </p>
             
@@ -61,16 +56,6 @@ export default function HeroSection() {
               >
                 상담 문의하기
                 <ArrowRight className="w-4 h-4" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                onClick={scrollToAbout}
-                className="gap-2 bg-white/10 border-white/30 text-white hover:bg-white/20"
-                data-testid="button-hero-history"
-              >
-                <FileText className="w-4 h-4" />
-                강의/컨설팅/심사 이력
               </Button>
             </div>
           </div>

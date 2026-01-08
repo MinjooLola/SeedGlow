@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Mic, GraduationCap, ClipboardCheck } from "lucide-react";
 import profileImage from "@assets/김민주_프로필_240525_1765811099605.png";
 
 const lectures = [
@@ -74,13 +73,23 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-20 md:py-28 lg:py-36 bg-card">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-12">
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
             ABOUT SEEDGLOW
           </Badge>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             회사 소개
           </h2>
+        </div>
+
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h3 className="text-xl md:text-2xl font-bold mb-4 text-primary">SeedGlow</h3>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다. 시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다. 서울의 공식은 로컬에서 통하지 않습니다. SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계, 실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
@@ -94,84 +103,54 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="flex flex-col justify-center space-y-6">
+            <h3 className="text-2xl md:text-3xl font-bold">김민주</h3>
+            
             <div>
-              <p className="text-primary font-semibold text-lg mb-1">현) 시드글로우(SeedGlow) 대표 / 컨설턴트</p>
+              <p className="text-primary font-semibold text-lg">시드글로우(SeedGlow) 대표 / 컨설턴트</p>
               <p className="text-muted-foreground">(전) 스타트업 투자사·액셀러레이터 팀장/선임연구원</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold mb-2">김민주</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다. 시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-3">핵심 업무</h4>
+              <h4 className="font-semibold mb-3">핵심 분야</h4>
               <div className="flex flex-wrap gap-2">
                 {coreWork.map((work, i) => (
                   <Badge key={i} variant="secondary">{work}</Badge>
                 ))}
               </div>
             </div>
-
-            <div className="p-6 rounded-md bg-background border border-border">
-              <h4 className="font-semibold mb-3">우리가 하는 일의 기준</h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다. 서울의 공식은 로컬에서 통하지 않습니다. SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계, 실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
-              </p>
-            </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-6 rounded-md bg-background border border-border">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-md bg-primary/10">
-                <Mic className="w-5 h-5 text-primary" />
-              </div>
-              <h4 className="font-bold text-lg">강의</h4>
-            </div>
-            <ul className="space-y-2">
+          <div className="p-6">
+            <h4 className="font-bold text-base mb-4">강의</h4>
+            <ul className="space-y-1.5">
               {lectures.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  {item}
+                <li key={i} className="text-xs text-muted-foreground leading-relaxed">
+                  - {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="p-6 rounded-md bg-background border border-border">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-md bg-primary/10">
-                <GraduationCap className="w-5 h-5 text-primary" />
-              </div>
-              <h4 className="font-bold text-lg">컨설팅</h4>
-            </div>
-            <ul className="space-y-2">
+          <div className="p-6">
+            <h4 className="font-bold text-base mb-4">컨설팅</h4>
+            <ul className="space-y-1.5">
               {consulting.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  {item}
+                <li key={i} className="text-xs text-muted-foreground leading-relaxed">
+                  - {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="p-6 rounded-md bg-background border border-border">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-md bg-primary/10">
-                <ClipboardCheck className="w-5 h-5 text-primary" />
-              </div>
-              <h4 className="font-bold text-lg">심사</h4>
-            </div>
-            <ul className="space-y-2">
+          <div className="p-6">
+            <h4 className="font-bold text-base mb-4">심사</h4>
+            <ul className="space-y-1.5">
               {judging.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  {item}
+                <li key={i} className="text-xs text-muted-foreground leading-relaxed">
+                  - {item}
                 </li>
               ))}
             </ul>
