@@ -38,9 +38,9 @@ const targetAudiences = [
   {
     title: "전략 부재형",
     descriptionLines: [
-      "지자체·기관 사업은",
-      "반복 참여하지만",
-      "스스로 성장 전략을 만들지 못한 팀"
+      "지자체·기관 지원사업은",
+      "반복해서 참여하지만",
+      "자생 전략을 만들지 못한 팀"
     ],
   },
 ];
@@ -63,11 +63,11 @@ function PentagonWithLabels() {
   const pentagonPath = pentagonPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
 
   const labelConfigs = [
-    { align: "center", xOffset: -80, yOffset: -labelDistance - 50 },
-    { align: "left", xOffset: labelDistance, yOffset: -25 },
-    { align: "left", xOffset: labelDistance - 10, yOffset: 5 },
-    { align: "right", xOffset: -labelDistance - 160, yOffset: 5 },
-    { align: "right", xOffset: -labelDistance - 160, yOffset: -25 },
+    { align: "center", xOffset: -80, yOffset: -labelDistance - 55 },
+    { align: "left", xOffset: labelDistance, yOffset: -30 },
+    { align: "left", xOffset: labelDistance - 10, yOffset: 0 },
+    { align: "right", xOffset: -labelDistance - 160, yOffset: 0 },
+    { align: "right", xOffset: -labelDistance - 160, yOffset: -30 },
   ];
 
   return (
@@ -128,22 +128,24 @@ function PentagonWithLabels() {
                   x={point.x + config.xOffset}
                   y={point.y + config.yOffset}
                   width="160"
-                  height="60"
+                  height="70"
                 >
                   <div 
-                    className="text-muted-foreground"
+                    className="px-3 py-2 rounded-md bg-card/80 border border-border/50 backdrop-blur-sm"
                     style={{ 
                       fontSize: '11px',
-                      lineHeight: '1.4',
+                      lineHeight: '1.5',
                       textAlign: config.align as "left" | "right" | "center"
                     }}
                   >
-                    {targetAudiences[index].descriptionLines.map((line, i) => (
-                      <span key={i}>
-                        {line}
-                        {i < targetAudiences[index].descriptionLines.length - 1 && <br />}
-                      </span>
-                    ))}
+                    <span className="text-muted-foreground">
+                      {targetAudiences[index].descriptionLines.map((line, i) => (
+                        <span key={i}>
+                          {line}
+                          {i < targetAudiences[index].descriptionLines.length - 1 && <br />}
+                        </span>
+                      ))}
+                    </span>
                   </div>
                 </foreignObject>
               </g>

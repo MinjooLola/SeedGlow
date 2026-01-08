@@ -41,7 +41,7 @@ const roadmapSteps = [
   {
     step: "03",
     title: "IR 전략 및 투자 연계",
-    subtitleLines: ["투자자의 질문에 먼저 답하는 IR,", "투자 검토 테이블에 오르는 언어로 바꿉니다"],
+    subtitleLines: ["투자자가 원하는", "IR 언어로 재설계합니다"],
     details: [
       "IR 덱 구조 설계 및 스토리라인 정리",
       "투자 포인트 및 리스크 정리",
@@ -191,8 +191,8 @@ export default function ServicesSection() {
                 서울의 공식은 로컬에서 통하지 않습니다.
               </p>
               <p className="text-amber-200/80">
-                SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계,<br />
-                실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해<br />
+                SeedGlow는 지역 시장 구조 분석 → 로컬 자원 기반 BM 설계 →<br />
+                실행 가능한 성장 전략 → 투자로 이어지는 IR 구조를 통해<br />
                 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
               </p>
             </div>
