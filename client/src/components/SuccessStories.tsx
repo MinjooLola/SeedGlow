@@ -38,7 +38,7 @@ const testimonials = [
   },
   {
     quote: "최근 IR을 많이 하고 다니는데, 계속 좋은 결과를 얻지 못했거든요. 부족한 저의 IR을 현재 합격한 기업과 비교해서 잘 얘기해주시니 도움이 많이 되었어요.",
-    highlight: "IR 합격 전략",
+    highlight: "IR 성공 전략",
   },
   {
     quote: "해당 사업 포션에 대한 깊은 인사이트와 날카로운 피드백 덕분에 IR에 우리의 강점을 자연스럽게 녹여낼 수 있었고, 전략의 방향성까지 한층 더 선명해졌습니다.",
@@ -46,7 +46,7 @@ const testimonials = [
   },
   {
     quote: "잘 몰랐던 자금 조달 부분에 대해 단계별로 알 수 있었고, 해외 시장 진출에 있어 막막한 부분을 잘 상기 시켜주셨습니다. 추상적일 수 있는 것들을 잘 정리해주셔서 좀더 구체적으로 생각해볼 수 있게 되었어요.",
-    highlight: "자금 조달·해외 진출",
+    highlight: "자금 조달/해외 진출",
   },
 ];
 
@@ -81,7 +81,7 @@ export default function SuccessStories() {
   };
 
   return (
-    <section id="success" className="py-20 md:py-28 lg:py-36 bg-gradient-to-b from-purple-950 to-violet-950">
+    <section id="success" className="py-20 md:py-28 lg:py-36 bg-gradient-to-b from-amber-900 to-amber-950">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-16 md:mb-20">
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
@@ -90,7 +90,7 @@ export default function SuccessStories() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             컨설팅 후기
           </h2>
-          <p className="text-violet-200/80 text-lg max-w-2xl mx-auto">
+          <p className="text-amber-200/80 text-lg max-w-2xl mx-auto">
             SeedGlow와 함께 성장하고 있는 팀들의 이야기
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function SuccessStories() {
                 className="w-[85%] md:w-[45%] lg:w-[32%] flex-shrink-0 snap-start"
                 data-testid={`card-testimonial-${index}`}
               >
-                <div className="h-full p-8 rounded-md bg-violet-900/30 border border-violet-700/50">
+                <div className="h-full p-8 rounded-md bg-amber-900/50 border border-amber-700/50">
                   <div className="flex items-start gap-3 mb-4">
                     <Quote className="w-6 h-6 text-primary flex-shrink-0" />
                     <Badge variant="secondary" className="text-xs">
@@ -128,7 +128,7 @@ export default function SuccessStories() {
               size="icon"
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
-              className="bg-violet-900/50 border-violet-700/50 text-white disabled:opacity-30"
+              className="bg-amber-900/50 border-amber-700/50 text-white disabled:opacity-30"
               data-testid="button-prev-testimonial"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -138,7 +138,7 @@ export default function SuccessStories() {
               size="icon"
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
-              className="bg-violet-900/50 border-violet-700/50 text-white disabled:opacity-30"
+              className="bg-amber-900/50 border-amber-700/50 text-white disabled:opacity-30"
               data-testid="button-next-testimonial"
             >
               <ChevronRight className="w-4 h-4" />

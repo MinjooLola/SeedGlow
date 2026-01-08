@@ -1,42 +1,6 @@
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { Mail } from "lucide-react";
 import { SiLinkedin, SiInstagram } from "react-icons/si";
-import { useToast } from "@/hooks/use-toast";
-
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  inquiryType: string;
-  message: string;
-}
-
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "이메일",
-    value: "minjoo.kim.biz@gmail.com",
-  },
-  {
-    icon: Clock,
-    label: "업무시간",
-    value: "평일 09:00 - 18:00",
-  },
-];
 
 const socialLinks = [
   {
@@ -51,244 +15,46 @@ const socialLinks = [
   },
 ];
 
-const inquiryTypes = [
-  { value: "bm", label: "BM 고도화" },
-  { value: "branding", label: "로컬 브랜딩" },
-  { value: "ir", label: "IR 전략" },
-  { value: "investment", label: "투자 연계" },
-  { value: "other", label: "기타 문의" },
-];
-
 export default function ContactSection() {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    inquiryType: "",
-    message: "",
-  });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    console.log("Form submitted:", formData);
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    toast({
-      title: "문의가 접수되었습니다",
-      description: "빠른 시일 내에 연락드리겠습니다.",
-    });
-
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        inquiryType: "",
-        message: "",
-      });
-    }, 3000);
-  };
-
   return (
     <section id="contact" className="py-16 md:py-24 lg:py-32 bg-card">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-12 md:mb-16">
-          <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
-            CONTACT
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            로컬 스타트업의 다음 단계를 함께 설계합니다
-          </h2>
-          <div className="flex flex-wrap justify-center gap-3 mt-6">
-            {inquiryTypes.slice(0, 4).map((type) => (
-              <Badge key={type.value} variant="secondary">
-                {type.label}
-              </Badge>
+      <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
+        <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
+          CONTACT
+        </Badge>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          로컬 스타트업의 다음 단계를 함께 설계합니다
+        </h2>
+        <p className="text-muted-foreground mb-8">
+          BM 고도화, 로컬 브랜딩, IR 전략, 투자 연계에 대해 문의해주세요.
+        </p>
+
+        <div className="flex flex-col items-center gap-6">
+          <a 
+            href="mailto:minjoo.kim.biz@gmail.com"
+            className="flex items-center gap-3 text-xl font-medium text-foreground hover:text-primary transition-colors"
+            data-testid="link-email"
+          >
+            <div className="p-3 rounded-md bg-primary/10">
+              <Mail className="w-6 h-6 text-primary" />
+            </div>
+            minjoo.kim.biz@gmail.com
+          </a>
+
+          <div className="flex items-center gap-4 mt-4">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-md bg-background border border-border text-muted-foreground hover:text-foreground transition-colors"
+                data-testid={`link-social-${social.label.toLowerCase()}`}
+              >
+                <social.icon className="w-5 h-5" />
+                <span className="text-sm">{social.label}</span>
+              </a>
             ))}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          <Card>
-            <CardContent className="p-6 md:p-8">
-              {isSubmitted ? (
-                <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <div className="p-4 rounded-full bg-primary/10 mb-4">
-                    <CheckCircle className="w-12 h-12 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">
-                    문의가 접수되었습니다
-                  </h3>
-                  <p className="text-muted-foreground">
-                    빠른 시일 내에 연락드리겠습니다.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">이름 *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="홍길동"
-                        required
-                        data-testid="input-name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">이메일 *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="example@company.com"
-                        required
-                        data-testid="input-email"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">연락처</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="010-1234-5678"
-                        data-testid="input-phone"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="company">회사명</Label>
-                      <Input
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        placeholder="스타트업명"
-                        data-testid="input-company"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="inquiryType">문의 유형 *</Label>
-                    <Select
-                      value={formData.inquiryType}
-                      onValueChange={(value) =>
-                        setFormData((prev) => ({ ...prev, inquiryType: value }))
-                      }
-                      required
-                    >
-                      <SelectTrigger data-testid="select-inquiry-type">
-                        <SelectValue placeholder="문의 유형을 선택해주세요" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {inquiryTypes.map((type) => (
-                          <SelectItem key={type.value} value={type.value}>
-                            {type.label}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">문의 내용 *</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="스타트업에 대한 간단한 소개와 문의 내용을 적어주세요."
-                      rows={5}
-                      required
-                      data-testid="input-message"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="w-full gap-2"
-                    disabled={isSubmitting}
-                    data-testid="button-submit-contact"
-                  >
-                    {isSubmitting ? (
-                      "전송 중..."
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4" />
-                        상담 문의하기
-                      </>
-                    )}
-                  </Button>
-                </form>
-              )}
-            </CardContent>
-          </Card>
-
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 gap-4">
-              {contactInfo.map((info, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-3 p-4 bg-background rounded-md"
-                  data-testid={`contact-info-${index}`}
-                >
-                  <div className="p-2 rounded-md bg-primary/10">
-                    <info.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">{info.label}</p>
-                    <p className="font-medium">{info.value}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="p-4 bg-background rounded-md">
-              <p className="text-sm text-muted-foreground mb-3">소셜 미디어</p>
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-                    data-testid={`link-social-${social.label.toLowerCase()}`}
-                  >
-                    <social.icon className="w-5 h-5" />
-                    <span className="text-sm">{social.label}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

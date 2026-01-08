@@ -26,7 +26,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-violet-950 py-12 md:py-16">
+    <footer className="bg-amber-950 py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           <div className="lg:col-span-1">
@@ -38,7 +38,7 @@ export default function Footer() {
               />
               <span className="text-xl font-bold text-white">SeedGlow</span>
             </div>
-            <p className="text-violet-200/70 mb-6 max-w-sm">
+            <p className="text-amber-200/70 mb-6 max-w-sm">
               로컬 스타트업의 성장을 함께하는 파트너, SeedGlow입니다. 전국 300팀
               이상의 컨설팅 경험으로 여러분의 성공을 지원합니다.
             </p>
@@ -51,7 +51,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-violet-200/70 hover:text-white transition-colors"
+                    className="text-amber-200/70 hover:text-white transition-colors"
                     data-testid={`link-footer-service-${index}`}
                   >
                     {link.label}
@@ -68,7 +68,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-violet-200/70 hover:text-white transition-colors"
+                    className="text-amber-200/70 hover:text-white transition-colors"
                     data-testid={`link-footer-company-${index}`}
                   >
                     {link.label}
@@ -85,7 +85,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-violet-200/70 hover:text-white transition-colors"
+                    className="text-amber-200/70 hover:text-white transition-colors"
                     data-testid={`link-footer-support-${index}`}
                   >
                     {link.label}
@@ -96,10 +96,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <Separator className="mb-8 bg-violet-800/50" />
+        <Separator className="mb-8 bg-amber-800/50" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-violet-200/60 text-center md:text-left">
+          <div className="text-sm text-amber-200/60 text-center md:text-left">
             <p>minjoo.kim.biz@gmail.com</p>
             <p className="mt-1">
               &copy; {new Date().getFullYear()} SeedGlow. All rights reserved.
@@ -114,7 +114,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="p-2 text-violet-200/70 hover:text-white transition-colors"
+                className="p-2 text-amber-200/70 hover:text-white transition-colors"
                 data-testid={`link-social-${social.label.toLowerCase()}`}
               >
                 <social.icon className="w-5 h-5" />

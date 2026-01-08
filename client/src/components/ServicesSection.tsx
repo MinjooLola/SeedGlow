@@ -84,61 +84,83 @@ const coreActivities = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-gradient-to-b from-violet-950 to-purple-950">
+    <section id="services" className="bg-gradient-to-b from-amber-950 to-amber-900">
       <div className="py-20 md:py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
-              WHAT WE DO
+              GROWTH ROADMAP
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               로컬 스타트업 성장 로드맵
             </h2>
-            <p className="text-violet-200/80 text-lg max-w-2xl mx-auto">
+            <p className="text-amber-200/80 text-lg max-w-2xl mx-auto">
               SeedGlow는 스타트업의 단계에 따라 3단계 성장 구조로 개입합니다.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20 md:mb-28">
-            {roadmapSteps.map((step, index) => (
-              <div
-                key={index}
-                className="group p-8 rounded-md bg-violet-900/30 border border-violet-700/50 hover-elevate"
-                data-testid={`card-roadmap-${index}`}
-              >
-                <div className="flex items-start gap-4 mb-6">
-                  <span className="text-5xl font-bold text-primary/80">{step.step}</span>
-                  <div className="p-3 rounded-md bg-primary/10 mt-2">
-                    <step.icon className="w-6 h-6 text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-primary/80 text-sm mb-4">{step.subtitle}</p>
-                
-                <ul className="space-y-2 mb-6">
-                  {step.details.map((detail, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-violet-100">
-                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
+          <div className="relative mb-20 md:mb-28">
+            <div className="hidden lg:block absolute top-32 left-[16.67%] right-[16.67%] h-1 bg-gradient-to-r from-primary via-primary to-primary/50 z-0">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
+              <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
+            </div>
 
-                <div className="pt-4 border-t border-violet-700/50">
-                  <div className="flex items-center gap-2 mb-3">
-                    <FileText className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-medium text-white">결과물</span>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {roadmapSteps.map((step, index) => (
+                <div
+                  key={index}
+                  className="group relative"
+                  data-testid={`card-roadmap-${index}`}
+                >
+                  <div className="hidden lg:flex flex-col items-center mb-6">
+                    <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-amber-950 font-bold text-2xl z-10">
+                      {step.step}
+                    </div>
+                    <div className="mt-2 text-white font-semibold text-center">{step.title}</div>
                   </div>
-                  <ul className="space-y-1">
-                    {step.results.map((result, i) => (
-                      <li key={i} className="text-sm text-violet-200/70">
-                        • {result}
-                      </li>
-                    ))}
-                  </ul>
+
+                  <div className="p-8 rounded-md bg-amber-900/50 border border-amber-700/50 hover-elevate lg:mt-4">
+                    <div className="flex items-start gap-4 mb-6 lg:hidden">
+                      <span className="text-5xl font-bold text-primary/80">{step.step}</span>
+                      <div className="p-3 rounded-md bg-primary/10 mt-2">
+                        <step.icon className="w-6 h-6 text-primary" />
+                      </div>
+                    </div>
+                    <div className="hidden lg:flex items-center gap-3 mb-4">
+                      <div className="p-3 rounded-md bg-primary/10">
+                        <step.icon className="w-6 h-6 text-primary" />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 lg:hidden">{step.title}</h3>
+                    <p className="text-primary/80 text-sm mb-4">{step.subtitle}</p>
+                    
+                    <ul className="space-y-2 mb-6">
+                      {step.details.map((detail, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-amber-100">
+                          <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="pt-4 border-t border-amber-700/50">
+                      <div className="flex items-center gap-2 mb-3">
+                        <FileText className="w-4 h-4 text-primary" />
+                        <span className="text-sm font-medium text-white">결과물</span>
+                      </div>
+                      <ul className="space-y-1">
+                        {step.results.map((result, i) => (
+                          <li key={i} className="text-sm text-amber-200/70">
+                            • {result}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div className="text-center mb-12">
@@ -154,14 +176,14 @@ export default function ServicesSection() {
             {coreActivities.map((activity, index) => (
               <div
                 key={index}
-                className="text-center p-8 rounded-md bg-violet-900/30 border border-violet-700/50 hover-elevate"
+                className="text-center p-8 rounded-md bg-amber-900/50 border border-amber-700/50 hover-elevate"
                 data-testid={`card-activity-${index}`}
               >
                 <div className="mx-auto p-4 rounded-full bg-primary/10 w-fit mb-5">
                   <activity.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="font-bold text-lg text-white mb-3">{activity.title}</h4>
-                <p className="text-violet-200/70 text-sm leading-relaxed">{activity.description}</p>
+                <p className="text-amber-200/70 text-sm leading-relaxed">{activity.description}</p>
               </div>
             ))}
           </div>

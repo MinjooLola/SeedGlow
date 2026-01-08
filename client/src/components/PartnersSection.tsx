@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const partners = [
   "SK하이닉스",
@@ -33,48 +33,26 @@ const partners = [
 
 export default function PartnersSection() {
   return (
-    <section className="py-12 md:py-16 bg-muted/50">
+    <section className="py-16 md:py-20 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-8">
-          <p className="text-muted-foreground text-sm font-medium uppercase tracking-wide">
-            Trusted Partners
-          </p>
-          <h3 className="text-xl font-bold mt-2">{partners.length}+ 협력 기관과 함께합니다</h3>
+        <div className="text-center mb-10">
+          <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
+            PARTNERS
+          </Badge>
+          <h3 className="text-2xl md:text-3xl font-bold">{partners.length}+ 협력기관과 함께합니다</h3>
         </div>
 
-        <div className="overflow-hidden relative">
-          <div className="flex animate-scroll gap-6">
-            {[...partners, ...partners].map((partner, index) => (
-              <Card
-                key={index}
-                className="flex-shrink-0 bg-background/80"
-              >
-                <CardContent className="px-6 py-4 flex items-center justify-center min-w-[180px]">
-                  <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">
-                    {partner}
-                  </span>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center gap-3">
+          {partners.map((partner, index) => (
+            <div
+              key={index}
+              className="px-4 py-2 rounded-md bg-background border border-border text-sm font-medium text-muted-foreground"
+              data-testid={`partner-${index}`}
+            >
+              {partner}
+            </div>
+          ))}
         </div>
-
-        <style>{`
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-          .animate-scroll {
-            animation: scroll 60s linear infinite;
-          }
-          .animate-scroll:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
       </div>
     </section>
   );

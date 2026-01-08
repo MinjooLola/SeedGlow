@@ -1,36 +1,6 @@
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Briefcase, GraduationCap, Mic, ClipboardCheck, Sparkles, Target, CheckCircle } from "lucide-react";
+import { Sparkles, Target, CheckCircle, Mic, GraduationCap, ClipboardCheck } from "lucide-react";
 import profileImage from "@assets/김민주_프로필_240525_1765811099605.png";
-
-const currentRole = {
-  title: "대표/컨설턴트",
-  badge: "현",
-  company: "시드글로우(SeedGlow)",
-  responsibilities: [
-    "로컬 스타트업 BM 고도화·브랜딩·IR 컨설팅",
-    "스타트업 IR 심사 및 투자 연계",
-  ],
-};
-
-const previousRole = {
-  title: "팀장/선임연구원",
-  badge: "전",
-  company: "엠와이소셜컴퍼니(MYSC)",
-  responsibilities: [
-    "액셀러레이팅 프로그램 기획·운영 총괄",
-    "예비~Series A 투자심사",
-    "BM·IR·ESG·디자인씽킹 강의",
-  ],
-};
-
-const lectureHighlights = [
-  "SK하이닉스 하이로컬 이천 프로그램",
-  "중소벤처기업부 강한소상공인 / 장인학교",
-  "제주·대구·경북 창조경제혁신센터",
-  "연세대 글로벌 MBA / 고려대 / 동국대 / 동덕여대",
-  "행정안전부 청년마을 / 지자체·공공기관 다수",
-];
 
 const lectures = [
   "SK하이닉스 하이로컬 이천 프로그램 로컬 창업 강연",
@@ -107,15 +77,32 @@ export default function AboutSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
-          <div className="space-y-8">
+          <div className="flex flex-col items-center lg:items-start order-2 lg:order-1">
+            <div className="relative w-full max-w-md">
+              <img
+                src={profileImage}
+                alt="김민주 대표"
+                className="w-full rounded-md object-cover aspect-[4/5]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-md">
+                <h3 className="text-2xl font-bold text-white mb-1">김민주</h3>
+                <p className="text-primary font-medium">대표 / 컨설턴트</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-8 order-1 lg:order-2">
             <div className="p-8 rounded-md bg-background border border-border">
               <div className="flex items-center gap-3 mb-4">
                 <Sparkles className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-bold">SeedGlow의 의미</h3>
+                <h3 className="text-xl font-bold">시드글로우(SeedGlow)</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                SeedGlow는 'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다. 시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다. 시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
               </p>
+              <div className="pt-4 border-t border-border">
+                <p className="text-muted-foreground text-sm">(전) 스타트업 투자사/액셀러레이터 팀장</p>
+              </div>
             </div>
 
             <div className="p-8 rounded-md bg-background border border-border">
@@ -152,137 +139,60 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-
-          <div className="flex flex-col items-center lg:items-start">
-            <div className="relative mb-6 w-full max-w-md">
-              <img
-                src={profileImage}
-                alt="김민주 대표"
-                className="w-full rounded-md object-cover aspect-[4/5]"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-md">
-                <h3 className="text-2xl font-bold text-white mb-1">김민주</h3>
-                <p className="text-primary font-medium">대표 / 컨설턴트</p>
-                <p className="text-white/80 text-sm">로컬 스타트업 BM·IR 전문</p>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-6 rounded-md bg-background border border-border">
-            <div className="flex items-start gap-4 mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-md bg-primary/10">
-                <Briefcase className="w-5 h-5 text-primary" />
+                <Mic className="w-5 h-5 text-primary" />
               </div>
-              <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-2 mb-1">
-                  <Badge variant="default">{currentRole.badge}</Badge>
-                  <h4 className="font-bold text-lg">{currentRole.title}</h4>
-                </div>
-                <p className="text-primary font-medium mb-3">{currentRole.company}</p>
-                <ul className="space-y-2">
-                  {currentRole.responsibilities.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h4 className="font-bold text-lg">강의</h4>
             </div>
+            <ul className="space-y-2 max-h-80 overflow-y-auto">
+              {lectures.map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="p-6 rounded-md bg-background border border-border">
-            <div className="flex items-start gap-4">
-              <div className="p-2 rounded-md bg-muted">
-                <Briefcase className="w-5 h-5 text-muted-foreground" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-md bg-primary/10">
+                <GraduationCap className="w-5 h-5 text-primary" />
               </div>
-              <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-2 mb-1">
-                  <Badge variant="outline">{previousRole.badge}</Badge>
-                  <h4 className="font-bold text-lg">{previousRole.title}</h4>
-                </div>
-                <p className="text-muted-foreground font-medium mb-3">{previousRole.company}</p>
-                <ul className="space-y-2">
-                  {previousRole.responsibilities.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h4 className="font-bold text-lg">컨설팅</h4>
             </div>
+            <ul className="space-y-2 max-h-80 overflow-y-auto">
+              {consulting.map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="p-6 rounded-md bg-background border border-border">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-md bg-primary/10">
+                <ClipboardCheck className="w-5 h-5 text-primary" />
+              </div>
+              <h4 className="font-bold text-lg">심사</h4>
+            </div>
+            <ul className="space-y-2 max-h-80 overflow-y-auto">
+              {judging.map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-
-        <div className="p-6 rounded-md bg-background border border-border mb-12">
-          <h4 className="font-bold text-lg mb-4">강의 · 컨설팅 · 심사 이력 (발췌)</h4>
-          <div className="flex flex-wrap gap-2">
-            {lectureHighlights.map((item, i) => (
-              <Badge key={i} variant="secondary" className="text-sm">
-                {item}
-              </Badge>
-            ))}
-          </div>
-        </div>
-
-        <Tabs defaultValue="lectures" className="max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-3 mb-6">
-            <TabsTrigger value="lectures" className="gap-2">
-              <Mic className="w-4 h-4" />
-              강의
-            </TabsTrigger>
-            <TabsTrigger value="consulting" className="gap-2">
-              <GraduationCap className="w-4 h-4" />
-              컨설팅
-            </TabsTrigger>
-            <TabsTrigger value="judging" className="gap-2">
-              <ClipboardCheck className="w-4 h-4" />
-              심사
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="lectures">
-            <div className="p-6 rounded-md bg-background border border-border max-h-64 overflow-y-auto">
-              <ul className="space-y-3">
-                {lectures.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="consulting">
-            <div className="p-6 rounded-md bg-background border border-border max-h-64 overflow-y-auto">
-              <ul className="space-y-3">
-                {consulting.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="judging">
-            <div className="p-6 rounded-md bg-background border border-border max-h-64 overflow-y-auto">
-              <ul className="space-y-3">
-                {judging.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </TabsContent>
-        </Tabs>
       </div>
     </section>
   );
