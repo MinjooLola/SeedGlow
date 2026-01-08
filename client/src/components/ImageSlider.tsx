@@ -7,11 +7,10 @@ import img4 from "@assets/KakaoTalk_20250523_104936309_01_1767890854746.jpg";
 import img5 from "@assets/KakaoTalk_20250523_104936309_02_1767890854749.jpg";
 import img6 from "@assets/KakaoTalk_20250523_104936309_03_1767890854752.jpg";
 import img7 from "@assets/KakaoTalk_20251210_233230339_1767890854755.jpg";
-import img8 from "@assets/KakaoTalk_20260108_061715922_02_1767890854758.jpg";
-import img9 from "@assets/M4J01775_1767890854762.jpg";
-import img10 from "@assets/M4J01778_1767890854765.jpg";
+import img8 from "@assets/M4J01775_1767890854762.jpg";
+import img9 from "@assets/M4J01778_1767890854765.jpg";
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
 export default function ImageSlider() {
   const [offset, setOffset] = useState(0);
