@@ -9,7 +9,7 @@ const roadmapSteps = [
   {
     step: "01",
     title: "BM 확립 및 고도화",
-    subtitle: "\"이 사업은 왜 존재하는가\"를 구조화합니다",
+    subtitle: "좋은 아이디어를, 사라지지 않는 사업으로 바꿉니다",
     details: [
       "시장·고객·문제 정의 재정의",
       "수익 구조 및 단가 설계",
@@ -184,7 +184,9 @@ export default function ServicesSection() {
                 서울의 공식은 로컬에서 통하지 않습니다.
               </p>
               <p className="text-amber-200/80">
-                SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계, 실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
+                SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계,<br />
+                실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해<br />
+                로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
               </p>
             </div>
           </div>

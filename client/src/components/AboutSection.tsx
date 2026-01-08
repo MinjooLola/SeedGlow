@@ -21,6 +21,7 @@ const lectures = [
 ];
 
 const consulting = [
+  "제주대학교 RISE사업단 예비창업 BM 컨설팅",
   "해양수산부 해양수산 액셀러레이팅 프로그램 창업기업 컨설팅",
   "경상북도경제진흥원 경북 창업기업 IR 컨설팅",
   "안동시 창업경진대회 예비·초기창업자 컨설팅",
@@ -33,14 +34,12 @@ const consulting = [
   "행정안전부 청년마을(부안·의성) BM 컨설팅",
   "한국엔젤투자협회 Be 글로컬 히어로 로컬크리에이터 IR 컨설팅",
   "제주국제자유도시개발센터 Route330 ICT 액셀러레이팅 1~3기 참여기업 컨설팅",
-  "부산창조경제혁신센터 소셜벤처 글로벌 진출 지원 액셀러레이팅 기획·운영",
   "제주도청 청년창업 스케일업 액셀러레이팅 참여기업 컨설팅",
-  "제주창조경제혁신센터 ESG 오픈이노베이션 액셀러레이팅 기획·운영",
   "한국예탁결제원 K-Camp 제주 액셀러레이팅 1~3기 참여기업 컨설팅",
-  "메트라이프 Inclusion Plus 액셀러레이팅 운영",
 ];
 
 const judging = [
+  "창업진흥원 사업계획서 작성 스프린트캠프 IR 심사 및 멘토링",
   "SK하이닉스 하이로컬 이천 프로그램 IR 심사",
   "경상북도경제진흥원 경북 창업기업 IR 피칭데이 심사",
   "제주창조경제혁신센터 인베스터데이 IR 심사",
@@ -52,6 +51,8 @@ const judging = [
   "대구콘텐츠기업지원센터 IR 인베스트콘 심사",
   "현대모비스 ESG 아이디어톤·임팩트 아이디어 챌린지 심사",
   "한국임업진흥원 포레스트 소셜챌린저 심사",
+  "제주국제자유도시개발센터 Route330 ICT 액셀러레이팅 1~4기 선발심사",
+  "한국예탁결제원 K-Camp 제주 액셀러레이팅 1~3기 선발 심사",
 ];
 
 const coreWork = [
@@ -75,25 +76,17 @@ export default function AboutSection() {
         </div>
 
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-muted-foreground leading-relaxed mb-4">
+          <p className="text-muted-foreground leading-relaxed mb-6">
             SeedGlow는 '씨앗(seed)'과 '빛(glow)'을 결합한 이름입니다.
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            스타트업의 시드 단계(seed stage)를 의미하는 동시에,
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            지역 곳곳에서 자라나는 작은 혁신의 씨앗들이
-          </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
+            스타트업의 시드 단계(seed stage)를 의미하는 동시에,<br />
+            지역 곳곳에서 자라나는 작은 혁신의 씨앗들이<br />
             스스로 빛날 수 있도록 돕는다는 뜻을 담고 있습니다.
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            SeedGlow는 단순히 자문을 넘어,
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            로컬 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록
-          </p>
           <p className="text-muted-foreground leading-relaxed">
+            SeedGlow는 단순히 자문을 넘어,<br />
+            로컬 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록<br />
             성장 구조를 설계하고 함께 걸어가는 파트너가 되고자 합니다.
           </p>
         </div>

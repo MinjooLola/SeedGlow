@@ -27,8 +27,8 @@ const targetAudiences = [
 
 function PentagonWithLabels() {
   const centerX = 300;
-  const centerY = 180;
-  const outerRadius = 120;
+  const centerY = 200;
+  const outerRadius = 110;
   
   const getPoint = (index: number, radius: number) => {
     const angle = (index * 72 - 90) * (Math.PI / 180);
@@ -42,7 +42,7 @@ function PentagonWithLabels() {
   const pentagonPath = pentagonPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
 
   const getLabelPosition = (index: number, point: { x: number; y: number }) => {
-    const labelOffset = 75;
+    const labelOffset = 85;
     const angle = (index * 72 - 90) * (Math.PI / 180);
     const labelX = point.x + labelOffset * Math.cos(angle);
     const labelY = point.y + labelOffset * Math.sin(angle);
@@ -57,7 +57,7 @@ function PentagonWithLabels() {
   return (
     <div className="flex justify-center mb-12">
       <div className="relative w-full max-w-2xl">
-        <svg viewBox="0 0 600 360" className="w-full h-auto">
+        <svg viewBox="0 0 600 400" className="w-full h-auto">
           <defs>
             <linearGradient id="pentagonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.2" />
@@ -90,7 +90,7 @@ function PentagonWithLabels() {
                 <circle
                   cx={point.x}
                   cy={point.y}
-                  r="30"
+                  r="32"
                   fill="hsl(var(--card))"
                   stroke="hsl(43, 96%, 56%)"
                   strokeWidth="2"
@@ -102,22 +102,22 @@ function PentagonWithLabels() {
                   textAnchor="middle"
                   dominantBaseline="central"
                   fill="hsl(43, 96%, 56%)"
-                  fontSize="9"
+                  fontSize="11"
                   fontWeight="bold"
                 >
                   {targetAudiences[index].title}
                 </text>
                 
                 <foreignObject
-                  x={labelPos.textAnchor === "start" ? labelPos.x - 5 : labelPos.textAnchor === "end" ? labelPos.x - 115 : labelPos.x - 60}
-                  y={index === 0 ? labelPos.y - 45 : labelPos.y - 18}
-                  width="120"
-                  height="55"
+                  x={labelPos.textAnchor === "start" ? labelPos.x - 5 : labelPos.textAnchor === "end" ? labelPos.x - 135 : labelPos.x - 70}
+                  y={index === 0 ? labelPos.y - 60 : labelPos.y - 22}
+                  width="140"
+                  height="70"
                 >
                   <div 
-                    className="text-muted-foreground leading-tight"
+                    className="text-muted-foreground leading-snug"
                     style={{ 
-                      fontSize: '8px',
+                      fontSize: '11px',
                       textAlign: labelPos.textAnchor === "start" ? "left" : labelPos.textAnchor === "end" ? "right" : "center"
                     }}
                   >
