@@ -47,9 +47,8 @@ const targetAudiences = [
 
 function PentagonWithLabels() {
   const centerX = 300;
-  const centerY = 210;
-  const outerRadius = 95;
-  const labelDistance = 50;
+  const centerY = 220;
+  const outerRadius = 90;
   
   const getPoint = (index: number, radius: number) => {
     const angle = (index * 72 - 90) * (Math.PI / 180);
@@ -63,17 +62,17 @@ function PentagonWithLabels() {
   const pentagonPath = pentagonPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
 
   const labelConfigs = [
-    { align: "center", xOffset: -80, yOffset: -labelDistance - 55 },
-    { align: "left", xOffset: labelDistance, yOffset: -30 },
-    { align: "left", xOffset: labelDistance - 10, yOffset: 0 },
-    { align: "right", xOffset: -labelDistance - 160, yOffset: 0 },
-    { align: "right", xOffset: -labelDistance - 160, yOffset: -30 },
+    { align: "center", xOffset: -95, yOffset: -95, width: 190, height: 75 },
+    { align: "left", xOffset: 40, yOffset: -30, width: 170, height: 75 },
+    { align: "left", xOffset: 35, yOffset: -5, width: 170, height: 75 },
+    { align: "right", xOffset: -205, yOffset: -5, width: 170, height: 75 },
+    { align: "right", xOffset: -210, yOffset: -30, width: 170, height: 75 },
   ];
 
   return (
     <div className="flex justify-center mb-12">
       <div className="relative w-full max-w-2xl">
-        <svg viewBox="0 0 600 420" className="w-full h-auto">
+        <svg viewBox="0 0 600 440" className="w-full h-auto">
           <defs>
             <linearGradient id="pentagonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.2" />
@@ -127,11 +126,11 @@ function PentagonWithLabels() {
                 <foreignObject
                   x={point.x + config.xOffset}
                   y={point.y + config.yOffset}
-                  width="160"
-                  height="70"
+                  width={config.width}
+                  height={config.height}
                 >
                   <div 
-                    className="px-3 py-2 rounded-md bg-card/80 border border-border/50 backdrop-blur-sm"
+                    className="px-3 py-2 rounded-md bg-card/90 border border-border/50"
                     style={{ 
                       fontSize: '11px',
                       lineHeight: '1.5',
