@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import PartnersSection from "@/components/PartnersSection";
 import SuccessStories from "@/components/SuccessStories";
+import ImageSlider from "@/components/ImageSlider";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <TargetAudienceSection />
         <ServicesSection />
         <AboutSection />
+        <ImageSlider />
         <PartnersSection />
         <SuccessStories />
         <ContactSection />
