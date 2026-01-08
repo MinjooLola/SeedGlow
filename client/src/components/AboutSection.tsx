@@ -1,6 +1,5 @@
 import { Badge } from "@/components/ui/badge";
 import profileImage from "@assets/김민주_프로필_240525_1765811099605.png";
-import logoImage from "@assets/Frame_1_1767061064709.png";
 
 const lectures = [
   "SK하이닉스 하이로컬 이천 프로그램 로컬 창업 강연",
@@ -16,15 +15,9 @@ const lectures = [
   "중소벤처기업부 강한소상공인 OT 사업기획 고도화 강연",
   "안산시 공무원 디자인씽킹 문제해결 워크숍 강연",
   "제주도시재생지원센터 청년인사이트 로컬·소셜임팩트 강연",
-  "고려대학교 캠퍼스타운 디자인씽킹 워크숍 강연",
-  "제2회 국제 Smart 농업엑스포 한국ESG학회 강연",
   "행정안전부 청년마을(의성) 로컬러닝랩 강연",
-  "기업가정신재단 임팩트 스트리밍 캠퍼스 강연",
-  "제주대학교 기후위기와 ESG 강연",
-  "제주더큰내일센터 문제정의 해커톤 강연",
-  "부산지역사회보장협의체 디자인씽킹 워크숍 강연",
-  "의성군 Us:Code 청년개발자 컨퍼런스 로컬 창업 강연",
-  "로컬임팩트세미나 「Z세대가 성장하는 로컬」 강연",
+  "의성군 Us:Code 컨퍼런스 로컬 창업 세션 모더레이터",
+  "로컬임팩트세미나 「Z세대가 성장하는 로컬」 모더레이터",
 ];
 
 const consulting = [
@@ -37,15 +30,13 @@ const consulting = [
   "한국외국어대학교 글로벌창업지원단 입주기업 컨설팅",
   "제주대학교 초기창업패키지 기업진단 컨설팅",
   "신한스퀘어브릿지 제주 집합적임팩트 연합팀 컨설팅",
-  "카카오 제주임팩트챌린지 디자인씽킹 컨설팅",
   "행정안전부 청년마을(부안·의성) BM 컨설팅",
-  "제주도청 청년업토링 프로그램 소셜임팩트 분야 컨설팅",
   "한국엔젤투자협회 Be 글로컬 히어로 로컬크리에이터 IR 컨설팅",
-  "제주국제자유도시개발센터 Route330 ICT 액셀러레이팅 기획·운영",
+  "제주국제자유도시개발센터 Route330 ICT 액셀러레이팅 1~3기 참여기업 컨설팅",
   "부산창조경제혁신센터 소셜벤처 글로벌 진출 지원 액셀러레이팅 기획·운영",
-  "제주도청 청년창업 스케일업 액셀러레이팅 기획·운영",
+  "제주도청 청년창업 스케일업 액셀러레이팅 참여기업 컨설팅",
   "제주창조경제혁신센터 ESG 오픈이노베이션 액셀러레이팅 기획·운영",
-  "한국예탁결제원 K-Camp 제주 액셀러레이팅 기획·운영",
+  "한국예탁결제원 K-Camp 제주 액셀러레이팅 1~3기 참여기업 컨설팅",
   "메트라이프 Inclusion Plus 액셀러레이팅 운영",
 ];
 
@@ -84,18 +75,26 @@ export default function AboutSection() {
         </div>
 
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="flex justify-center mb-6">
-            <img
-              src={logoImage}
-              alt="SeedGlow"
-              className="h-12 w-auto"
-            />
-          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다.
+            SeedGlow는 '씨앗(seed)'과 '빛(glow)'을 결합한 이름입니다.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            스타트업의 시드 단계(seed stage)를 의미하는 동시에,
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            지역 곳곳에서 자라나는 작은 혁신의 씨앗들이
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            스스로 빛날 수 있도록 돕는다는 뜻을 담고 있습니다.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            SeedGlow는 단순히 자문을 넘어,
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            로컬 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
+            성장 구조를 설계하고 함께 걸어가는 파트너가 되고자 합니다.
           </p>
         </div>
 
