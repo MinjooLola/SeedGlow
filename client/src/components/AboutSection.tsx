@@ -110,7 +110,7 @@ export default function AboutSection() {
             
             <div className="space-y-2">
               <p className="text-primary font-semibold text-lg">시드글로우(SeedGlow) 대표 / 컨설턴트</p>
-              <p className="text-muted-foreground">(전) 스타트업 투자사·액셀러레이터 팀장/선임연구원</p>
+              <p className="text-muted-foreground">(前) 스타트업 투자사·액셀러레이터 팀장</p>
             </div>
 
             <div>

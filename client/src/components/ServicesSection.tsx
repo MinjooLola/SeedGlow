@@ -60,17 +60,17 @@ const coreActivities = [
   {
     icon: MapPin,
     title: "로컬 시장·자원 분석",
-    description: "지역별 산업 구조, 소비자 특성, 정책 환경을 분석해 '이 지역에서 가능한 성장 경로'를 정의합니다.",
+    description: "지역별 산업 구조, 소비자 특성,\n정책 환경을 분석해 '이 지역에서\n가능한 성장 경로'를 정의합니다.",
   },
   {
     icon: Network,
     title: "로컬 생태계 연결",
-    description: "지자체·기관·대학·로컬 투자자와의 실제 작동하는 네트워크를 연결합니다.",
+    description: "지자체·기관·대학·투자자와의\n실제 작동하는 네트워크를\n연결하고 협력합니다.",
   },
   {
     icon: Rocket,
     title: "실행 중심 컨설팅",
-    description: "보고서로 끝나지 않고 MVP·고객·IR까지 실행 가능한 단계로 함께 만듭니다.",
+    description: "보고서로 끝나지 않고\nMVP·고객검증·IR까지\n실행하는 과정을 함께합니다.",
   },
 ];
 
@@ -209,7 +209,7 @@ export default function ServicesSection() {
                   <activity.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="font-bold text-lg text-white mb-3">{activity.title}</h4>
-                <p className="text-amber-200/70 text-sm leading-relaxed">{activity.description}</p>
+                <p className="text-amber-200/70 text-sm leading-relaxed whitespace-pre-line">{activity.description}</p>
               </div>
             ))}
           </div>
