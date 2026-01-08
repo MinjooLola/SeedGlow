@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Briefcase, GraduationCap, Mic, ClipboardCheck } from "lucide-react";
+import { Briefcase, GraduationCap, Mic, ClipboardCheck, Sparkles, Target } from "lucide-react";
 import profileImage from "@assets/김민주_프로필_240525_1765811099605.png";
 
 const currentRole = {
@@ -89,195 +88,174 @@ const judging = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-16 md:py-24 lg:py-32 bg-card">
+    <section id="about" className="py-20 md:py-28 lg:py-36 bg-card">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-12 md:mb-16">
-          <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
-            About SeedGlow
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-16 md:mb-20">
+          <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
+            ABOUT
+          </Badge>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             회사 소개
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto mb-16 space-y-8">
-          <Card>
-            <CardContent className="p-6 md:p-8">
-              <h3 className="text-xl font-bold mb-4 text-primary">SeedGlow의 의미</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
+          <div className="space-y-8">
+            <div className="p-8 rounded-md bg-background border border-border">
+              <div className="flex items-center gap-3 mb-4">
+                <Sparkles className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-bold">SeedGlow의 의미</h3>
+              </div>
               <p className="text-muted-foreground leading-relaxed">
-                SeedGlow는 '씨앗(seed)'과 '빛(glow)'을 결합한 이름입니다. 이는 스타트업의 시드 단계(seed stage)를 의미하는 동시에, 지역 곳곳에서 자라나는 작은 혁신의 씨앗들이 스스로 빛날 수 있도록 돕는다는 뜻을 담고 있습니다.
+                SeedGlow는 '씨앗(seed)'과 '빛(glow)'을 결합한 이름입니다. 스타트업의 시드 단계(seed stage)를 의미하는 동시에, 지역 곳곳에서 자라나는 작은 혁신의 씨앗들이 스스로 빛날 수 있도록 돕는다는 뜻을 담고 있습니다.
               </p>
-            </CardContent>
-          </Card>
+            </div>
 
-          <Card>
-            <CardContent className="p-6 md:p-8">
-              <h3 className="text-xl font-bold mb-4 text-primary">미션과 전략</h3>
+            <div className="p-8 rounded-md bg-background border border-border">
+              <div className="flex items-center gap-3 mb-4">
+                <Target className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-bold">미션과 전략</h3>
+              </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   각 지역은 고유의 산업 구조, 인재 풀, 소비 문화가 다릅니다. 서울의 전략을 그대로 적용해서는 지속가능한 성장을 만들 수 없습니다.
                 </p>
-                <p>
-                  SeedGlow는 로컬의 산업·문화적 특성을 기반으로 비즈니스 모델 확립 및 고도화 → 로컬 브랜딩 → IR 전략 → 투자 연결까지 지역 맞춤형 성장 로드맵을 함께 설계합니다.
-                </p>
-                <div className="pl-4 border-l-2 border-primary my-6">
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      각 로컬의 시장 구조와 자원 흐름을 분석하고,
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      로컬 투자자·기관과의 네트워크를 연결하며,
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      초기 스타트업이 반드시 점검해야 할 실행 전략을 함께 수립합니다.
-                    </li>
-                  </ul>
-                </div>
-                <p className="font-medium text-foreground">
-                  SeedGlow는 단순히 자문을 넘어 로컬 스타트업이 스스로 빛날 수 있는 생태계를 만드는 플랫폼이 되고자 합니다.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-          <div className="lg:col-span-1">
-            <div className="sticky top-24">
-              <div className="relative mb-6">
-                <img
-                  src={profileImage}
-                  alt="김민주 대표"
-                  className="w-full max-w-sm mx-auto rounded-md object-cover aspect-[3/4]"
-                />
-              </div>
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-1">김민주</h3>
-                <p className="text-primary font-medium mb-2">대표 / 컨설턴트</p>
-                <p className="text-sm text-muted-foreground">
-                  로컬 스타트업 BM 고도화 및 IR 전문가
-                </p>
+                <ul className="space-y-2 pl-4">
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    각 로컬의 시장 구조와 자원 흐름을 분석
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    로컬 투자자·기관과의 네트워크 연결
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    초기 스타트업 맞춤 실행 전략 수립
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div className="lg:col-span-2">
-            <Card className="mb-6">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-2 rounded-md bg-primary/10">
-                    <Briefcase className="w-5 h-5 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <Badge variant="default">{currentRole.badge}</Badge>
-                      <h4 className="font-bold text-lg">{currentRole.title}</h4>
-                    </div>
-                    <p className="text-primary font-medium mb-3">{currentRole.company}</p>
-                    <ul className="space-y-2">
-                      {currentRole.responsibilities.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="mb-6">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-2 rounded-md bg-muted">
-                    <Briefcase className="w-5 h-5 text-muted-foreground" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <Badge variant="outline">{previousRole.badge}</Badge>
-                      <h4 className="font-bold text-lg">{previousRole.title}</h4>
-                    </div>
-                    <p className="text-muted-foreground font-medium mb-3">{previousRole.company}</p>
-                    <ul className="space-y-2">
-                      {previousRole.responsibilities.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Tabs defaultValue="lectures" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 mb-4">
-                <TabsTrigger value="lectures" className="gap-2">
-                  <Mic className="w-4 h-4" />
-                  강의
-                </TabsTrigger>
-                <TabsTrigger value="consulting" className="gap-2">
-                  <GraduationCap className="w-4 h-4" />
-                  컨설팅
-                </TabsTrigger>
-                <TabsTrigger value="judging" className="gap-2">
-                  <ClipboardCheck className="w-4 h-4" />
-                  심사
-                </TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="lectures">
-                <Card>
-                  <CardContent className="p-4 max-h-80 overflow-y-auto">
-                    <ul className="space-y-2">
-                      {lectures.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm py-1">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="consulting">
-                <Card>
-                  <CardContent className="p-4 max-h-80 overflow-y-auto">
-                    <ul className="space-y-2">
-                      {consulting.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm py-1">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="judging">
-                <Card>
-                  <CardContent className="p-4 max-h-80 overflow-y-auto">
-                    <ul className="space-y-2">
-                      {judging.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm py-1">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="relative mb-6 w-full max-w-md">
+              <img
+                src={profileImage}
+                alt="김민주 대표"
+                className="w-full rounded-md object-cover aspect-[4/5]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-md">
+                <h3 className="text-2xl font-bold text-white mb-1">김민주</h3>
+                <p className="text-primary font-medium">대표 / 컨설턴트</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="p-6 rounded-md bg-background border border-border">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="p-2 rounded-md bg-primary/10">
+                <Briefcase className="w-5 h-5 text-primary" />
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                  <Badge variant="default">{currentRole.badge}</Badge>
+                  <h4 className="font-bold text-lg">{currentRole.title}</h4>
+                </div>
+                <p className="text-primary font-medium mb-3">{currentRole.company}</p>
+                <ul className="space-y-2">
+                  {currentRole.responsibilities.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-6 rounded-md bg-background border border-border">
+            <div className="flex items-start gap-4">
+              <div className="p-2 rounded-md bg-muted">
+                <Briefcase className="w-5 h-5 text-muted-foreground" />
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                  <Badge variant="outline">{previousRole.badge}</Badge>
+                  <h4 className="font-bold text-lg">{previousRole.title}</h4>
+                </div>
+                <p className="text-muted-foreground font-medium mb-3">{previousRole.company}</p>
+                <ul className="space-y-2">
+                  {previousRole.responsibilities.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Tabs defaultValue="lectures" className="max-w-4xl mx-auto">
+          <TabsList className="grid w-full grid-cols-3 mb-6">
+            <TabsTrigger value="lectures" className="gap-2">
+              <Mic className="w-4 h-4" />
+              강의
+            </TabsTrigger>
+            <TabsTrigger value="consulting" className="gap-2">
+              <GraduationCap className="w-4 h-4" />
+              컨설팅
+            </TabsTrigger>
+            <TabsTrigger value="judging" className="gap-2">
+              <ClipboardCheck className="w-4 h-4" />
+              심사
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="lectures">
+            <div className="p-6 rounded-md bg-background border border-border max-h-64 overflow-y-auto">
+              <ul className="space-y-3">
+                {lectures.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="consulting">
+            <div className="p-6 rounded-md bg-background border border-border max-h-64 overflow-y-auto">
+              <ul className="space-y-3">
+                {consulting.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="judging">
+            <div className="p-6 rounded-md bg-background border border-border max-h-64 overflow-y-auto">
+              <ul className="space-y-3">
+                {judging.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );

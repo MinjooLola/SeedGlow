@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import MetricsBar from "@/components/MetricsBar";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import PartnersSection from "@/components/PartnersSection";
@@ -14,7 +13,6 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
-        <MetricsBar />
         <ServicesSection />
         <AboutSection />
         <PartnersSection />
