@@ -2,7 +2,22 @@
 
 ## Design Approach
 
-**Reference-Based Approach**: Drawing inspiration from professional business/consulting sites like Stripe, Y Combinator, and Linear - combining credibility with modern aesthetics. The design should convey trust, achievement, and forward-thinking innovation suitable for the Korean startup ecosystem.
+**Reference-Based Approach**: Modern Korean consulting website with a professional purple/violet color scheme. Inspired by career coaching and professional consulting sites with clean layouts, professional photography, and accent colors for branding.
+
+## Color Palette
+
+**Primary Color**: Purple/Violet (hsl 271 81% 56%)
+- Used for: CTA buttons, accents, highlights, icons
+- Creates a professional, trustworthy, and modern feeling
+
+**Background Colors**:
+- Hero/Dark sections: gradient from violet-950 to purple-900
+- Light sections: subtle violet-tinted backgrounds (bg-card, bg-background)
+- Card backgrounds: violet-900/30 for dark sections, bg-card for light sections
+
+**Text Colors**:
+- On dark backgrounds: white, violet-200, violet-300
+- On light backgrounds: foreground (dark purple-tinted gray), muted-foreground
 
 ## Typography
 
@@ -10,10 +25,6 @@
 - Headings: 700 weight, sizes from text-4xl to text-6xl for hierarchy
 - Body: 400 weight, text-base to text-lg for readability
 - Metrics/Numbers: 600-700 weight, text-2xl to text-5xl for impact
-
-**Secondary Font**: Source Sans Pro or similar for accents
-- Subheadings: 600 weight
-- Captions: 400 weight, text-sm
 
 ## Layout System
 
@@ -31,46 +42,49 @@
 ## Component Library
 
 ### Navigation
-Top navigation bar with SeedGlow logo (left), menu items (center/right), and prominent CTA button. Sticky on scroll with subtle backdrop blur.
+Top navigation bar with transparent background on hero, solid purple-tinted background on scroll. Sticky with high z-index.
 
-### Hero Section (Full-width, 80vh)
-Large hero image showing startup/team collaboration or modern office environment with overlay gradient. SeedGlow logo prominently displayed with headline "스타트업 성장의 파트너" and subtitle describing their mission. Two CTAs: primary "상담 신청하기" and secondary "성공 사례 보기".
+### Hero Section (Full-width, min-h-screen)
+- Background: gradient from violet-950 via purple-900
+- Professional photo on right side with gradient overlay
+- Left side: tagline, headline, description, CTA button
+- Bottom metrics bar with stats
 
-### Success Metrics Bar
-Horizontal stats display with large numbers (300+, 26팀) and descriptive labels. Use subtle background differentiation with icons.
+### Section Styling
 
-### Services Section (3-column grid)
-Cards with icons, titles, and descriptions for consulting services and investment support. Each card includes a subtle hover lift effect and "자세히 보기" link.
+**Dark Sections** (Services, Success Stories):
+- Background: gradient from violet-950 to purple-950
+- Cards: bg-violet-900/30 with border-violet-700/50
+- Text: white for headings, violet-200/80 for descriptions
 
-### Company Introduction
-Two-column layout (60/40 split): Left side contains company story and expertise text, right side features team photo or office image. Include founding year, mission statement, and core values.
+**Light Sections** (Target Audience, About, Contact):
+- Background: bg-background or bg-card
+- Cards: bg-card with border-border
+- Standard foreground/muted-foreground text colors
 
-### Success Stories Showcase
-Card-based grid (2-3 columns) featuring client logos, brief case descriptions, and key results. Each story includes company industry tag and investment amount/growth metric.
+### Cards and Containers
+- Border radius: rounded-md (small, not pill-shaped)
+- Borders: subtle violet-700/50 on dark, border-border on light
+- Hover: use hover-elevate utility class
 
-### Contact Form Section
-Two-column layout: Left side has form (name, email, phone, company, inquiry type, message), right side displays office information, contact details, and small map placeholder or office photo.
-
-### Footer
-Multi-column layout with company info, quick links, social media icons, address, and copyright. Include newsletter signup field.
+### Buttons
+- Primary: Purple background (primary color)
+- Outline: For secondary actions, with backdrop blur on hero
+- Ghost: For navigation items
 
 ## Images
 
-**Hero Image**: Professional photo of diverse startup team collaborating in modern office or coworking space, or abstract visualization of growth/connectivity. Aspect ratio 16:9, positioned as full-width background with gradient overlay.
+**Hero Image**: Professional photo of CEO/consultant presenting, positioned on right side with gradient overlay for text readability.
 
-**Company Section**: Team photo or office environment showing SeedGlow's professional workspace (approximately 600x400px).
-
-**Success Stories**: Client company logos and representative product/service images for case studies.
-
-**Contact Section**: Office exterior or interior photo, or map visualization showing Seoul location.
+**Profile Images**: Rounded-md corners, professional headshots
 
 ## Animations
 
 Minimal and purposeful:
 - Fade-in-up on scroll for section entries
 - Smooth number counting for metrics
-- Subtle hover effects on cards (transform: translateY(-4px))
-- Page transition fade only
+- Subtle hover effects on cards (hover-elevate utility)
+- Scroll animation for partner logos
 
 ## Korean Language Optimization
 

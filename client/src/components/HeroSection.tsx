@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@assets/DSC03795_1767870496681.JPG";
+import heroImage from "@assets/hero-image.jpg";
 
 const metrics = [
   { value: "300+", label: "로컬 스타트업 컨설팅" },

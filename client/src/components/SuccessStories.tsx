@@ -81,7 +81,7 @@ export default function SuccessStories() {
   };
 
   return (
-    <section id="success" className="py-20 md:py-28 lg:py-36 bg-zinc-900 dark:bg-zinc-950">
+    <section id="success" className="py-20 md:py-28 lg:py-36 bg-gradient-to-b from-purple-950 to-violet-950">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-16 md:mb-20">
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
@@ -90,7 +90,7 @@ export default function SuccessStories() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             컨설팅 후기
           </h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="text-violet-200/80 text-lg max-w-2xl mx-auto">
             SeedGlow와 함께 성장하고 있는 팀들의 이야기
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function SuccessStories() {
                 className="w-[85%] md:w-[45%] lg:w-[32%] flex-shrink-0 snap-start"
                 data-testid={`card-testimonial-${index}`}
               >
-                <div className="h-full p-8 rounded-md bg-zinc-800/50 border border-zinc-700">
+                <div className="h-full p-8 rounded-md bg-violet-900/30 border border-violet-700/50">
                   <div className="flex items-start gap-3 mb-4">
                     <Quote className="w-6 h-6 text-primary flex-shrink-0" />
                     <Badge variant="secondary" className="text-xs">
@@ -128,7 +128,7 @@ export default function SuccessStories() {
               size="icon"
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
-              className="bg-zinc-800 border-zinc-700 text-white disabled:opacity-30"
+              className="bg-violet-900/50 border-violet-700/50 text-white disabled:opacity-30"
               data-testid="button-prev-testimonial"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -138,7 +138,7 @@ export default function SuccessStories() {
               size="icon"
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
-              className="bg-zinc-800 border-zinc-700 text-white disabled:opacity-30"
+              className="bg-violet-900/50 border-violet-700/50 text-white disabled:opacity-30"
               data-testid="button-next-testimonial"
             >
               <ChevronRight className="w-4 h-4" />

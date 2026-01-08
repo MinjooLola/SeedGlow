@@ -84,7 +84,7 @@ const coreActivities = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-zinc-900 dark:bg-zinc-950">
+    <section id="services" className="bg-gradient-to-b from-violet-950 to-purple-950">
       <div className="py-20 md:py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
@@ -94,7 +94,7 @@ export default function ServicesSection() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               로컬 스타트업 성장 로드맵
             </h2>
-            <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+            <p className="text-violet-200/80 text-lg max-w-2xl mx-auto">
               SeedGlow는 스타트업의 단계에 따라 3단계 성장 구조로 개입합니다.
             </p>
           </div>
@@ -103,7 +103,7 @@ export default function ServicesSection() {
             {roadmapSteps.map((step, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-md bg-zinc-800/50 border border-zinc-700 hover-elevate"
+                className="group p-8 rounded-md bg-violet-900/30 border border-violet-700/50 hover-elevate"
                 data-testid={`card-roadmap-${index}`}
               >
                 <div className="flex items-start gap-4 mb-6">
@@ -117,21 +117,21 @@ export default function ServicesSection() {
                 
                 <ul className="space-y-2 mb-6">
                   {step.details.map((detail, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-zinc-300">
+                    <li key={i} className="flex items-start gap-2 text-sm text-violet-100">
                       <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                       {detail}
                     </li>
                   ))}
                 </ul>
 
-                <div className="pt-4 border-t border-zinc-700">
+                <div className="pt-4 border-t border-violet-700/50">
                   <div className="flex items-center gap-2 mb-3">
                     <FileText className="w-4 h-4 text-primary" />
                     <span className="text-sm font-medium text-white">결과물</span>
                   </div>
                   <ul className="space-y-1">
                     {step.results.map((result, i) => (
-                      <li key={i} className="text-sm text-zinc-400">
+                      <li key={i} className="text-sm text-violet-200/70">
                         • {result}
                       </li>
                     ))}
@@ -154,14 +154,14 @@ export default function ServicesSection() {
             {coreActivities.map((activity, index) => (
               <div
                 key={index}
-                className="text-center p-8 rounded-md bg-zinc-800/50 border border-zinc-700 hover-elevate"
+                className="text-center p-8 rounded-md bg-violet-900/30 border border-violet-700/50 hover-elevate"
                 data-testid={`card-activity-${index}`}
               >
                 <div className="mx-auto p-4 rounded-full bg-primary/10 w-fit mb-5">
                   <activity.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="font-bold text-lg text-white mb-3">{activity.title}</h4>
-                <p className="text-zinc-400 text-sm leading-relaxed">{activity.description}</p>
+                <p className="text-violet-200/70 text-sm leading-relaxed">{activity.description}</p>
               </div>
             ))}
           </div>
