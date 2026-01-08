@@ -1,8 +1,5 @@
 import { Badge } from "@/components/ui/badge";
 import {
-  Lightbulb,
-  Palette,
-  TrendingUp,
   MapPin,
   Network,
   Rocket,
@@ -11,14 +8,13 @@ import {
 const roadmapSteps = [
   {
     step: "01",
-    icon: Lightbulb,
     title: "BM 확립 및 고도화",
     subtitle: "\"이 사업은 왜 존재하는가\"를 구조화합니다",
     details: [
       "시장·고객·문제 정의 재정의",
       "수익 구조 및 단가 설계",
-      "경쟁 구조 분석 및 차별화 포인트 도출",
-      "지원사업용 BM → 투자 가능한 BM 전환",
+      "경쟁 구조 분석·차별화 포인트 도출",
+      "지원사업용 BM → 투자 가능한 BM",
     ],
     results: [
       "구조화된 BM 캔버스",
@@ -28,7 +24,6 @@ const roadmapSteps = [
   },
   {
     step: "02",
-    icon: Palette,
     title: "로컬 브랜딩",
     subtitle: "로컬을 '스토리'가 아닌 '전략'으로 씁니다",
     details: [
@@ -45,7 +40,6 @@ const roadmapSteps = [
   },
   {
     step: "03",
-    icon: TrendingUp,
     title: "IR 전략 및 투자 연계",
     subtitle: "투자자가 이해하는 언어로 바꿉니다",
     details: [
@@ -124,11 +118,8 @@ function GrowthGraphHorizontal() {
             className="text-center p-6 rounded-md bg-amber-900/30 border border-amber-700/30"
             data-testid={`card-roadmap-${index}`}
           >
-            <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="flex items-center justify-center mb-4">
               <span className="text-3xl font-bold text-primary">{step.step}</span>
-              <div className="p-2 rounded-md bg-primary/10">
-                <step.icon className="w-5 h-5 text-primary" />
-              </div>
             </div>
             <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
             <p className="text-primary/80 text-sm mb-4">{step.subtitle}</p>

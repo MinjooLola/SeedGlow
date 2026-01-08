@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import profileImage from "@assets/김민주_프로필_240525_1765811099605.png";
+import logoImage from "@assets/Frame_1_1767061064709.png";
 
 const lectures = [
   "SK하이닉스 하이로컬 이천 프로그램 로컬 창업 강연",
@@ -83,30 +84,43 @@ export default function AboutSection() {
         </div>
 
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h3 className="text-xl md:text-2xl font-bold mb-4 text-primary">SeedGlow</h3>
+          <div className="flex justify-center mb-6">
+            <img
+              src={logoImage}
+              alt="SeedGlow"
+              className="h-12 w-auto"
+            />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다. 시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
+            'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            서울의 공식은 로컬에서 통하지 않습니다.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다. 서울의 공식은 로컬에서 통하지 않습니다. SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계, 실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
+            SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계, 실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
-          <div className="flex flex-col items-center lg:items-start">
-            <div className="relative w-full max-w-md">
-              <img
-                src={profileImage}
-                alt="김민주 대표"
-                className="w-full rounded-md object-cover aspect-[4/5]"
-              />
-            </div>
+        <div className="flex flex-col md:flex-row gap-8 lg:gap-12 mb-20 items-center">
+          <div className="w-full md:w-1/3 flex-shrink-0">
+            <img
+              src={profileImage}
+              alt="김민주 대표"
+              className="w-full max-w-xs mx-auto rounded-md object-cover aspect-[4/5]"
+            />
           </div>
 
-          <div className="flex flex-col justify-center space-y-6">
+          <div className="w-full md:w-2/3 space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold">김민주</h3>
             
-            <div>
+            <div className="space-y-2">
               <p className="text-primary font-semibold text-lg">시드글로우(SeedGlow) 대표 / 컨설턴트</p>
               <p className="text-muted-foreground">(전) 스타트업 투자사·액셀러레이터 팀장/선임연구원</p>
             </div>

@@ -25,11 +25,10 @@ const targetAudiences = [
   },
 ];
 
-function LargePentagonWithPoints() {
-  const centerX = 200;
-  const centerY = 180;
-  const outerRadius = 150;
-  const innerRadius = 85;
+function PentagonWithLabels() {
+  const centerX = 300;
+  const centerY = 220;
+  const outerRadius = 160;
   
   const getPoint = (index: number, radius: number) => {
     const angle = (index * 72 - 90) * (Math.PI / 180);
@@ -42,14 +41,27 @@ function LargePentagonWithPoints() {
   const pentagonPoints = Array.from({ length: 5 }, (_, i) => getPoint(i, outerRadius));
   const pentagonPath = pentagonPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
 
+  const getLabelPosition = (index: number, point: { x: number; y: number }) => {
+    const labelOffset = 90;
+    const angle = (index * 72 - 90) * (Math.PI / 180);
+    const labelX = point.x + labelOffset * Math.cos(angle);
+    const labelY = point.y + labelOffset * Math.sin(angle);
+    
+    let textAnchor = "middle";
+    if (index === 1 || index === 2) textAnchor = "start";
+    if (index === 3 || index === 4) textAnchor = "end";
+    
+    return { x: labelX, y: labelY, textAnchor };
+  };
+
   return (
     <div className="flex justify-center mb-12">
-      <div className="relative w-full max-w-lg">
-        <svg viewBox="0 0 400 360" className="w-full h-auto">
+      <div className="relative w-full max-w-3xl">
+        <svg viewBox="0 0 600 440" className="w-full h-auto">
           <defs>
             <linearGradient id="pentagonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.15" />
-              <stop offset="100%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.05" />
+              <stop offset="0%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.1" />
             </linearGradient>
           </defs>
           
@@ -61,66 +73,86 @@ function LargePentagonWithPoints() {
             strokeOpacity="0.5"
           />
           
-          {pentagonPoints.map((point, index) => (
-            <g key={index}>
-              <line
-                x1={centerX}
-                y1={centerY}
-                x2={point.x}
-                y2={point.y}
-                stroke="hsl(43, 96%, 56%)"
-                strokeWidth="1"
-                strokeOpacity="0.3"
-              />
-              
-              <circle
-                cx={point.x}
-                cy={point.y}
-                r="32"
-                fill="hsl(var(--card))"
-                stroke="hsl(43, 96%, 56%)"
-                strokeWidth="2"
-              />
-              
-              <text
-                x={point.x}
-                y={point.y}
-                textAnchor="middle"
-                dominantBaseline="central"
-                fill="hsl(43, 96%, 56%)"
-                fontSize="11"
-                fontWeight="bold"
-              >
-                {targetAudiences[index].title}
-              </text>
-            </g>
-          ))}
+          {pentagonPoints.map((point, index) => {
+            const labelPos = getLabelPosition(index, point);
+            return (
+              <g key={index}>
+                <line
+                  x1={centerX}
+                  y1={centerY}
+                  x2={point.x}
+                  y2={point.y}
+                  stroke="hsl(43, 96%, 56%)"
+                  strokeWidth="1"
+                  strokeOpacity="0.3"
+                />
+                
+                <circle
+                  cx={point.x}
+                  cy={point.y}
+                  r="36"
+                  fill="hsl(var(--card))"
+                  stroke="hsl(43, 96%, 56%)"
+                  strokeWidth="2"
+                />
+                
+                <text
+                  x={point.x}
+                  y={point.y}
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fill="hsl(43, 96%, 56%)"
+                  fontSize="10"
+                  fontWeight="bold"
+                >
+                  {targetAudiences[index].title}
+                </text>
+                
+                <foreignObject
+                  x={labelPos.textAnchor === "start" ? labelPos.x - 10 : labelPos.textAnchor === "end" ? labelPos.x - 130 : labelPos.x - 70}
+                  y={index === 0 ? labelPos.y - 50 : labelPos.y - 20}
+                  width="140"
+                  height="60"
+                >
+                  <div 
+                    className="text-muted-foreground leading-tight"
+                    style={{ 
+                      fontSize: '9px',
+                      textAlign: labelPos.textAnchor === "start" ? "left" : labelPos.textAnchor === "end" ? "right" : "center"
+                    }}
+                  >
+                    {targetAudiences[index].description}
+                  </div>
+                </foreignObject>
+              </g>
+            );
+          })}
           
           <circle
             cx={centerX}
             cy={centerY}
-            r="40"
+            r="45"
             fill="hsl(43, 96%, 56%)"
-            fillOpacity="0.15"
+            fillOpacity="0.4"
             stroke="hsl(43, 96%, 56%)"
-            strokeWidth="2"
+            strokeWidth="3"
           />
           <text
             x={centerX}
             y={centerY - 8}
             textAnchor="middle"
-            fill="hsl(43, 96%, 56%)"
-            fontSize="12"
+            fill="hsl(43, 96%, 40%)"
+            fontSize="14"
             fontWeight="bold"
           >
             성장
           </text>
           <text
             x={centerX}
-            y={centerY + 8}
+            y={centerY + 10}
             textAnchor="middle"
-            fill="hsl(43, 96%, 56%)"
-            fontSize="12"
+            fill="hsl(43, 96%, 40%)"
+            fontSize="14"
             fontWeight="bold"
           >
             정체
@@ -150,21 +182,7 @@ export default function TargetAudienceSection() {
           </h2>
         </div>
 
-        <LargePentagonWithPoints />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
-          {targetAudiences.map((item, index) => (
-            <div
-              key={index}
-              className="p-4 rounded-md bg-card border border-border text-center"
-              data-testid={`card-target-${index}`}
-            >
-              <p className="text-muted-foreground text-xs leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
+        <PentagonWithLabels />
 
         <div className="text-center p-8 rounded-md bg-card border border-border">
           <p className="text-lg md:text-xl mb-6">
