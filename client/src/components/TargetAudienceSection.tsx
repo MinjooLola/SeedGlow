@@ -5,30 +5,51 @@ import { ArrowRight } from "lucide-react";
 const targetAudiences = [
   {
     title: "BM 정체형",
-    description: "지역 기반으로 사업을 시작했지만 BM이 '로컬 지원사업용' 수준에 머물러 있는 팀",
+    descriptionLines: [
+      "지역 기반으로 사업을 시작했지만",
+      "BM이 '로컬 지원사업용' 수준에",
+      "머물러 있는 팀"
+    ],
   },
   {
     title: "시장 불명확형",
-    description: "제품·서비스는 있으나 시장 정의와 고객 세분화가 불명확한 팀",
+    descriptionLines: [
+      "제품·서비스는 있으나",
+      "시장과 고객 세분화가",
+      "불명확한 팀"
+    ],
   },
   {
     title: "스토리 단절형",
-    description: "지역 자원·스토리는 있지만 사업성과 투자 논리로 연결되지 않는 팀",
+    descriptionLines: [
+      "지역 자원·스토리는 있지만",
+      "사업성과 투자 논리로",
+      "연결되지 않는 팀"
+    ],
   },
   {
     title: "IR 미설득형",
-    description: "IR 자료는 만들었으나 왜 투자받아야 하는지 설명되지 않는 팀",
+    descriptionLines: [
+      "IR 자료는 만들었으나",
+      "왜 투자받아야 하는지",
+      "설명되지 않는 팀"
+    ],
   },
   {
     title: "전략 부재형",
-    description: "지자체·기관 사업은 반복 참여하지만 스스로 성장 전략을 만들지 못한 팀",
+    descriptionLines: [
+      "지자체·기관 사업은",
+      "반복 참여하지만",
+      "스스로 성장 전략을 만들지 못한 팀"
+    ],
   },
 ];
 
 function PentagonWithLabels() {
   const centerX = 300;
   const centerY = 210;
-  const outerRadius = 100;
+  const outerRadius = 95;
+  const labelDistance = 50;
   
   const getPoint = (index: number, radius: number) => {
     const angle = (index * 72 - 90) * (Math.PI / 180);
@@ -42,11 +63,11 @@ function PentagonWithLabels() {
   const pentagonPath = pentagonPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
 
   const labelConfigs = [
-    { offsetX: -75, offsetY: -75, width: 150, height: 60, align: "center" },
-    { offsetX: 45, offsetY: -25, width: 155, height: 55, align: "left" },
-    { offsetX: 25, offsetY: 10, width: 155, height: 55, align: "left" },
-    { offsetX: -180, offsetY: 10, width: 155, height: 55, align: "right" },
-    { offsetX: -200, offsetY: -25, width: 155, height: 55, align: "right" },
+    { align: "center", xOffset: -80, yOffset: -labelDistance - 50 },
+    { align: "left", xOffset: labelDistance, yOffset: -25 },
+    { align: "left", xOffset: labelDistance - 10, yOffset: 5 },
+    { align: "right", xOffset: -labelDistance - 160, yOffset: 5 },
+    { align: "right", xOffset: -labelDistance - 160, yOffset: -25 },
   ];
 
   return (
@@ -85,7 +106,7 @@ function PentagonWithLabels() {
                 <circle
                   cx={point.x}
                   cy={point.y}
-                  r="30"
+                  r="28"
                   fill="hsl(var(--card))"
                   stroke="hsl(43, 96%, 56%)"
                   strokeWidth="2"
@@ -104,19 +125,25 @@ function PentagonWithLabels() {
                 </text>
                 
                 <foreignObject
-                  x={point.x + config.offsetX}
-                  y={point.y + config.offsetY}
-                  width={config.width}
-                  height={config.height}
+                  x={point.x + config.xOffset}
+                  y={point.y + config.yOffset}
+                  width="160"
+                  height="60"
                 >
                   <div 
-                    className="text-muted-foreground leading-snug"
+                    className="text-muted-foreground"
                     style={{ 
                       fontSize: '11px',
+                      lineHeight: '1.4',
                       textAlign: config.align as "left" | "right" | "center"
                     }}
                   >
-                    {targetAudiences[index].description}
+                    {targetAudiences[index].descriptionLines.map((line, i) => (
+                      <span key={i}>
+                        {line}
+                        {i < targetAudiences[index].descriptionLines.length - 1 && <br />}
+                      </span>
+                    ))}
                   </div>
                 </foreignObject>
               </g>
@@ -126,7 +153,7 @@ function PentagonWithLabels() {
           <circle
             cx={centerX}
             cy={centerY}
-            r="35"
+            r="32"
             fill="hsl(43, 96%, 56%)"
             fillOpacity="0.5"
             stroke="hsl(43, 96%, 56%)"
