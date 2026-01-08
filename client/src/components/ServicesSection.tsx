@@ -9,7 +9,7 @@ const roadmapSteps = [
   {
     step: "01",
     title: "BM 확립 및 고도화",
-    subtitle: "좋은 아이디어를, 사라지지 않는 사업으로 바꿉니다",
+    subtitleLines: ["좋은 아이디어를,", "사라지지 않는 사업으로 바꿉니다"],
     details: [
       "시장·고객·문제 정의 재정의",
       "수익 구조 및 단가 설계",
@@ -25,7 +25,7 @@ const roadmapSteps = [
   {
     step: "02",
     title: "로컬 브랜딩",
-    subtitle: "로컬을 '스토리'가 아닌 '전략'으로 씁니다",
+    subtitleLines: ["로컬을 '스토리'를 넘어", "'전략'으로 씁니다"],
     details: [
       "지역 자원의 사업적 활용 방식 설계",
       "로컬 정체성 기반 브랜드 포지셔닝",
@@ -41,7 +41,7 @@ const roadmapSteps = [
   {
     step: "03",
     title: "IR 전략 및 투자 연계",
-    subtitle: "투자자가 이해하는 언어로 바꿉니다",
+    subtitleLines: ["투자자의 질문에 먼저 답하는 IR,", "투자 검토 테이블에 오르는 언어로 바꿉니다"],
     details: [
       "IR 덱 구조 설계 및 스토리라인 정리",
       "투자 포인트 및 리스크 정리",
@@ -122,7 +122,14 @@ function GrowthGraphHorizontal() {
               <span className="text-3xl font-bold text-primary">{step.step}</span>
             </div>
             <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
-            <p className="text-primary/80 text-sm mb-4">{step.subtitle}</p>
+            <div className="text-primary/80 text-sm mb-4">
+              {step.subtitleLines.map((line, i) => (
+                <span key={i}>
+                  {line}
+                  {i < step.subtitleLines.length - 1 && <br />}
+                </span>
+              ))}
+            </div>
             
             <ul className="text-left space-y-1 mb-4">
               {step.details.map((detail, i) => (

@@ -27,8 +27,8 @@ const targetAudiences = [
 
 function PentagonWithLabels() {
   const centerX = 300;
-  const centerY = 200;
-  const outerRadius = 110;
+  const centerY = 210;
+  const outerRadius = 100;
   
   const getPoint = (index: number, radius: number) => {
     const angle = (index * 72 - 90) * (Math.PI / 180);
@@ -41,23 +41,18 @@ function PentagonWithLabels() {
   const pentagonPoints = Array.from({ length: 5 }, (_, i) => getPoint(i, outerRadius));
   const pentagonPath = pentagonPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
 
-  const getLabelPosition = (index: number, point: { x: number; y: number }) => {
-    const labelOffset = 85;
-    const angle = (index * 72 - 90) * (Math.PI / 180);
-    const labelX = point.x + labelOffset * Math.cos(angle);
-    const labelY = point.y + labelOffset * Math.sin(angle);
-    
-    let textAnchor = "middle";
-    if (index === 1 || index === 2) textAnchor = "start";
-    if (index === 3 || index === 4) textAnchor = "end";
-    
-    return { x: labelX, y: labelY, textAnchor };
-  };
+  const labelConfigs = [
+    { offsetX: -75, offsetY: -75, width: 150, height: 60, align: "center" },
+    { offsetX: 45, offsetY: -25, width: 155, height: 55, align: "left" },
+    { offsetX: 25, offsetY: 10, width: 155, height: 55, align: "left" },
+    { offsetX: -180, offsetY: 10, width: 155, height: 55, align: "right" },
+    { offsetX: -200, offsetY: -25, width: 155, height: 55, align: "right" },
+  ];
 
   return (
     <div className="flex justify-center mb-12">
       <div className="relative w-full max-w-2xl">
-        <svg viewBox="0 0 600 400" className="w-full h-auto">
+        <svg viewBox="0 0 600 420" className="w-full h-auto">
           <defs>
             <linearGradient id="pentagonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="hsl(43, 96%, 56%)" stopOpacity="0.2" />
@@ -74,7 +69,7 @@ function PentagonWithLabels() {
           />
           
           {pentagonPoints.map((point, index) => {
-            const labelPos = getLabelPosition(index, point);
+            const config = labelConfigs[index];
             return (
               <g key={index}>
                 <line
@@ -90,7 +85,7 @@ function PentagonWithLabels() {
                 <circle
                   cx={point.x}
                   cy={point.y}
-                  r="32"
+                  r="30"
                   fill="hsl(var(--card))"
                   stroke="hsl(43, 96%, 56%)"
                   strokeWidth="2"
@@ -102,23 +97,23 @@ function PentagonWithLabels() {
                   textAnchor="middle"
                   dominantBaseline="central"
                   fill="hsl(43, 96%, 56%)"
-                  fontSize="11"
+                  fontSize="10"
                   fontWeight="bold"
                 >
                   {targetAudiences[index].title}
                 </text>
                 
                 <foreignObject
-                  x={labelPos.textAnchor === "start" ? labelPos.x - 5 : labelPos.textAnchor === "end" ? labelPos.x - 135 : labelPos.x - 70}
-                  y={index === 0 ? labelPos.y - 60 : labelPos.y - 22}
-                  width="140"
-                  height="70"
+                  x={point.x + config.offsetX}
+                  y={point.y + config.offsetY}
+                  width={config.width}
+                  height={config.height}
                 >
                   <div 
                     className="text-muted-foreground leading-snug"
                     style={{ 
                       fontSize: '11px',
-                      textAlign: labelPos.textAnchor === "start" ? "left" : labelPos.textAnchor === "end" ? "right" : "center"
+                      textAlign: config.align as "left" | "right" | "center"
                     }}
                   >
                     {targetAudiences[index].description}
@@ -131,7 +126,7 @@ function PentagonWithLabels() {
           <circle
             cx={centerX}
             cy={centerY}
-            r="38"
+            r="35"
             fill="hsl(43, 96%, 56%)"
             fillOpacity="0.5"
             stroke="hsl(43, 96%, 56%)"
@@ -142,7 +137,7 @@ function PentagonWithLabels() {
             y={centerY - 8}
             textAnchor="middle"
             fill="hsl(43, 96%, 35%)"
-            fontSize="13"
+            fontSize="12"
             fontWeight="bold"
           >
             성장
@@ -152,7 +147,7 @@ function PentagonWithLabels() {
             y={centerY + 10}
             textAnchor="middle"
             fill="hsl(43, 96%, 35%)"
-            fontSize="13"
+            fontSize="12"
             fontWeight="bold"
           >
             정체
