@@ -103,7 +103,10 @@ export default function AboutSection() {
           </div>
 
           <div className="w-full md:w-2/3 space-y-6">
-            <h3 className="text-2xl md:text-3xl font-bold">김민주</h3>
+            <div>
+              <p className="text-sm text-primary font-medium mb-1">Founder & CEO</p>
+              <h3 className="text-2xl md:text-3xl font-bold">김민주</h3>
+            </div>
             
             <div className="space-y-2">
               <p className="text-primary font-semibold text-lg">시드글로우(SeedGlow) 대표 / 컨설턴트</p>
