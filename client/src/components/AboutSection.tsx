@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Briefcase, GraduationCap, Mic, ClipboardCheck, Sparkles, Target } from "lucide-react";
+import { Briefcase, GraduationCap, Mic, ClipboardCheck, Sparkles, Target, CheckCircle } from "lucide-react";
 import profileImage from "@assets/김민주_프로필_240525_1765811099605.png";
 
 const currentRole = {
@@ -8,7 +8,7 @@ const currentRole = {
   badge: "현",
   company: "시드글로우(SeedGlow)",
   responsibilities: [
-    "로컬 스타트업 비즈니스모델(BM) 고도화, 브랜딩, IR 전문 컨설팅 및 강의",
+    "로컬 스타트업 BM 고도화·브랜딩·IR 컨설팅",
     "스타트업 IR 심사 및 투자 연계",
   ],
 };
@@ -18,12 +18,19 @@ const previousRole = {
   badge: "전",
   company: "엠와이소셜컴퍼니(MYSC)",
   responsibilities: [
-    "액셀러레이팅 프로그램 기획 및 운영 총괄(Project Manager)",
-    "스타트업 컨설팅 및 투자심사 (예비~Series A)",
-    "BM고도화, IR 피칭, 투자 전략, 디자인씽킹, ESG 강의 진행",
-    "기관협력 오픈이노베이션 프로그램 기획 및 운영",
+    "액셀러레이팅 프로그램 기획·운영 총괄",
+    "예비~Series A 투자심사",
+    "BM·IR·ESG·디자인씽킹 강의",
   ],
 };
+
+const lectureHighlights = [
+  "SK하이닉스 하이로컬 이천 프로그램",
+  "중소벤처기업부 강한소상공인 / 장인학교",
+  "제주·대구·경북 창조경제혁신센터",
+  "연세대 글로벌 MBA / 고려대 / 동국대 / 동덕여대",
+  "행정안전부 청년마을 / 지자체·공공기관 다수",
+];
 
 const lectures = [
   "SK하이닉스 하이로컬 이천 프로그램 로컬 창업 강연",
@@ -92,7 +99,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-16 md:mb-20">
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
-            ABOUT
+            ABOUT SEEDGLOW
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             회사 소개
@@ -107,33 +114,41 @@ export default function AboutSection() {
                 <h3 className="text-xl font-bold">SeedGlow의 의미</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                SeedGlow는 '씨앗(seed)'과 '빛(glow)'을 결합한 이름입니다. 스타트업의 시드 단계(seed stage)를 의미하는 동시에, 지역 곳곳에서 자라나는 작은 혁신의 씨앗들이 스스로 빛날 수 있도록 돕는다는 뜻을 담고 있습니다.
+                SeedGlow는 'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다. 시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
               </p>
             </div>
 
             <div className="p-8 rounded-md bg-background border border-border">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-bold">미션과 전략</h3>
+                <h3 className="text-xl font-bold">우리가 하는 일의 기준</h3>
               </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  각 지역은 고유의 산업 구조, 인재 풀, 소비 문화가 다릅니다. 서울의 전략을 그대로 적용해서는 지속가능한 성장을 만들 수 없습니다.
+                  지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다. 서울의 공식은 로컬에서 통하지 않습니다.
                 </p>
-                <ul className="space-y-2 pl-4">
+                <p className="font-medium text-foreground">SeedGlow는</p>
+                <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    각 로컬의 시장 구조와 자원 흐름을 분석
+                    <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                    지역 시장 구조 분석
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    로컬 투자자·기관과의 네트워크 연결
+                    <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                    로컬 자원 기반 BM 설계
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    초기 스타트업 맞춤 실행 전략 수립
+                    <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                    실행 가능한 성장 전략
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                    투자로 이어지는 IR 구조
                   </li>
                 </ul>
+                <p>
+                  를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
+                </p>
               </div>
             </div>
           </div>
@@ -148,6 +163,7 @@ export default function AboutSection() {
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-md">
                 <h3 className="text-2xl font-bold text-white mb-1">김민주</h3>
                 <p className="text-primary font-medium">대표 / 컨설턴트</p>
+                <p className="text-white/80 text-sm">로컬 스타트업 BM·IR 전문</p>
               </div>
             </div>
           </div>
@@ -198,6 +214,17 @@ export default function AboutSection() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="p-6 rounded-md bg-background border border-border mb-12">
+          <h4 className="font-bold text-lg mb-4">강의 · 컨설팅 · 심사 이력 (발췌)</h4>
+          <div className="flex flex-wrap gap-2">
+            {lectureHighlights.map((item, i) => (
+              <Badge key={i} variant="secondary" className="text-sm">
+                {item}
+              </Badge>
+            ))}
           </div>
         </div>
 

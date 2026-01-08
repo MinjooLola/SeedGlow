@@ -7,6 +7,7 @@ import {
   Network,
   Rocket,
   CheckCircle,
+  FileText,
 } from "lucide-react";
 
 const roadmapSteps = [
@@ -14,40 +15,70 @@ const roadmapSteps = [
     step: "01",
     icon: Lightbulb,
     title: "BM 확립 및 고도화",
-    description: "비즈니스 모델을 체계적으로 정립하고 투자 유치가 가능한 수준으로 고도화합니다.",
-    details: ["시장 분석 및 고객 검증", "수익 모델 설계", "경쟁력 분석 및 차별화 전략"],
+    subtitle: "\"이 사업은 왜 존재하는가\"를 구조화합니다",
+    details: [
+      "시장·고객·문제 정의 재정의",
+      "수익 구조 및 단가 설계",
+      "경쟁 구조 분석 및 차별화 포인트 도출",
+      "지원사업용 BM → 투자 가능한 BM 전환",
+    ],
+    results: [
+      "구조화된 BM 캔버스",
+      "핵심 가설 및 검증 전략",
+      "투자자 관점 사업 설명 구조",
+    ],
   },
   {
     step: "02",
     icon: Palette,
     title: "로컬 브랜딩",
-    description: "지역의 고유한 자원과 문화를 반영한 브랜드 아이덴티티를 수립합니다.",
-    details: ["로컬 스토리텔링 개발", "지역 특화 브랜드 포지셔닝", "로컬 마케팅 전략 수립"],
+    subtitle: "로컬을 '스토리'가 아닌 '전략'으로 씁니다",
+    details: [
+      "지역 자원의 사업적 활용 방식 설계",
+      "로컬 정체성 기반 브랜드 포지셔닝",
+      "타깃 고객 관점 메시지 정리",
+      "로컬 시장 맞춤 마케팅 구조 설계",
+    ],
+    results: [
+      "브랜드 핵심 메시지",
+      "로컬 차별화 포인트 정의",
+      "시장 진입 전략",
+    ],
   },
   {
     step: "03",
     icon: TrendingUp,
     title: "IR 전략 및 투자 연계",
-    description: "투자자가 매력을 느끼는 IR 자료와 피칭 전략을 수립하고 투자자를 연결합니다.",
-    details: ["IR 덱 작성 및 스토리텔링", "투자 포인트 도출 및 피칭 코칭", "투자자 네트워크 연결"],
+    subtitle: "투자자가 이해하는 언어로 바꿉니다",
+    details: [
+      "IR 덱 구조 설계 및 스토리라인 정리",
+      "투자 포인트 및 리스크 정리",
+      "피칭 코칭 및 질의응답 대응 전략",
+      "단계·분야별 투자자 연결",
+    ],
+    results: [
+      "IR Deck (투자자 기준)",
+      "피칭 스크립트",
+      "투자자 미팅 전략",
+    ],
   },
 ];
 
 const coreActivities = [
   {
     icon: MapPin,
-    title: "로컬 시장/자원 분석",
-    description: "지역별 시장 특성과 로컬 자원을 심층 분석하여 맞춤형 전략의 기반을 마련합니다.",
+    title: "로컬 시장·자원 분석",
+    description: "지역별 산업 구조, 소비자 특성, 정책 환경을 분석해 '이 지역에서 가능한 성장 경로'를 정의합니다.",
   },
   {
     icon: Network,
-    title: "로컬 네트워크 연결",
-    description: "지자체, 지역 기업, 대학, 투자자 등 로컬 생태계 내 핵심 파트너와 연결합니다.",
+    title: "로컬 생태계 연결",
+    description: "지자체·기관·대학·로컬 투자자와의 실제 작동하는 네트워크를 연결합니다.",
   },
   {
     icon: Rocket,
-    title: "초기 실행 전략 수립",
-    description: "MVP 개발부터 초기 고객 확보까지 실행 가능한 단계별 전략을 함께 실행합니다.",
+    title: "실행 중심 컨설팅",
+    description: "보고서로 끝나지 않고 MVP·고객·IR까지 실행 가능한 단계로 함께 만듭니다.",
   },
 ];
 
@@ -58,13 +89,13 @@ export default function ServicesSection() {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
-              CONSULTING
+              WHAT WE DO
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              3단계 성장 로드맵
+              로컬 스타트업 성장 로드맵
             </h2>
             <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-              로컬 스타트업의 성장 단계에 맞춘 체계적인 컨설팅을 제공합니다.
+              SeedGlow는 스타트업의 단계에 따라 3단계 성장 구조로 개입합니다.
             </p>
           </div>
 
@@ -81,26 +112,41 @@ export default function ServicesSection() {
                     <step.icon className="w-6 h-6 text-primary" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                <p className="text-zinc-400 mb-6">{step.description}</p>
-                <ul className="space-y-3">
+                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
+                <p className="text-primary/80 text-sm mb-4">{step.subtitle}</p>
+                
+                <ul className="space-y-2 mb-6">
                   {step.details.map((detail, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm text-zinc-300">
-                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-2 text-sm text-zinc-300">
+                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                       {detail}
                     </li>
                   ))}
                 </ul>
+
+                <div className="pt-4 border-t border-zinc-700">
+                  <div className="flex items-center gap-2 mb-3">
+                    <FileText className="w-4 h-4 text-primary" />
+                    <span className="text-sm font-medium text-white">결과물</span>
+                  </div>
+                  <ul className="space-y-1">
+                    {step.results.map((result, i) => (
+                      <li key={i} className="text-sm text-zinc-400">
+                        • {result}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
 
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
-              CORE ACTIVITIES
+              CORE APPROACH
             </Badge>
             <h3 className="text-2xl md:text-3xl font-bold text-white">
-              3대 핵심 활동
+              SeedGlow의 핵심 접근 방식
             </h3>
           </div>
 

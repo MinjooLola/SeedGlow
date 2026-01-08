@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
 import {
   Select,
   SelectContent,
@@ -11,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { MapPin, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { Mail, Clock, Send, CheckCircle } from "lucide-react";
 import { SiLinkedin, SiInstagram } from "react-icons/si";
 import { useToast } from "@/hooks/use-toast";
 
@@ -25,11 +26,6 @@ interface FormData {
 }
 
 const contactInfo = [
-  {
-    icon: MapPin,
-    label: "주소",
-    value: "서울특별시 도봉구 해등로 242-11",
-  },
   {
     icon: Mail,
     label: "이메일",
@@ -56,10 +52,10 @@ const socialLinks = [
 ];
 
 const inquiryTypes = [
-  { value: "consulting", label: "비즈니스 컨설팅" },
-  { value: "investment", label: "투자 유치 지원" },
+  { value: "bm", label: "BM 고도화" },
   { value: "branding", label: "로컬 브랜딩" },
   { value: "ir", label: "IR 전략" },
+  { value: "investment", label: "투자 연계" },
   { value: "other", label: "기타 문의" },
 ];
 
@@ -87,7 +83,6 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // todo: remove mock functionality - implement real form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     console.log("Form submitted:", formData);
@@ -116,15 +111,19 @@ export default function ContactSection() {
     <section id="contact" className="py-16 md:py-24 lg:py-32 bg-card">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
-            Contact Us
-          </p>
+          <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
+            CONTACT
+          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            지금 바로 상담을 시작하세요
+            로컬 스타트업의 다음 단계를 함께 설계합니다
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            스타트업의 성장에 관한 모든 질문에 답변드리겠습니다.
-          </p>
+          <div className="flex flex-wrap justify-center gap-3 mt-6">
+            {inquiryTypes.slice(0, 4).map((type) => (
+              <Badge key={type.value} variant="secondary">
+                {type.label}
+              </Badge>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -244,7 +243,7 @@ export default function ContactSection() {
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        문의하기
+                        상담 문의하기
                       </>
                     )}
                   </Button>
