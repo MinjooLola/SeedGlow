@@ -62,15 +62,15 @@ function PentagonWithLabels() {
   const pentagonPath = pentagonPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
 
   const labelConfigs = [
-    { align: "center", xOffset: -95, yOffset: -95, width: 190, height: 75 },
-    { align: "left", xOffset: 40, yOffset: -30, width: 170, height: 75 },
-    { align: "left", xOffset: 35, yOffset: -5, width: 170, height: 75 },
-    { align: "right", xOffset: -205, yOffset: -5, width: 170, height: 75 },
-    { align: "right", xOffset: -210, yOffset: -30, width: 170, height: 75 },
+    { xOffset: -95, yOffset: -95, width: 190, height: 75 },
+    { xOffset: -85, yOffset: -30, width: 170, height: 75 },
+    { xOffset: -85, yOffset: -5, width: 170, height: 75 },
+    { xOffset: -85, yOffset: -5, width: 170, height: 75 },
+    { xOffset: -85, yOffset: -30, width: 170, height: 75 },
   ];
 
   return (
-    <div className="flex justify-center mb-12">
+    <div className="flex justify-center mb-8">
       <div className="relative w-full max-w-2xl">
         <svg viewBox="0 0 600 440" className="w-full h-auto">
           <defs>
@@ -90,6 +90,12 @@ function PentagonWithLabels() {
           
           {pentagonPoints.map((point, index) => {
             const config = labelConfigs[index];
+            const labelX = index === 0 ? point.x + config.xOffset :
+                          index === 1 ? point.x + 40 :
+                          index === 2 ? point.x + 35 :
+                          index === 3 ? point.x - 205 :
+                          point.x - 210;
+            
             return (
               <g key={index}>
                 <line
@@ -124,17 +130,16 @@ function PentagonWithLabels() {
                 </text>
                 
                 <foreignObject
-                  x={point.x + config.xOffset}
+                  x={labelX}
                   y={point.y + config.yOffset}
                   width={config.width}
                   height={config.height}
                 >
                   <div 
-                    className="px-3 py-2 rounded-md bg-card/90 border border-border/50"
+                    className="px-3 py-2 rounded-md bg-card/90 border border-border/50 text-center"
                     style={{ 
                       fontSize: '11px',
-                      lineHeight: '1.5',
-                      textAlign: config.align as "left" | "right" | "center"
+                      lineHeight: '1.5'
                     }}
                   >
                     <span className="text-muted-foreground">
@@ -195,7 +200,7 @@ export default function TargetAudienceSection() {
   return (
     <section className="py-20 md:py-28 lg:py-36 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-10 md:mb-12">
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
             PAIN POINTS
           </Badge>
