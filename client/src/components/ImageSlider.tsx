@@ -19,7 +19,7 @@ export default function ImageSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setOffset((prev) => prev + 1);
-    }, 50);
+    }, 25);
     return () => clearInterval(interval);
   }, []);
 

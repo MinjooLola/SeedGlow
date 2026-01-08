@@ -102,7 +102,7 @@ export default function AboutSection() {
             />
           </div>
 
-          <div className="w-full md:w-2/3 space-y-5">
+          <div className="w-full md:w-2/3 space-y-3">
             <div>
               <p className="text-sm text-muted-foreground font-medium mb-1">Founder</p>
               <h3 className="text-2xl md:text-3xl font-bold">김민주</h3>
@@ -122,7 +122,7 @@ export default function AboutSection() {
               </div>
             </div>
 
-            <div className="space-y-4 pt-4 border-t border-border/50">
+            <div className="space-y-3 pt-3 border-t border-border/50">
               <p className="text-muted-foreground text-sm leading-relaxed">
                 제주, 대구, 부산, 경주, 의성, 광주, 안동, 울릉, 부안, 이천 등 지역의 문제를 해결하는 300개 이상의 스타트업이 고객의 진짜 니즈를 바탕으로 아이템을 찾고 이를 비즈니스로 만들어가는 여정을 함께 해왔습니다.
               </p>
