@@ -93,7 +93,7 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-12 mb-20 items-center">
+        <div className="flex flex-col md:flex-row gap-8 lg:gap-12 mb-20 md:items-stretch">
           <div className="w-full md:w-1/3 flex-shrink-0">
             <img
               src={profileImage}
@@ -102,9 +102,9 @@ export default function AboutSection() {
             />
           </div>
 
-          <div className="w-full md:w-2/3 space-y-6">
+          <div className="w-full md:w-2/3 space-y-6 flex flex-col justify-between">
             <div>
-              <p className="text-sm text-primary font-medium mb-1">Founder</p>
+              <p className="text-sm text-muted-foreground font-medium mb-1">Founder</p>
               <h3 className="text-2xl md:text-3xl font-bold">김민주</h3>
             </div>
             
