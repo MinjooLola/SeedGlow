@@ -93,16 +93,16 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-12 mb-20 md:items-stretch">
+        <div className="flex flex-col md:flex-row gap-8 lg:gap-12 mb-20">
           <div className="w-full md:w-1/3 flex-shrink-0">
             <img
               src={profileImage}
               alt="김민주 대표"
-              className="w-full max-w-xs mx-auto rounded-md object-cover aspect-[4/5]"
+              className="w-full max-w-xs mx-auto rounded-md object-cover"
             />
           </div>
 
-          <div className="w-full md:w-2/3 space-y-6 flex flex-col justify-between">
+          <div className="w-full md:w-2/3 space-y-5">
             <div>
               <p className="text-sm text-muted-foreground font-medium mb-1">Founder</p>
               <h3 className="text-2xl md:text-3xl font-bold">김민주</h3>
