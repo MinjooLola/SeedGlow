@@ -99,10 +99,9 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm text-amber-200/60 text-center md:text-left">
-            <p>minjoo.kim.biz@gmail.com</p>
-            <p className="mt-1">
-              &copy; {new Date().getFullYear()} SeedGlow. All rights reserved.
-            </p>
+            <p>대표: 김민주  |  사업자등록번호: 302-10-65233</p>
+            <p className="mt-1">E-mail : minjoo.kim.biz@gmail.com</p>
+            <p className="mt-1">&copy; 2026 SeedGlow. All rights reserved.</p>
           </div>
 
           <div className="flex items-center gap-4">

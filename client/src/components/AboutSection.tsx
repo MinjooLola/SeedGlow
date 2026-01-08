@@ -94,17 +94,8 @@ export default function AboutSection() {
           <p className="text-muted-foreground leading-relaxed mb-4">
             'Seed(씨앗)'와 'Glow(빛나다)'의 결합입니다.
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            서울의 공식은 로컬에서 통하지 않습니다.
-          </p>
           <p className="text-muted-foreground leading-relaxed">
-            SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계, 실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
+            시드 단계의 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록 성장 구조를 설계하는 파트너가 되고자 합니다.
           </p>
         </div>
 
@@ -142,7 +133,7 @@ export default function AboutSection() {
             <ul className="space-y-1.5">
               {lectures.map((item, i) => (
                 <li key={i} className="text-xs text-muted-foreground leading-relaxed">
-                  - {item}
+                  {item}
                 </li>
               ))}
             </ul>
@@ -153,7 +144,7 @@ export default function AboutSection() {
             <ul className="space-y-1.5">
               {consulting.map((item, i) => (
                 <li key={i} className="text-xs text-muted-foreground leading-relaxed">
-                  - {item}
+                  {item}
                 </li>
               ))}
             </ul>
@@ -164,7 +155,7 @@ export default function AboutSection() {
             <ul className="space-y-1.5">
               {judging.map((item, i) => (
                 <li key={i} className="text-xs text-muted-foreground leading-relaxed">
-                  - {item}
+                  {item}
                 </li>
               ))}
             </ul>

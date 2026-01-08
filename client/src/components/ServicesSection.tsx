@@ -169,13 +169,24 @@ export default function ServicesSection() {
 
           <GrowthGraphHorizontal />
 
-          <div className="text-center mb-12 mt-20">
+          <div className="text-center mb-8 mt-20">
             <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
               CORE APPROACH
             </Badge>
-            <h3 className="text-2xl md:text-3xl font-bold text-white">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
               SeedGlow의 핵심 접근 방식
             </h3>
+            <div className="max-w-3xl mx-auto space-y-3 mb-12">
+              <p className="text-amber-200/80">
+                지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다.
+              </p>
+              <p className="text-amber-200/80">
+                서울의 공식은 로컬에서 통하지 않습니다.
+              </p>
+              <p className="text-amber-200/80">
+                SeedGlow는 지역 시장 구조 분석, 로컬 자원 기반 BM 설계, 실행 가능한 성장 전략, 투자로 이어지는 IR 구조를 통해 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
