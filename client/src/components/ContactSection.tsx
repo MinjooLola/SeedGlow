@@ -23,7 +23,8 @@ export default function ContactSection() {
           CONTACT
         </Badge>
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          로컬 스타트업의 다음 단계를 함께 설계합니다
+          당신의 로컬 비즈니스,<br />
+          다음 장을 여기서 시작하세요
         </h2>
         <p className="text-muted-foreground mb-2">
           BM 고도화, 로컬 브랜딩, IR 전략, 투자 연계까지
