@@ -62,11 +62,11 @@ function PentagonWithLabels() {
   const pentagonPath = pentagonPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
 
   const labelConfigs = [
-    { xOffset: -95, yOffset: -95, width: 190, height: 75 },
-    { xOffset: -85, yOffset: -30, width: 170, height: 75 },
-    { xOffset: -85, yOffset: -5, width: 170, height: 75 },
-    { xOffset: -85, yOffset: -5, width: 170, height: 75 },
-    { xOffset: -85, yOffset: -30, width: 170, height: 75 },
+    { xOffset: -95, yOffset: -110, width: 190, height: 75 },
+    { xOffset: 40, yOffset: -30, width: 170, height: 75 },
+    { xOffset: 35, yOffset: -5, width: 170, height: 75 },
+    { xOffset: -205, yOffset: -5, width: 170, height: 75 },
+    { xOffset: -210, yOffset: -30, width: 170, height: 75 },
   ];
 
   return (
@@ -90,11 +90,6 @@ function PentagonWithLabels() {
           
           {pentagonPoints.map((point, index) => {
             const config = labelConfigs[index];
-            const labelX = index === 0 ? point.x + config.xOffset :
-                          index === 1 ? point.x + 40 :
-                          index === 2 ? point.x + 35 :
-                          index === 3 ? point.x - 205 :
-                          point.x - 210;
             
             return (
               <g key={index}>
@@ -130,7 +125,7 @@ function PentagonWithLabels() {
                 </text>
                 
                 <foreignObject
-                  x={labelX}
+                  x={point.x + config.xOffset}
                   y={point.y + config.yOffset}
                   width={config.width}
                   height={config.height}
