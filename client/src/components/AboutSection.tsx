@@ -78,15 +78,15 @@ export default function AboutSection() {
         </div>
 
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-muted-foreground leading-relaxed mb-6">
+          <p className="text-muted-foreground leading-relaxed mb-6 break-keep">
             SeedGlow는 '씨앗(seed)'과 '빛(glow)'을 결합한 이름입니다.
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
+          <p className="text-muted-foreground leading-relaxed mb-6 break-keep">
             스타트업의 시드 단계(seed stage)를 의미하는 동시에,<br />
             지역 곳곳에서 자라나는 작은 혁신의 씨앗들이<br />
             스스로 빛날 수 있도록 돕는다는 뜻을 담고 있습니다.
           </p>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed break-keep">
             SeedGlow는 단순히 자문을 넘어,<br />
             로컬 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록<br />
             성장 구조를 설계하고 함께 걸어가는 파트너가 되고자 합니다.
@@ -123,10 +123,10 @@ export default function AboutSection() {
             </div>
 
             <div className="space-y-3 pt-3 border-t border-border/50">
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed break-keep">
                 제주, 대구, 부산, 경주, 의성, 광주, 안동, 울릉, 부안, 이천 등 지역의 문제를 해결하는 300개 이상의 스타트업이 고객의 진짜 니즈를 바탕으로 아이템을 찾고 이를 비즈니스로 만들어가는 여정을 함께 해왔습니다.
               </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed break-keep">
                 일회성 컨설팅보다는 제로투원을 함께 하는 페이스메이커로서, 혼자서 가기 힘든 길을 같이 걸으며 문제를 해결해 나갑니다.
               </p>
             </div>
@@ -138,7 +138,7 @@ export default function AboutSection() {
             <h4 className="font-bold text-base mb-4">강의</h4>
             <ul className="space-y-1.5">
               {lectures.map((item, i) => (
-                <li key={i} className="text-xs text-muted-foreground leading-relaxed">
+                <li key={i} className="text-xs text-muted-foreground leading-relaxed break-keep">
                   {item}
                 </li>
               ))}
@@ -149,7 +149,7 @@ export default function AboutSection() {
             <h4 className="font-bold text-base mb-4">컨설팅</h4>
             <ul className="space-y-1.5">
               {consulting.map((item, i) => (
-                <li key={i} className="text-xs text-muted-foreground leading-relaxed">
+                <li key={i} className="text-xs text-muted-foreground leading-relaxed break-keep">
                   {item}
                 </li>
               ))}
@@ -160,7 +160,7 @@ export default function AboutSection() {
             <h4 className="font-bold text-base mb-4">심사</h4>
             <ul className="space-y-1.5">
               {judging.map((item, i) => (
-                <li key={i} className="text-xs text-muted-foreground leading-relaxed">
+                <li key={i} className="text-xs text-muted-foreground leading-relaxed break-keep">
                   {item}
                 </li>
               ))}

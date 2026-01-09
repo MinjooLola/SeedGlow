@@ -169,7 +169,7 @@ export default function ServicesSection() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               로컬 스타트업 성장 로드맵
             </h2>
-            <p className="text-amber-200/80 text-lg max-w-2xl mx-auto">
+            <p className="text-amber-200/80 text-lg max-w-2xl mx-auto break-keep">
               SeedGlow는 스타트업의 단계에 따라 3단계 성장 구조로 개입합니다.
             </p>
           </div>
@@ -184,13 +184,13 @@ export default function ServicesSection() {
               SeedGlow의 핵심 접근 방식
             </h3>
             <div className="max-w-3xl mx-auto space-y-3 mb-12">
-              <p className="text-amber-200/80">
+              <p className="text-amber-200/80 break-keep">
                 지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다.
               </p>
-              <p className="text-amber-200/80">
+              <p className="text-amber-200/80 break-keep">
                 서울의 공식은 로컬에서 통하지 않습니다.
               </p>
-              <p className="text-amber-200/80">
+              <p className="text-amber-200/80 break-keep">
                 SeedGlow는 지역 시장 구조 분석 → 로컬 자원 기반 BM 설계 →<br />
                 실행 가능한 성장 전략 → 투자로 이어지는 IR 구조를 통해<br />
                 로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
@@ -209,7 +209,7 @@ export default function ServicesSection() {
                   <activity.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="font-bold text-lg text-white mb-3">{activity.title}</h4>
-                <p className="text-amber-200/70 text-sm leading-relaxed whitespace-pre-line">{activity.description}</p>
+                <p className="text-amber-200/70 text-sm leading-relaxed whitespace-pre-line break-keep">{activity.description}</p>
               </div>
             ))}
           </div>
