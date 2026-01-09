@@ -60,7 +60,7 @@ const coreActivities = [
   {
     icon: MapPin,
     title: "로컬 시장·자원 분석",
-    description: "지역별 산업 구조, 소비자 특성,\n정책 환경을 분석해 '이 지역에서\n가능한 성장 경로'를 정의합니다.",
+    description: "지역별 산업 구조와 소비자 특성,\n정책 환경과 주요 자원을 분석해\n'지속가능한 성장 경로'를 정의합니다.",
   },
   {
     icon: Network,
@@ -169,8 +169,13 @@ export default function ServicesSection() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               로컬 스타트업 성장 로드맵
             </h2>
-            <p className="text-amber-200/80 text-lg max-w-2xl mx-auto break-keep">
-              SeedGlow는 스타트업의 단계에 따라 3단계 성장 구조로 개입합니다.
+            <p className="text-amber-200/80 text-base md:text-lg max-w-2xl mx-auto break-keep">
+              300+ 로컬 스타트업을<br />
+              심사하고 컨설팅하며 구조적으로 분해한
+            </p>
+            <p className="text-amber-200/80 text-base md:text-lg max-w-2xl mx-auto break-keep mt-3">
+              SeedGlow는 아이디어를 다듬는 컨설팅이 아니라<br />
+              성장과 투자로 이어지는 구조를 만드는 컨설팅을 합니다.
             </p>
           </div>
 
@@ -184,16 +189,18 @@ export default function ServicesSection() {
               SeedGlow의 핵심 접근 방식
             </h3>
             <div className="max-w-3xl mx-auto space-y-3 mb-12">
-              <p className="text-amber-200/80 break-keep">
+              <p className="text-amber-200/80 text-sm md:text-base break-keep">
+                서울의 공식은 로컬에서 통하지 않습니다.<br />
                 지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다.
               </p>
-              <p className="text-amber-200/80 break-keep">
-                서울의 공식은 로컬에서 통하지 않습니다.
+              <p className="text-amber-200/80 text-sm md:text-base break-keep">
+                SeedGlow는 지역별 시장과 자원을 분석해 BM을 재설계하고<br />
+                투자 및 오픈이노베이션 연계를 통해 실질적 결과를 만들어내며<br />
+                모든 실행 과정에 지속적으로 함께 합니다.
               </p>
-              <p className="text-amber-200/80 break-keep">
-                SeedGlow는 지역 시장 구조 분석 → 로컬 자원 기반 BM 설계 →<br />
-                실행 가능한 성장 전략 → 투자로 이어지는 IR 구조를 통해<br />
-                로컬 스타트업이 '지원사업 이후'에도 살아남는 구조를 만듭니다.
+              <p className="text-amber-200/80 text-sm md:text-base break-keep">
+                로컬 스타트업이 '지원사업 이후'에도<br />
+                스스로 살아남는 구조를 만듭니다.
               </p>
             </div>
           </div>

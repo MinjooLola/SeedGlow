@@ -23,7 +23,7 @@ export default function HeroSection() {
           <img
             src={heroImage}
             alt="김민주 대표"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[30%_top]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-amber-950 via-amber-900/60 to-transparent" />
         </div>
@@ -44,7 +44,7 @@ export default function HeroSection() {
             <p className="text-sm md:text-base text-amber-100/90 leading-relaxed mb-10 break-keep" data-testid="text-hero-description">
               서울 중심의 일반론이 아닌,<br />
               지역의 산업 구조·시장 규모·자원 흐름을 기준으로<br />
-              로컬 스타트업의 BM, 실행 전략, IR, 투자 연결까지 설계합니다.
+              로컬 스타트업의 BM, 브랜딩, IR 전략까지 설계합니다.
             </p>
             
             <div className="flex flex-wrap gap-4">

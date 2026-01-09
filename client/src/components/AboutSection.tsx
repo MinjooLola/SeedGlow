@@ -78,18 +78,18 @@ export default function AboutSection() {
         </div>
 
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-muted-foreground leading-relaxed mb-6 break-keep">
+          <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-6 break-keep">
             SeedGlow는 '씨앗(seed)'과 '빛(glow)'을 결합한 이름입니다.
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-6 break-keep">
+          <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-6 break-keep">
             스타트업의 시드 단계(seed stage)를 의미하는 동시에,<br />
             지역 곳곳에서 자라나는 작은 혁신의 씨앗들이<br />
             스스로 빛날 수 있도록 돕는다는 뜻을 담고 있습니다.
           </p>
-          <p className="text-muted-foreground leading-relaxed break-keep">
+          <p className="text-muted-foreground text-sm md:text-base leading-relaxed break-keep">
             SeedGlow는 단순히 자문을 넘어,<br />
-            로컬 스타트업이 지역이라는 토양 안에서 스스로 빛날 수 있도록<br />
-            성장 구조를 설계하고 함께 걸어가는 파트너가 되고자 합니다.
+            스타트업이 지역이라는 토양 안에서 빛날 수 있도록<br />
+            성장 구조를 설계하며 함께 걸어가는 파트너가 되고자 합니다.
           </p>
         </div>
 

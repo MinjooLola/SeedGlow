@@ -26,13 +26,11 @@ export default function ContactSection() {
           당신의 로컬 비즈니스,<br />
           다음 장을 여기서 시작하세요
         </h2>
-        <p className="text-muted-foreground mb-2 break-keep">
-          BM 고도화, 로컬 브랜딩, IR 전략, 투자 연계까지
-        </p>
-        <p className="text-muted-foreground mb-2 break-keep">
+        <p className="text-muted-foreground text-sm md:text-base mb-2 break-keep">
+          BM 고도화, 로컬 브랜딩, IR 전략, 투자 연계까지<br />
           현재 상황에 맞는 성장 방향을 함께 정리해드립니다.
         </p>
-        <p className="text-muted-foreground mb-8 break-keep">
+        <p className="text-muted-foreground text-sm md:text-base mb-8 break-keep">
           상담 문의는 언제든지 환영합니다.
         </p>
 

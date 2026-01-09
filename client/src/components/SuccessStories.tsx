@@ -90,7 +90,7 @@ export default function SuccessStories() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             컨설팅 후기
           </h2>
-          <p className="text-amber-200/80 text-lg max-w-2xl mx-auto">
+          <p className="text-amber-200/80 text-sm md:text-lg max-w-2xl mx-auto break-keep">
             SeedGlow와 함께 성장하고 있는 팀들의 이야기
           </p>
         </div>
