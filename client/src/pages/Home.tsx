@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import PartnersSection from "@/components/PartnersSection";
 import SuccessStories from "@/components/SuccessStories";
 import ImageSlider from "@/components/ImageSlider";
+import ArchiveSection from "@/components/ArchiveSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <ImageSlider />
         <PartnersSection />
         <SuccessStories />
+        <ArchiveSection />
         <ContactSection />
       </main>
       <Footer />

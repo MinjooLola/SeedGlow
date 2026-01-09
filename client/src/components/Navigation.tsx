@@ -11,6 +11,7 @@ const navItems: NavItem[] = [
   { label: "서비스", href: "#services" },
   { label: "회사소개", href: "#about" },
   { label: "컨설팅 후기", href: "#success" },
+  { label: "아카이브", href: "#archive" },
   { label: "문의하기", href: "#contact" },
 ];
 
