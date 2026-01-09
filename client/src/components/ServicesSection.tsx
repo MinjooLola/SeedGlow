@@ -223,9 +223,9 @@ export default function ServicesSection() {
                   <activity.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="font-bold text-lg text-white mb-3">{activity.title}</h4>
-                <p className="text-amber-200/70 text-xs md:text-sm leading-relaxed">
+                <p className="text-amber-200/70 text-[11px] md:text-sm leading-relaxed">
                   {activity.lines.map((line, i) => (
-                    <span key={i} className="block">{line}</span>
+                    <span key={i} className="block whitespace-nowrap">{line}</span>
                   ))}
                 </p>
               </div>
