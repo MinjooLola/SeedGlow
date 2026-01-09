@@ -202,8 +202,8 @@ export default function ServicesSection() {
               </p>
               <div className="text-amber-200/80 text-sm md:text-base break-keep">
                 <p className="mb-2">SeedGlow는</p>
-                <p>(1) 지역별 시장과 자원을 분석해 BM을 재설계하고 →</p>
-                <p>(2) 투자 및 오픈이노베이션 연계를 통해 실질적 결과를 만들어내며 →</p>
+                <p>(1) 지역별 시장과 자원을 분석해 BM을 재설계하고</p>
+                <p>(2) 투자 연계를 통해 실질적 결과를 만들어내며</p>
                 <p>(3) 모든 실행 과정에 지속적으로 함께 합니다.</p>
               </div>
               <p className="text-amber-200/80 text-sm md:text-base break-keep">
