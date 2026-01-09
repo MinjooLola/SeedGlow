@@ -25,7 +25,6 @@ export default function HeroSection() {
             alt="김민주 대표"
             loading="eager"
             decoding="sync"
-            fetchPriority="high"
             className="w-full h-full object-cover object-[50%_20%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-amber-950 via-amber-900/60 to-transparent" />
