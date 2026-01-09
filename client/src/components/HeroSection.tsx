@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroVideo from "@assets/추가_김민주대표_1767949485657.mp4";
+import heroImage from "@assets/제목_없는_디자인_1767950331510.png";
 
 const metrics = [
   { value: "300+", label: "로컬 스타트업 컨설팅" },
@@ -20,12 +20,12 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-950/95 via-amber-900/80 to-transparent" />
         <div className="absolute right-0 top-0 bottom-0 w-3/5 md:w-1/2 lg:w-2/5">
-          <video
-            src={heroVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src={heroImage}
+            alt="김민주 대표"
+            loading="eager"
+            decoding="sync"
+            fetchPriority="high"
             className="w-full h-full object-cover object-[50%_20%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-amber-950 via-amber-900/60 to-transparent" />
