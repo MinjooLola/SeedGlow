@@ -19,11 +19,11 @@ export default function HeroSection() {
     <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden bg-gradient-to-br from-amber-950 via-amber-900 to-amber-800">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-950/95 via-amber-900/80 to-transparent" />
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 lg:w-2/5">
+        <div className="absolute right-0 top-0 bottom-0 w-3/5 md:w-1/2 lg:w-2/5">
           <img
             src={heroImage}
             alt="김민주 대표"
-            className="w-full h-full object-cover object-[30%_top]"
+            className="w-full h-full object-cover object-[50%_20%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-amber-950 via-amber-900/60 to-transparent" />
         </div>

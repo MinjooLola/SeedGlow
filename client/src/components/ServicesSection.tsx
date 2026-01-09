@@ -170,12 +170,7 @@ export default function ServicesSection() {
               로컬 스타트업 성장 로드맵
             </h2>
             <p className="text-amber-200/80 text-base md:text-lg max-w-2xl mx-auto break-keep">
-              300+ 로컬 스타트업을<br />
-              심사하고 컨설팅하며 구조적으로 분해한
-            </p>
-            <p className="text-amber-200/80 text-base md:text-lg max-w-2xl mx-auto break-keep mt-3">
-              SeedGlow는 아이디어를 다듬는 컨설팅이 아니라<br />
-              성장과 투자로 이어지는 구조를 만드는 컨설팅을 합니다.
+              SeedGlow는 스타트업의 단계에 따라 3단계 성장 구조로 개입합니다.
             </p>
           </div>
 
@@ -216,7 +211,7 @@ export default function ServicesSection() {
                   <activity.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="font-bold text-lg text-white mb-3">{activity.title}</h4>
-                <p className="text-amber-200/70 text-sm leading-relaxed whitespace-pre-line break-keep">{activity.description}</p>
+                <p className="text-amber-200/70 text-xs md:text-sm leading-relaxed whitespace-pre-line">{activity.description}</p>
               </div>
             ))}
           </div>
