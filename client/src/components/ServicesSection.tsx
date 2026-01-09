@@ -195,16 +195,17 @@ export default function ServicesSection() {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
               SeedGlow의 핵심 접근 방식
             </h3>
-            <div className="max-w-3xl mx-auto space-y-3 mb-12">
+            <div className="max-w-3xl mx-auto space-y-4 mb-12">
               <p className="text-amber-200/80 text-sm md:text-base break-keep">
                 서울의 공식은 로컬에서 통하지 않습니다.<br />
                 지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다.
               </p>
-              <p className="text-amber-200/80 text-sm md:text-base break-keep">
-                SeedGlow는 지역별 시장과 자원을 분석해 BM을 재설계하고<br />
-                투자 및 오픈이노베이션 연계를 통해 실질적 결과를 만들어내며<br />
-                모든 실행 과정에 지속적으로 함께 합니다.
-              </p>
+              <div className="text-amber-200/80 text-sm md:text-base break-keep">
+                <p className="mb-2">SeedGlow는</p>
+                <p>(1) 지역별 시장과 자원을 분석해 BM을 재설계하고 →</p>
+                <p>(2) 투자 및 오픈이노베이션 연계를 통해 실질적 결과를 만들어내며 →</p>
+                <p>(3) 모든 실행 과정에 지속적으로 함께 합니다.</p>
+              </div>
               <p className="text-amber-200/80 text-sm md:text-base break-keep">
                 로컬 스타트업이 '지원사업 이후'에도<br />
                 스스로 살아남는 구조를 만듭니다.
