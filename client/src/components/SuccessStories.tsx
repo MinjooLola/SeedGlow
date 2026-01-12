@@ -15,6 +15,11 @@ const testimonials = [
     highlight: "실행 과제 도출",
   },
   {
+    quote: "로컬 브랜드의 막막함 속에서 길을 찾게 해주신 민주님, 사업 구조를 정리하고 전략을 세우는 과정에서 성심껏 도움을 주셨습니다.",
+    author: "6년차 로컬 F&B 스타트업, 프리 시리즈 A 후속 투자 유치 성공",
+    highlight: "로컬 브랜드 전략",
+  },
+  {
     quote: "해외 시장 진출에 있어 막막한 부분을 잘 상기 시켜주셨습니다. 새로 스타트업을 시작하고 새로운 곳에서 피칭을 할 때 여러가지 보완하고 보강해야할 건설적인 피드백이 많아서 좋았습니다.",
     author: "1년차 Contents 스타트업, 미국 VC 투자 IR 준비 중",
     highlight: "건설적 피드백",
@@ -44,12 +49,7 @@ const testimonials = [
     author: "8년차 GovTech 스타트업, 투자 IR 준비 중",
     highlight: "지속적 파트너십",
   },
-  {
-    quote: "로컬 브랜드의 막막함 속에서 길을 찾게 해주신 민주님, 사업 구조를 정리하고 전략을 세우는 과정에서 성심껏 도움을 주셨습니다.",
-    author: "6년차 로컬 F&B 스타트업, 프리 시리즈 A 후속 투자 유치 성공",
-    highlight: "로컬 브랜드 전략",
-  },
-];
+  ];
 
 export default function SuccessStories() {
   const scrollRef = useRef<HTMLDivElement>(null);
