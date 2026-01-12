@@ -202,8 +202,11 @@ export default function ServicesSection() {
                 지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다.
               </p>
               <div className="text-amber-200/80 text-sm md:text-base break-keep">
-                <p className="mb-2 md:hidden">SeedGlow는<br />'아이디어를 다듬는 컨설팅'이 아니라<br />'성장과 투자로 이어지는<br />구조를 만드는 컨설팅'을 합니다.</p>
-                <p className="mb-2 hidden md:block">SeedGlow는 '아이디어를 다듬는 컨설팅'이 아니라 '성장과 투자로 이어지는 구조를 만드는 컨설팅'을 합니다.</p>
+                <p className="mb-2 md:hidden">SeedGlow는<br />아이디어를 다듬는 컨설팅이 아니라<br />성장과 투자로 이어지도록<br />구조를 함께 만드는 컨설팅을 합니다.</p>
+                <p className="mb-2 hidden md:block">SeedGlow는 아이디어를 다듬는 컨설팅이 아니라 성장과 투자로 이어지도록 구조를 함께 만드는 컨설팅을 합니다.</p>
+                <p>(1) 지역별 시장과 자원을 분석해 BM을 재설계하고</p>
+                <p>(2) 투자 연계를 통해 실질적 결과를 만들어내며</p>
+                <p>(3) 모든 실행 과정에 지속적으로 함께 합니다.</p>
               </div>
               <p className="text-amber-200/80 text-sm md:text-base break-keep">
                 로컬 스타트업이 '지원사업 이후'에도<br />
