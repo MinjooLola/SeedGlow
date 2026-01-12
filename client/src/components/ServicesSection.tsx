@@ -182,7 +182,8 @@ export default function ServicesSection() {
               로컬 스타트업 성장 로드맵
             </h2>
             <p className="text-amber-200/80 text-base md:text-lg max-w-2xl mx-auto break-keep">
-              SeedGlow는 스타트업의 단계에 따라 3단계 성장 구조로 개입합니다.
+              <span className="md:hidden">SeedGlow는 스타트업의 단계에 따라<br />3단계 성장 구조로 개입합니다.</span>
+              <span className="hidden md:inline">SeedGlow는 스타트업의 단계에 따라 3단계 성장 구조로 개입합니다.</span>
             </p>
           </div>
 
@@ -201,10 +202,8 @@ export default function ServicesSection() {
                 지역마다 산업 구조도, 시장 규모도, 성장 속도도 다릅니다.
               </p>
               <div className="text-amber-200/80 text-sm md:text-base break-keep">
-                <p className="mb-2">SeedGlow는</p>
-                <p>(1) 지역별 시장과 자원을 분석해 BM을 재설계하고</p>
-                <p>(2) 투자 연계를 통해 실질적 결과를 만들어내며</p>
-                <p>(3) 모든 실행 과정에 지속적으로 함께 합니다.</p>
+                <p className="mb-2 md:hidden">SeedGlow는<br />'아이디어를 다듬는 컨설팅'이 아니라<br />'성장과 투자로 이어지는<br />구조를 만드는 컨설팅'을 합니다.</p>
+                <p className="mb-2 hidden md:block">SeedGlow는 '아이디어를 다듬는 컨설팅'이 아니라 '성장과 투자로 이어지는 구조를 만드는 컨설팅'을 합니다.</p>
               </div>
               <p className="text-amber-200/80 text-sm md:text-base break-keep">
                 로컬 스타트업이 '지원사업 이후'에도<br />
@@ -224,7 +223,7 @@ export default function ServicesSection() {
                   <activity.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="font-bold text-lg text-white mb-3">{activity.title}</h4>
-                <p className="text-amber-200/70 text-[10px] md:text-sm leading-relaxed text-center">
+                <p className="text-amber-200/70 text-xs md:text-sm leading-relaxed text-center">
                   {activity.lines.map((line, i) => (
                     <span key={i} className="block">{line}</span>
                   ))}

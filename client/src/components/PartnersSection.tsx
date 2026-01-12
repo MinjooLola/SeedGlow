@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 
 const partners = [
-  "SK하이닉스",
   "해양수산부",
   "경상북도경제진흥원",
   "제주대학교",
@@ -31,6 +30,7 @@ const partners = [
   "제주더큰내일센터",
   "유디임팩트",
   "창업진흥원",
+  "그외 다수",
 ];
 
 export default function PartnersSection() {

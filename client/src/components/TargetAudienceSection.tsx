@@ -199,7 +199,10 @@ export default function TargetAudienceSection() {
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
             PAIN POINTS
           </Badge>
-          <p className="text-muted-foreground mb-2">300+ 로컬 스타트업을 심사하고 컨설팅하며 구조적으로 분해한</p>
+          <p className="text-muted-foreground mb-2 break-keep">
+            <span className="md:hidden">300+ 로컬 스타트업을<br />심사하고 컨설팅하며 구조적으로 분해한</span>
+            <span className="hidden md:inline">300+ 로컬 스타트업을 심사하고 컨설팅하며 구조적으로 분해한</span>
+          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             5가지 성장 정체 유형
           </h2>
