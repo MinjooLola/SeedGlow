@@ -211,10 +211,10 @@ export default function TargetAudienceSection() {
         <PentagonWithLabels />
 
         <div className="text-center p-8 rounded-md bg-card border border-border">
-          <p className="text-lg md:text-xl mb-6">
-            SeedGlow는 '아이디어를 다듬는 컨설팅'이 아니라<br />
-            <span className="font-bold text-primary">성장과 투자로 이어지는 구조</span>를 만드는 컨설팅을 합니다.
-          </p>
+          <div className="text-lg md:text-xl mb-6">
+            <p className="md:hidden">SeedGlow는<br />아이디어를 다듬는 컨설팅이 아니라<br />성장과 투자로 이어지는<br />구조를 만드는 컨설팅을 합니다.</p>
+            <p className="hidden md:block">SeedGlow는 아이디어를 다듬는 컨설팅이 아니라<br /><span className="font-bold text-primary">성장과 투자로 이어지는 구조</span>를 만드는 컨설팅을 합니다.</p>
+          </div>
           <Button onClick={scrollToServices} className="gap-2" data-testid="button-view-services">
             성장 로드맵 보기
             <ArrowRight className="w-4 h-4" />
