@@ -7,6 +7,15 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
 
+  app.get("/robots.txt", (_req, res) => {
+    const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: https://seedglow.co.kr/sitemap.xml`;
+    res.set("Content-Type", "text/plain");
+    res.send(robotsTxt);
+  });
+
   app.get("/sitemap.xml", (_req, res) => {
     const today = new Date().toISOString().split("T")[0];
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
