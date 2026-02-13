@@ -7,6 +7,14 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
 
+  app.use((req, res, next) => {
+    const host = req.hostname;
+    if (host === "lolaum-product--lolajjoo2022.replit.app") {
+      return res.redirect(301, "https://lolaum.kr" + req.originalUrl);
+    }
+    next();
+  });
+
   app.get("/robots.txt", (_req, res) => {
     const robotsTxt = `User-agent: *
 Allow: /
