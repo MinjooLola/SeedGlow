@@ -22,6 +22,48 @@ const schemaData = [
   },
   {
     "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "홈",
+        "item": "https://lolaum.kr",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "서비스",
+        "item": "https://lolaum.kr/#services",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "회사 소개",
+        "item": "https://lolaum.kr/#about",
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "파트너",
+        "item": "https://lolaum.kr/#partners",
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "고객 후기",
+        "item": "https://lolaum.kr/#stories",
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "문의",
+        "item": "https://lolaum.kr/#contact",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "시드글로우 (SeedGlow)",
     "url": "https://lolaum.kr",
