@@ -103,14 +103,14 @@ export default function SuccessStories() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {testimonials.map((testimonial, index) => (
-              <div
+              <article
                 key={index}
                 className="w-[85%] md:w-[45%] lg:w-[32%] flex-shrink-0 snap-start"
                 data-testid={`card-testimonial-${index}`}
               >
                 <div className="h-full p-8 rounded-md bg-amber-900/50 border border-amber-700/50 flex flex-col">
                   <div className="flex items-start gap-3 mb-4">
-                    <Quote className="w-6 h-6 text-primary flex-shrink-0" />
+                    <Quote className="w-6 h-6 text-primary flex-shrink-0" aria-hidden="true" />
                     <Badge variant="secondary" className="text-xs">
                       {testimonial.highlight}
                     </Badge>
@@ -119,10 +119,10 @@ export default function SuccessStories() {
                     "{testimonial.quote}"
                   </blockquote>
                   <p className="text-amber-300/70 text-xs mt-4 pt-4 border-t border-amber-700/30">
-                    - {testimonial.author}
+                    <cite>- {testimonial.author}</cite>
                   </p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
 

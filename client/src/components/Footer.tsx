@@ -7,7 +7,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-amber-950 py-8 md:py-10">
+    <footer className="bg-amber-950 py-8 md:py-10" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm text-amber-200/60 text-center md:text-left">

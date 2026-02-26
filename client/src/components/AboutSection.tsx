@@ -98,6 +98,7 @@ export default function AboutSection() {
             <img
               src={profileImage}
               alt="시드글로우 김민주 대표 프로필 사진 - 로컬 스타트업 컨설턴트"
+              loading="lazy"
               className="w-full max-w-xs mx-auto rounded-md object-cover"
             />
           </div>

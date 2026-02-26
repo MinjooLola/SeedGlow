@@ -150,15 +150,66 @@ const schemaData = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "AggregateRating",
-    "itemReviewed": {
-      "@type": "ProfessionalService",
-      "name": "시드글로우 (SeedGlow)",
+    "@type": "ProfessionalService",
+    "name": "시드글로우 (SeedGlow)",
+    "url": "https://lolaum.kr",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "ratingCount": "9",
+      "reviewCount": "9",
     },
-    "ratingValue": "5",
-    "bestRating": "5",
-    "ratingCount": "9",
-    "reviewCount": "9",
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "GovTech 스타트업 대표" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "사업 영역에 대한 깊은 이해와 날카로운 시각으로 방향성을 짚어주셨습니다. 정책 데이터 플랫폼의 확장성과 투자자 관점에서의 설득 포인트를 명확히 구조화해 주셔서 많은 인사이트를 얻었습니다.",
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Lifestyle 스타트업 대표" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "구체적인 실행 전략을 정리해주시는 게 너무 좋았어요. 어떤 부분이 강점이 되고, 어떤 부분은 보완해야 하는지를 현실적으로 제시해주셔서 바로 실행 가능한 과제들을 도출할 수 있었습니다.",
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "로컬 F&B 스타트업 대표" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "로컬 브랜드의 막막함 속에서 길을 찾게 해주신 민주님, 사업 구조를 정리하고 전략을 세우는 과정에서 성심껏 도움을 주셨습니다.",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "시드글로우는 어떤 컨설팅 서비스를 제공하나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "시드글로우는 BM(비즈니스 모델) 확립 및 고도화, 로컬 브랜딩, IR 전략 수립 및 투자 연계 등 3단계 성장 로드맵을 기반으로 로컬 스타트업 전문 컨설팅을 제공합니다.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "시드글로우의 컨설팅 실적은 어떻게 되나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "전국 300팀 이상의 로컬 스타트업 컨설팅, 26팀 투자 유치 성공, 누적 50억 원 이상의 투자 유치 연계, 40회 이상의 창업 강의 및 IR 심사 실적을 보유하고 있습니다.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "시드글로우에 상담 문의는 어떻게 하나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "이메일(minjoo.kim.biz@gmail.com)로 문의하시거나 LinkedIn, Instagram을 통해 연락하실 수 있습니다. BM 고도화, 로컬 브랜딩, IR 전략, 투자 연계 등 현재 상황에 맞는 성장 방향을 함께 정리해드립니다.",
+        },
+      },
+    ],
   },
 ];
 
