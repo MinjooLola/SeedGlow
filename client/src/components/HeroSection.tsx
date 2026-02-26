@@ -22,7 +22,7 @@ export default function HeroSection() {
         <div className="absolute right-0 top-0 bottom-0 w-3/5 md:w-1/2 lg:w-2/5">
           <img
             src={heroImage}
-            alt="김민주 대표"
+            alt="시드글로우 김민주 대표 - 로컬 스타트업 컨설턴트"
             loading="eager"
             decoding="sync"
             className="w-full h-full object-cover object-[50%_20%]"

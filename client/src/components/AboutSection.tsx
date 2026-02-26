@@ -97,7 +97,7 @@ export default function AboutSection() {
           <div className="w-full md:w-1/3 flex-shrink-0">
             <img
               src={profileImage}
-              alt="김민주 대표"
+              alt="시드글로우 김민주 대표 프로필 사진 - 로컬 스타트업 컨설턴트"
               className="w-full max-w-xs mx-auto rounded-md object-cover"
             />
           </div>

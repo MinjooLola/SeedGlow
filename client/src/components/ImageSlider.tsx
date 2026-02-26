@@ -40,7 +40,7 @@ export default function ImageSlider() {
           >
             <img
               src={img}
-              alt={`활동 사진 ${(index % images.length) + 1}`}
+              alt={`시드글로우 컨설팅 및 강의 활동 사진 ${(index % images.length) + 1}`}
               className="w-full h-full object-cover"
             />
           </div>

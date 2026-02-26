@@ -27,7 +27,8 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -35,7 +36,8 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
-  const scrollToTop = () => {
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -48,24 +50,27 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <nav className="flex items-center justify-between gap-4 h-16 md:h-20">
-          <button
-            onClick={scrollToTop}
+        <nav className="flex items-center justify-between gap-4 h-16 md:h-20" aria-label="메인 내비게이션">
+          <a
+            href="https://lolaum.kr"
+            onClick={handleLogoClick}
             className="flex items-center"
             data-testid="link-logo"
+            aria-label="시드글로우 홈"
           >
             <img
               src={logoImage}
-              alt="SeedGlow"
+              alt="시드글로우(SeedGlow) 로고"
               className="h-10 md:h-12 w-auto"
             />
-          </button>
+          </a>
 
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className={`text-sm font-medium transition-colors hover-elevate active-elevate-2 px-3 py-2 rounded-md ${
                   isScrolled
                     ? "text-foreground"
@@ -74,7 +79,7 @@ export default function Navigation() {
                 data-testid={`link-nav-${item.label}`}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -82,6 +87,8 @@ export default function Navigation() {
             className={`md:hidden p-2 rounded-md ${isScrolled ? "text-foreground" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="button-mobile-menu"
+            aria-label="메뉴 열기"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -91,14 +98,15 @@ export default function Navigation() {
           <div className="md:hidden bg-background border-b border-border pb-4">
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
-                <button
+                <a
                   key={item.href}
-                  onClick={() => scrollToSection(item.href)}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className="text-sm font-medium text-foreground px-3 py-2 hover-elevate rounded-md text-left"
                   data-testid={`link-nav-mobile-${item.label}`}
                 >
                   {item.label}
-                </button>
+                </a>
               ))}
             </div>
           </div>
