@@ -52,7 +52,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <nav className="flex items-center justify-between gap-4 h-16 md:h-20" aria-label="메인 내비게이션">
           <a
-            href="https://lolaum.kr"
+            href="https://seedglow.co.kr"
             onClick={handleLogoClick}
             className="flex items-center"
             data-testid="link-logo"

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lolaum.kr/sitemap.xml
+Sitemap: https://seedglow.co.kr/sitemap.xml
