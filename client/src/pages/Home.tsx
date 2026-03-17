@@ -68,7 +68,7 @@ const schemaData = [
     "name": "시드글로우 (SeedGlow)",
     "url": "https://lolaum.kr",
     "logo": "https://lolaum.kr/favicon.png",
-    "image": "https://lolaum.kr/og-seedglow.jpg",
+    "image": "https://lolaum.kr/og-v2.jpg",
     "description": "로컬 스타트업 전문 컨설팅 - BM 고도화, 로컬 브랜딩, IR 전략, 투자 연계",
     "email": "minjoo.kim.biz@gmail.com",
     "founder": {
