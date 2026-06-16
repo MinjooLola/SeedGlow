@@ -91,7 +91,7 @@ const schemaData = [
     ],
     "sameAs": [
       "https://www.linkedin.com/in/lolajjoo/",
-      "https://www.instagram.com/seedglow_/",
+      "https://www.instagram.com/lola_minjoo/",
     ],
     "knowsAbout": [
       "로컬 스타트업",
@@ -120,7 +120,7 @@ const schemaData = [
     ],
     "sameAs": [
       "https://www.linkedin.com/in/lolajjoo/",
-      "https://www.instagram.com/seedglow_/",
+      "https://www.instagram.com/lola_minjoo/",
     ],
   },
   {

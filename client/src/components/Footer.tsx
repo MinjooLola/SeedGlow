@@ -2,7 +2,7 @@ import { SiLinkedin, SiInstagram } from "react-icons/si";
 
 const socialLinks = [
   { icon: SiLinkedin, href: "https://www.linkedin.com/in/lolajjoo/", label: "LinkedIn" },
-  { icon: SiInstagram, href: "https://www.instagram.com/seedglow_/", label: "Instagram" },
+  { icon: SiInstagram, href: "https://www.instagram.com/lola_minjoo/", label: "Instagram" },
 ];
 
 export default function Footer() {

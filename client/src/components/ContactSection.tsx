@@ -11,7 +11,7 @@ const socialLinks = [
   {
     icon: SiInstagram,
     label: "Instagram",
-    href: "https://www.instagram.com/seedglow_/",
+    href: "https://www.instagram.com/lola_minjoo/",
   },
 ];
 
