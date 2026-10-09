@@ -1,4 +1,5 @@
 import React from "react";
+import { resumeIdentity, resumeRoleDetails } from "../../../../../../client/src/data/resumeExperiences";
 import { ArrowRight, ChevronRight, BarChart, TrendingUp, Users, Target, Building2, MapPin } from "lucide-react";
 
 export function Sharp() {
@@ -148,7 +149,7 @@ export function Sharp() {
       <section className="border-t border-[#1a1a1c] flex flex-col">
         <div className="p-6 pb-0">
           <p className="font-mono-accent text-xs uppercase tracking-widest text-[#666] mb-4">Leadership</p>
-          <h2 className="text-2xl font-bold tracking-tight mb-8">김민주 대표</h2>
+          <h2 className="text-2xl font-bold tracking-tight mb-8">{resumeIdentity.name}</h2>
         </div>
         
         <div className="aspect-[4/3] bg-[#111] relative border-y border-[#1a1a1c] mb-8 overflow-hidden group">
@@ -163,20 +164,20 @@ export function Sharp() {
         
         <div className="px-6 pb-20">
           <p className="text-sm text-[#888] leading-loose mb-6">
-            "수많은 로컬 스타트업들이 뛰어난 기술과 열정을 가지고도 자금 조달과 시장 진입의 벽에 부딪힙니다. 시드글로우는 철저한 분석과 냉철한 전략으로 그 벽을 허무는 날카로운 무기가 되어드립니다."
+            {resumeRoleDetails.seedGlow.responsibilities.join(" ")}
           </p>
           <div className="space-y-3 font-mono-accent text-xs text-[#666]">
             <div className="flex items-start gap-4">
               <span className="gold-accent w-2 opacity-50">▶</span>
-              <p>現 SeedGlow 대표이사</p>
+              <p>{resumeRoleDetails.seedGlow.title} / {resumeRoleDetails.seedGlow.period}</p>
             </div>
             <div className="flex items-start gap-4">
               <span className="gold-accent w-2 opacity-50">▶</span>
-              <p>스타트업 엑셀러레이팅 및 투자 심사역 출신</p>
+              <p>{resumeRoleDetails.mysc.title} / {resumeRoleDetails.mysc.period}</p>
             </div>
             <div className="flex items-start gap-4">
               <span className="gold-accent w-2 opacity-50">▶</span>
-              <p>지역 혁신 창업 기업 전담 멘토</p>
+              <p>{resumeRoleDetails.mysc.responsibilities[1]}</p>
             </div>
           </div>
         </div>

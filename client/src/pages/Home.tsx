@@ -10,6 +10,8 @@ import ImageSlider from "@/components/ImageSlider";
 import ArchiveSection from "@/components/ArchiveSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import { resumeSiteDescription } from "@/data/resumeExperiences";
+import { founderIntro } from "@/data/aboutHistory";
 
 const schemaData = [
   {
@@ -17,7 +19,7 @@ const schemaData = [
     "@type": "WebSite",
     "name": "시드글로우 (SeedGlow)",
     "url": "https://seedglow.co.kr",
-    "description": "전국 300팀 이상의 로컬 스타트업 컨설팅 및 26팀 투자 유치 성공. SeedGlow는 지역 스타트업의 성장을 함께합니다.",
+    "description": resumeSiteDescription,
     "inLanguage": "ko",
   },
   {
@@ -106,7 +108,7 @@ const schemaData = [
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "김민주",
-    "jobTitle": "시드글로우(SeedGlow) 대표 / 컨설턴트",
+    "jobTitle": founderIntro.title,
     "worksFor": {
       "@type": "Organization",
       "name": "시드글로우 (SeedGlow)",

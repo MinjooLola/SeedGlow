@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, searchForWorkspaceRoot } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
@@ -62,6 +62,10 @@ export default defineConfig({
     allowedHosts: true,
     fs: {
       strict: true,
+      allow: [
+        searchForWorkspaceRoot(import.meta.dirname),
+        path.resolve(import.meta.dirname, "../../client/src/data"),
+      ],
     },
   },
   preview: {

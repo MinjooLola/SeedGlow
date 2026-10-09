@@ -1,0 +1,1 @@
+- [홈페이지 이력 표시](homepage-history-presentation.md) — 기존 대표 소개와 강의·컨설팅·심사 분류를 유지하고 새 활동만 추가한다.

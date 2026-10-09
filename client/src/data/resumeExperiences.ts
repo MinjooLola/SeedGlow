@@ -117,6 +117,7 @@ export const myscTeachingConsultingExperiences: ResumeExperience[] = [
 export const resumeRoleDetails = {
   seedGlow: {
     title: "대표/컨설턴트, 시드글로우(SeedGlow)",
+    period: "2025.02~현재",
     responsibilities: [
       "로컬 스타트업 비즈니스모델(BM)고도화브랜딩IR 전문 컨설팅 및 강의",
       "스타트업 IR 심사 및 투자 연계",
@@ -124,7 +125,7 @@ export const resumeRoleDetails = {
   },
   mysc: {
     title: "팀장/선임연구원, 엠와이소셜컴퍼니(MYSC)",
-    period: "2025.02~현재",
+    period: "2021.01~2025.02",
     responsibilities: [
       "액셀러레이팅 및 오픈이노베이션 프로그램 기획운영 총괄",
       "스타트업 컨설팅 및 투자심사 (예비~seriesA)",
@@ -137,3 +138,23 @@ export const resumeRoleDetails = {
     responsibility: "사업단 홍보 및 운영 실무 / 중남미 환경뉴스 번역 및 책자 발간",
   },
 };
+
+export const resumeIdentity = {
+  name: "김민주(Kim Minjoo)",
+  contact: "+82 10-6597-1543 | minjoo.kim.biz@gmail.com | linkedin.com/in/lolajjoo/ | https://seedglow.co.kr/",
+};
+
+export const resumeEducation: ResumeExperience[] = [
+  { period: "2021.11 ~ 2021.12", text: "조직문화 소통전문가과정 퍼실리테이터 교육 이수" },
+  { period: "2016.03 ~ 2021.08", text: "한국외국어대학교 스페인어 & 국제학 전공 (4.18/4.5)" },
+  { period: "2019.04 ~ 2019.05", text: "멕시코 우남대학교 CEPE 과정 이수" },
+];
+
+export const resumeSkills = [
+  "Language Skills: 한국어 (상), 영어 (상), 스페인어 (중상/Dele B2)",
+  "Computer Skills: Notion, Vibe Coding, Google Spreadsheet, Power Point, Excel, Canva, Premiere Pro",
+];
+
+// Existing performance figures are intentionally unchanged pending the owner's confirmation.
+export const resumeSiteDescription =
+  "전국 300팀 이상의 로컬 스타트업 컨설팅 및 26팀 투자 유치 성공. SeedGlow는 지역 스타트업의 성장을 함께합니다.";

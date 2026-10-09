@@ -1,4 +1,5 @@
 import React from "react";
+import { resumeIdentity, resumeRoleDetails } from "../../../../../../client/src/data/resumeExperiences";
 import { Coffee, Sun, Sprout, ArrowRight, BookOpen, Handshake, TrendingUp, Presentation, MessageCircle } from "lucide-react";
 
 export function Warm() {
@@ -167,17 +168,16 @@ export function Warm() {
             </div>
           </div>
           
-          <h2 className="text-xl font-bold mb-1">김민주 대표</h2>
-          <p className="text-[#D36C56] text-sm font-medium mb-6">시드글로우 CEO</p>
+          <h2 className="text-xl font-bold mb-1">{resumeIdentity.name}</h2>
+          <p className="text-[#D36C56] text-sm font-medium mb-6">{resumeRoleDetails.seedGlow.title} / {resumeRoleDetails.seedGlow.period}</p>
           
           <p className="text-[#7E736E] text-[15px] leading-relaxed mb-6 text-left">
-            "지역에는 아직 발견되지 않은 원석 같은 창업팀들이 너무나 많습니다. 저는 그 원석들이 온전한 빛을 발할 수 있도록 돕는 조력자입니다. 단순한 컨설팅을 넘어, 함께 밤을 새우며 고민하는 든든한 팀원이 되어드리겠습니다."
+            {resumeRoleDetails.seedGlow.responsibilities.join(" ")}
           </p>
           
           <div className="flex flex-wrap gap-2 justify-center">
-            <span className="px-3 py-1 bg-[#F4EFEB] rounded-full text-xs text-[#7E736E]">로컬 창업 전문가</span>
-            <span className="px-3 py-1 bg-[#F4EFEB] rounded-full text-xs text-[#7E736E]">IR 스토리텔러</span>
-            <span className="px-3 py-1 bg-[#F4EFEB] rounded-full text-xs text-[#7E736E]">투자 유치 멘토</span>
+            <span className="px-3 py-1 bg-[#F4EFEB] rounded-full text-xs text-[#7E736E]">{resumeRoleDetails.mysc.title}</span>
+            <span className="px-3 py-1 bg-[#F4EFEB] rounded-full text-xs text-[#7E736E]">{resumeRoleDetails.mysc.period}</span>
           </div>
         </div>
       </section>

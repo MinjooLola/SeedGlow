@@ -1,0 +1,32 @@
+{
+  "originalEntriesPreserved": 76,
+  "newActivities": 36,
+  "categories": [
+    {
+      "name": "강의",
+      "previousRows": 33,
+      "addedRows": 22,
+      "currentRows": 55
+    },
+    {
+      "name": "컨설팅",
+      "previousRows": 23,
+      "addedRows": 16,
+      "currentRows": 39
+    },
+    {
+      "name": "심사",
+      "previousRows": 20,
+      "addedRows": 10,
+      "currentRows": 30
+    }
+  ],
+  "missing": 0,
+  "extra": 0,
+  "originalWordingChanges": 0,
+  "founderIntroductionRestored": true,
+  "renderedThreeCategoryLayout": true,
+  "pendingClassification": [
+    "SK하이닉스 하이로컬이천 로컬 기업 투자 사례 및 LIPS 전략"
+  ]
+}

@@ -1,6 +1,8 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { resumeSiteDescription } from "../client/src/data/resumeExperiences";
+import { escapeHtml } from "../client/src/data/resumeMarkup";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -68,7 +70,7 @@ Sitemap: https://seedglow.co.kr/sitemap.xml`;
   <channel>
     <title>시드글로우 | 로컬 스타트업 전문 컨설팅</title>
     <link>https://seedglow.co.kr</link>
-    <description>전국 300팀 이상의 로컬 스타트업 컨설팅 및 26팀 투자 유치 성공. SeedGlow는 지역 스타트업의 성장을 함께합니다.</description>
+    <description>${escapeHtml(resumeSiteDescription)}</description>
     <language>ko</language>
     <lastBuildDate>${now}</lastBuildDate>
     <atom:link href="https://seedglow.co.kr/rss.xml" rel="self" type="application/rss+xml"/>

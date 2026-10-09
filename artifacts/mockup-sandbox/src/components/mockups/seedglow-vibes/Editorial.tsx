@@ -1,4 +1,5 @@
 import React from "react";
+import { resumeIdentity, resumeRoleDetails } from "../../../../../../client/src/data/resumeExperiences";
 import { ArrowRight } from "lucide-react";
 
 export function Editorial() {
@@ -126,16 +127,17 @@ export function Editorial() {
       <section className="px-6 py-20 bg-zinc-900 text-zinc-100">
         <div className="mb-10 text-zinc-500 text-xs tracking-widest uppercase">Director</div>
         
-        <h2 className="font-playfair text-3xl mb-2">김민주</h2>
-        <p className="text-sm text-zinc-400 mb-8 font-light">CEO, SeedGlow</p>
+        <h2 className="font-playfair text-3xl mb-2">{resumeIdentity.name}</h2>
+        <p className="text-sm text-zinc-400 mb-8 font-light">{resumeRoleDetails.seedGlow.title} / {resumeRoleDetails.seedGlow.period}</p>
         
         <div className="space-y-6 text-sm text-zinc-300 font-light leading-relaxed">
           <p>
-            "로컬 비즈니스는 단순히 지역에 있다는 것만으로 특별해지지 않습니다. 본질적인 경쟁력과 숫자로 증명할 수 있는 전략이 필요합니다."
+            {resumeRoleDetails.seedGlow.responsibilities.join(" ")}
           </p>
           <p>
-            다년간의 액셀러레이팅 경험과 40여 회 이상의 심사 및 강연을 통해 축적된 인사이트로, 지역 창업가들이 겪는 막막함을 해소하고 실질적인 성장의 돌파구를 마련합니다.
+            {resumeRoleDetails.mysc.title} / {resumeRoleDetails.mysc.period}
           </p>
+          <p>40여 회 이상의 심사 및 강연</p>
         </div>
       </section>
 

@@ -2,9 +2,19 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import { resumeSiteDescription } from "./client/src/data/resumeExperiences";
+import { escapeHtml, resumeProfileHtml } from "./client/src/data/resumeMarkup";
 
 export default defineConfig({
   plugins: [
+    {
+      name: "resume-content",
+      transformIndexHtml(html) {
+        return html
+          .replaceAll("__RESUME_SITE_DESCRIPTION__", escapeHtml(resumeSiteDescription))
+          .replace("<!-- RESUME_PROFILE -->", resumeProfileHtml());
+      },
+    },
     react(),
     runtimeErrorOverlay(),
     ...(process.env.NODE_ENV !== "production" &&
