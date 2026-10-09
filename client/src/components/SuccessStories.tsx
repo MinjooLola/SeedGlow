@@ -4,12 +4,7 @@ import { useHomeContent } from "@/hooks/use-home-content";
 import { Quote } from "lucide-react";
 import { useRef, useState } from "react";
 
-const partnershipQuote = {
-  body: "투자자 관점에서 우리의 강점을 어떻게 강조해야 하는지, 또 그것을 어떻게 장표화해야 할지 명확히 구조화해주셔서 큰 인사이트를 얻을 수 있었습니다. 덕분에 당장 실행해야 할 것과 방향성, 그리고 우리의 IR을 어떻게 매력적으로 만들지 정리할 수 있었고, 더 잘 어필할 수 있다는 자신감도 많이 얻었습니다! 무엇보다 발표 이후에도 지속적으로 업데이트되는 내용과 고민들을 함께 점검하며 관계를 이어가고자 하시는 모습에서 큰 감동을 받았습니다. 혹시 IR을 준비하고 계시다면, 꼭 한 번 의견 들어보시길 추천드립니다.",
-  display: "8년차 GovTech 스타트업, 투자 IR 준비 중",
-};
-
-const INITIAL_REVIEW_COUNT = 6;
+const INITIAL_REVIEW_COUNT = 4;
 
 export default function SuccessStories({ defaultExpanded = false }: { defaultExpanded?: boolean }) {
   const { data, isLoading, isError } = useHomeContent();
@@ -48,24 +43,9 @@ export default function SuccessStories({ defaultExpanded = false }: { defaultExp
           </p>
         </div>
 
-        <article className="max-w-4xl mx-auto mb-10 md:mb-14">
-          <div className="p-7 md:p-9 rounded-md bg-amber-900/50 border border-amber-700/50 flex flex-col">
-            <div className="flex items-start gap-3 mb-4">
-              <Quote className="w-6 h-6 text-primary flex-shrink-0" aria-hidden="true" />
-              <Badge variant="secondary" className="text-sm">지속적 파트너십</Badge>
-            </div>
-            <blockquote className="text-white leading-relaxed text-[15px] md:text-base whitespace-pre-wrap break-keep">
-              "{partnershipQuote.body}"
-            </blockquote>
-            <p className="text-amber-300/80 text-sm mt-5 pt-4 border-t border-amber-700/30 italic">
-              <cite>- {partnershipQuote.display}</cite>
-            </p>
-          </div>
-        </article>
-
         {isLoading && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" aria-label="후기를 불러오는 중" aria-busy="true">
-            {[0, 1, 2].map((item) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" aria-label="후기를 불러오는 중" aria-busy="true">
+            {[0, 1, 2, 3].map((item) => (
               <div key={item} className="h-64 rounded-md bg-amber-900/50 border border-amber-700/40 animate-pulse" />
             ))}
           </div>
@@ -85,7 +65,7 @@ export default function SuccessStories({ defaultExpanded = false }: { defaultExp
               emptyLabel="아직 공개된 후기가 없습니다."
             />
             {(reviews.status === "ready" || reviews.status === "stale") && reviews.items.length > 0 && (
-              <div id="consulting-reviews" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div id="consulting-reviews" className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {visibleReviews.map((review, index) => (
                   <article
                     key={`${review.display}-${index}`}

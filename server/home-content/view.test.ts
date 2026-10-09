@@ -76,7 +76,7 @@ test("real React views match published rows, counts, ordering and unabridged rev
     assert.equal((rendered.match(/data-testid="link-archive-/g) ?? []).length, 1);
     assert.ok(rendered.includes("누적 72건") && rendered.includes("70+") && rendered.includes("60+ 협력기관과 함께합니다"));
     assert.ok(rendered.includes(escapeHtml(longBody)));
-    assert.ok(rendered.includes("마지막 문장") && rendered.includes("지속적 파트너십"));
+    assert.ok(rendered.includes("마지막 문장") && !rendered.includes("지속적 파트너십"));
     const history = rendered.match(/<section id="history"[\s\S]*?<\/section>/)?.[0] ?? "";
     assert.ok(!history.includes('data-home-field="period"') && !history.includes("2026.04-12"));
     content.history.items.forEach((item, index) => {
@@ -96,7 +96,7 @@ test("real React views match published rows, counts, ordering and unabridged rev
     }
     const reviews = rendered.match(/<section id="success"[\s\S]*?<\/section>/)?.[0] ?? "";
     assert.ok(!/line-clamp|truncate|더보기/.test(reviews));
-    assert.ok(reviews.includes("lg:grid-cols-3") && reviews.includes("whitespace-pre-wrap"));
+    assert.ok(reviews.includes("md:grid-cols-2") && !reviews.includes("lg:grid-cols-3") && reviews.includes("whitespace-pre-wrap"));
     const firstCard = reviews.match(/data-testid="card-testimonial-0"[\s\S]*?<\/article>/)?.[0] ?? "";
     assert.ok(!firstCard.includes('data-slot="badge"') && !firstCard.includes("실행 전략"));
     assert.ok(reviews.indexOf(escapeHtml(longBody)) < reviews.indexOf("두 번째 후기"));
@@ -108,12 +108,12 @@ test("real React views match published rows, counts, ordering and unabridged rev
       keyword: `키워드 ${index}`, body: `후기 ${index} 원문 그대로`, display: "익명 참여자",
     }));
     const folded = renderToStaticMarkup(createElement(Views, { content: manyReviews }));
-    assert.equal((folded.match(/data-testid="card-testimonial-/g) ?? []).length, 6);
+    assert.equal((folded.match(/data-testid="card-testimonial-/g) ?? []).length, 4);
     assert.ok(folded.includes('aria-expanded="false"') && folded.includes('aria-controls="consulting-reviews"'));
     assert.ok(!folded.includes("후기 8 원문 그대로"));
     const expanded = renderToStaticMarkup(createElement(Views, { content: manyReviews, expanded: true }));
     assert.equal((expanded.match(/data-testid="card-testimonial-/g) ?? []).length, 9);
-    assert.ok(expanded.includes("후기 8 원문 그대로") && expanded.includes("지속적 파트너십"));
+    assert.ok(expanded.includes("후기 8 원문 그대로") && !expanded.includes("지속적 파트너십"));
 
     const unavailable = structuredClone(content);
     unavailable.history = { status: "unconfigured", updatedAt: null, items: [] };

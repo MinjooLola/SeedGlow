@@ -1,0 +1,35 @@
+{
+  "sourceTab": "홈_후기",
+  "sourcePublishedReviews": 40,
+  "uniqueDisplayedReviews": 37,
+  "initialCards": 4,
+  "moreCards": 33,
+  "sheetWrites": 0,
+  "overlappingFixedCardRemoved": true,
+  "mergedDuplicates": [
+    {
+      "omitted": "건설적 피드백",
+      "kept": "피칭 보완점 진단",
+      "reason": "reviewed_overlap"
+    },
+    {
+      "omitted": "실전 IR 노하우",
+      "kept": "IR 전략 비교 분석",
+      "reason": "reviewed_overlap"
+    },
+    {
+      "omitted": "PMF 검증 전략",
+      "kept": "투자·자금조달 단계 이해",
+      "reason": "reviewed_overlap"
+    }
+  ],
+  "unchangedTextComparison": {
+    "sourceRows": 37,
+    "renderedRows": 37,
+    "displayedRows": 37,
+    "missing": 0,
+    "extras": 0,
+    "changedFields": 0,
+    "orderUnchanged": true
+  }
+}

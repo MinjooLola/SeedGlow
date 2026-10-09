@@ -1,4 +1,5 @@
 import path from "node:path";
+import { deduplicateReviews } from "./review-deduplication";
 import type { ArchiveItem, ContentFeed, HomeContent } from "../../shared/homeContent";
 import { roundDownToTens } from "../../shared/homeContent";
 import { LastGoodCache, CACHE_TTL_MS } from "./cache";
@@ -51,7 +52,7 @@ export function createHomeContentService(options: {
     const historyCount = h.updatedAt === null ? null : h.items.length;
     const partnersCount = p.updatedAt === null ? null : p.items.filter((item) => item.excludedFromCount === false).length;
     return {
-      history: h, reviews: r, partners: p,
+      history: h, reviews: { ...r, items: deduplicateReviews(r.items).items }, partners: p,
       archive: { ...a, items: a.items.map((item) => ({
         ...item, imageUrl: item.imageUrl ? `/api/archive-image?post=${encodeURIComponent(item.url)}` : null,
       })) },

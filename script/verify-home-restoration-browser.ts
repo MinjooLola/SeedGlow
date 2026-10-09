@@ -44,16 +44,16 @@ try {
     assert.ok(content.history.items.every((item: { period: string }) => item.period === ""));
     const historyText = page.locator('#history [data-home-field="text"]').first();
     assert.ok(await historyText.evaluate(node => parseFloat(getComputedStyle(node).fontSize) >= 14));
-    assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), Math.min(6, content.reviews.items.length));
+    assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), Math.min(4, content.reviews.items.length));
     const reviewToggle = page.getByTestId("button-reviews-toggle");
     await reviewToggle.click();
     assert.equal(await reviewToggle.getAttribute("aria-expanded"), "true");
     assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), content.reviews.items.length);
     assert.deepEqual(await page.locator('#consulting-reviews [data-home-field="body"]').allTextContents(),
       content.reviews.items.map((item: { body: string }) => item.body));
-    assert.equal(await page.getByText("지속적 파트너십", { exact: true }).count(), 1);
+    assert.equal(await page.getByText("지속적 파트너십", { exact: true }).count(), 0);
     await reviewToggle.click();
-    assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), 6);
+    assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), 4);
     assert.equal(await reviewToggle.getAttribute("aria-expanded"), "false");
 
     const interviewLinks = page.locator('[data-testid^="link-interview-"]');
@@ -92,7 +92,7 @@ try {
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     assert.deepEqual(errors, []);
     console.log(JSON.stringify({ viewport, historyRows: new Set(sourceIndices).size,
-      reviews: content.reviews.items.length, collapsedReviews: 6, fixedPartnership: 1,
+      reviews: content.reviews.items.length, collapsedReviews: 4, fixedPartnership: 0,
       historyColumnCounts: expectedGroups.map(group => ({ category: group.category, count: group.texts.length })),
       historyDatesHidden: true, interviews: 2, expandedArchive: postIds.length,
       olderArchivePresent: historicalArchiveIds.length, photosUncropped: true, collapsedArchive: 6, errors }));
