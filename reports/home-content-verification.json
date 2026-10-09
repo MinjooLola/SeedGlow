@@ -1,14 +1,14 @@
 {
-  "historyStatus": "unconfigured",
+  "historyStatus": "unavailable",
   "publishedHistoryRows": null,
   "historyMetricBefore": "40+",
   "historyMetricAfter": "설정·확인 대기",
-  "partnerStatus": "unconfigured",
+  "partnerStatus": "unavailable",
   "allPublishedPartnerChips": null,
   "countedPartnerChips": null,
   "partnersTitleBefore": "40+ 협력기관과 함께합니다",
   "partnersTitleAfter": "설정·확인 대기",
-  "reviewStatus": "unconfigured",
+  "reviewStatus": "unavailable",
   "publishedReviews": null,
   "reviewKeys": [
     "keyword",
@@ -25,9 +25,5 @@
   "pendingClassification": [
     "SK하이닉스 하이로컬이천 LIPS 항목: CSV 연결 후 강의 분류 확인 필요"
   ],
-  "unconfiguredVariables": [
-    "HOME_HISTORY_CSV_URL",
-    "HOME_REVIEWS_CSV_URL",
-    "HOME_PARTNERS_CSV_URL"
-  ]
+  "unconfiguredVariables": []
 }
