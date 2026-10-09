@@ -1,32 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import profileImage from "@assets/김민주_프로필_240525_1765811099605.png";
-import {
-  consulting,
-  founderIntro,
-  judging,
-  lectures,
-} from "@/data/aboutHistory";
-
-function ExperienceList({
-  items,
-  label,
-}: {
-  items: string[];
-  label: string;
-}) {
-  return (
-    <div className="p-6">
-      <h4 className="font-bold text-base mb-4">{label}</h4>
-      <ul aria-label={label} className="space-y-1.5">
-        {items.map((item, index) => (
-          <li key={index} className="text-xs text-muted-foreground leading-relaxed break-keep">
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+import { founderIntro } from "@/data/founderIntro";
 
 export default function AboutSection() {
   return (
@@ -96,11 +70,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ExperienceList items={lectures} label="강의" />
-          <ExperienceList items={consulting} label="컨설팅" />
-          <ExperienceList items={judging} label="심사" />
-        </div>
       </div>
     </section>
   );

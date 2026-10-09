@@ -1,15 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@assets/제목_없는_디자인_1767953447116.png";
+import { useHomeContent } from "@/hooks/use-home-content";
 
-const metrics = [
+const fixedMetrics = [
   { value: "300+", label: "로컬 스타트업 컨설팅" },
   { value: "26팀", label: "투자 유치 성공" },
   { value: "50억+", label: "누적 투자 유치 연계" },
-  { value: "40+", label: "창업 강의/IR 심사" },
 ];
 
 export default function HeroSection() {
+  const { data } = useHomeContent();
+  const rounded = data?.stats.historyRounded;
+  const metrics = [...fixedMetrics, {
+    value: rounded === null || rounded === undefined ? "—" : `${rounded}+`,
+    label: "창업 강의/IR 심사",
+  }];
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     element?.scrollIntoView({ behavior: "smooth" });

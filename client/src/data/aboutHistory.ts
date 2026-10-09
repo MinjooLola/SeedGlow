@@ -1,15 +1,6 @@
 import { seedGlowExperiences } from "./resumeExperiences";
 
-export const founderIntro = {
-  name: "김민주",
-  title: "시드글로우(SeedGlow) 대표 / 컨설턴트",
-  previousTitle: "(前) 스타트업 투자사·액셀러레이터 팀장",
-  coreWork: ["BM 고도화", "로컬 브랜딩", "IR 전략", "투자 연계"],
-  paragraphs: [
-    "제주, 대구, 부산, 경주, 의성, 광주, 안동, 울릉, 부안, 이천 등 지역의 문제를 해결하는 300개 이상의 스타트업이 고객의 진짜 니즈를 바탕으로 아이템을 찾고 이를 비즈니스로 만들어가는 여정을 함께 해왔습니다.",
-    "일회성 컨설팅보다는 제로투원을 함께 하는 페이스메이커로서, 혼자서 가기 힘든 길을 같이 걸으며 문제를 해결해 나갑니다.",
-  ],
-};
+export { founderIntro } from "./founderIntro";
 
 export const existingLectures = [
   "한림대학교 2026-2 로컬창업비즈니스플랜 교과목 강의",
@@ -136,6 +127,7 @@ const newActivityCategories: { sourceIndex: number; categories: HistoryCategory[
   { sourceIndex: 35, categories: ["lecture"] },
   { sourceIndex: 36, categories: ["consulting", "judging"] },
   { sourceIndex: 37, categories: ["lecture"] },
+  { sourceIndex: 38, categories: ["lecture"] },
 ];
 
 export const historyAdditions = newActivityCategories.map(({ sourceIndex, categories }) => ({
@@ -143,8 +135,7 @@ export const historyAdditions = newActivityCategories.map(({ sourceIndex, catego
   categories,
 }));
 
-// No activity type is stated in this title, so it is not classified by assumption.
-export const pendingHistory = [seedGlowExperiences[38].text];
+export const pendingHistory: string[] = [];
 
 const extendHistory = (category: HistoryCategory, existing: string[]) => [
   ...historyAdditions.filter((item) => item.categories.includes(category)).map((item) => item.text),

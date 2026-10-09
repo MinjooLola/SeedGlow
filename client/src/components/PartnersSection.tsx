@@ -1,47 +1,12 @@
 import { Badge } from "@/components/ui/badge";
-
-const partners = [
-  "해양수산부",
-  "경상북도경제진흥원",
-  "제주대학교",
-  "동국대학교",
-  "동덕여자대학교",
-  "울산문화관광재단",
-  "대구창조경제혁신센터",
-  "안동시",
-  "제주창조경제혁신센터",
-  "대구광역시",
-  "대구테크노파크",
-  "사회적협동조합 menTory",
-  "중소벤처기업부",
-  "안산시",
-  "대구대학교",
-  "경북경제진흥원",
-  "연세대학교",
-  "서울시립대학교",
-  "엠와이소셜컴퍼니(MYSC)",
-  "한국외국어대학교",
-  "대구콘텐츠기업지원센터",
-  "현대모비스",
-  "한국임업진흥원",
-  "제주도시재생지원센터",
-  "고려대학교",
-  "행정안전부",
-  "제주더큰내일센터",
-  "유디임팩트",
-  "창업진흥원",
-  "한림대학교",
-  "충북글로벌창업이민센터",
-  "강원도립대학교",
-  "경북콘텐츠코리아랩",
-  "강동구 해냄센터",
-  "대구광역시 달서구 사회적경제지원센터",
-  "농림축산식품부",
-  "한국농어촌공사",
-  "그외 다수",
-];
+import ContentFeedStatus from "@/components/ContentFeedStatus";
+import { useHomeContent } from "@/hooks/use-home-content";
 
 export default function PartnersSection() {
+  const { data, isLoading, isError } = useHomeContent();
+  const partners = data?.partners;
+  const roundedCount = data?.stats.partnersRounded;
+
   return (
     <section className="py-16 md:py-20 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -49,20 +14,43 @@ export default function PartnersSection() {
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
             PARTNERS
           </Badge>
-          <h3 className="text-2xl md:text-3xl font-bold">40+ 협력기관과 함께합니다</h3>
+          <h3 className="text-2xl md:text-3xl font-bold">
+            {roundedCount == null ? "연결 준비 중" : `${roundedCount}+ 협력기관과 함께합니다`}
+          </h3>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="px-4 py-2 rounded-md bg-background border border-border text-sm font-medium text-muted-foreground"
-              data-testid={`partner-${index}`}
-            >
-              {partner}
-            </div>
-          ))}
-        </div>
+        {isLoading && (
+          <div className="flex flex-wrap justify-center gap-3" aria-label="협력기관을 불러오는 중" aria-busy="true">
+            {[0, 1, 2, 3, 4, 5].map((item) => (
+              <div key={item} className="h-9 w-28 rounded-md bg-muted/60 animate-pulse" />
+            ))}
+          </div>
+        )}
+
+        {!isLoading && !partners && (
+          <p role="status" className="text-center text-sm text-muted-foreground">
+            협력기관 연결을 준비 중입니다. 잠시 후 다시 확인해 주세요.
+          </p>
+        )}
+
+        {!isLoading && partners && (
+          <>
+            <ContentFeedStatus feed={partners} isError={isError} />
+            {(partners.status === "ready" || partners.status === "stale") && partners.items.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-3">
+                {partners.items.map((partner, index) => (
+                  <div
+                    key={`${partner.name}-${index}`}
+                    className="px-4 py-2 rounded-md bg-background border border-border text-sm font-medium text-muted-foreground"
+                    data-testid={`partner-${index}`}
+                  >
+                    <span className="whitespace-pre-wrap">{partner.name}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </>
+        )}
       </div>
     </section>
   );

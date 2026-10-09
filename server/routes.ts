@@ -3,11 +3,23 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { resumeSiteDescription } from "../client/src/data/resumeExperiences";
 import { escapeHtml } from "../client/src/data/resumeMarkup";
+import { homeContentService } from "./home-content/service";
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  // Warm asynchronously: the homepage and health checks must not wait on external services.
+  void homeContentService.get();
+  app.get("/api/home-content", async (_req, res) => {
+    res.set("Cache-Control", "no-store").json(await homeContentService.get());
+  });
+  app.get("/api/archive-image", async (req, res) => {
+    if (typeof req.query.post !== "string") return res.sendStatus(400);
+    const image = await homeContentService.image(req.query.post);
+    if (!image) return res.sendStatus(404);
+    res.set("Content-Type", image.type).set("Cache-Control", "public, max-age=3600").send(image.body);
+  });
 
   app.get("/robots.txt", (_req, res) => {
     const robotsTxt = `User-agent: *
@@ -38,6 +50,12 @@ Sitemap: https://seedglow.co.kr/sitemap.xml`;
     <loc>https://seedglow.co.kr/#about</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://seedglow.co.kr/#history</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

@@ -1,1 +1,2 @@
-- [홈페이지 이력 표시](homepage-history-presentation.md) — 기존 대표 소개와 강의·컨설팅·심사 분류를 유지하고 새 활동만 추가한다.
+- [홈페이지 이력 표시](homepage-history-presentation.md) — 대표 소개와 실적 구분을 유지하며, 공개 시트 연동 후에는 원문·행 순서를 우선한다.
+- [홈페이지 콘텐츠 운영](homepage-content-ownership.md) — 운영자 시트·블로그 자동 반영, 후기 익명성과 게시용 원문 보존 원칙.

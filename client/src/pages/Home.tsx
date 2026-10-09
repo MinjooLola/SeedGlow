@@ -11,7 +11,10 @@ import ArchiveSection from "@/components/ArchiveSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { resumeSiteDescription } from "@/data/resumeExperiences";
-import { founderIntro } from "@/data/aboutHistory";
+import { founderIntro } from "@/data/founderIntro";
+import HistorySection from "@/components/HistorySection";
+import { useHomeContent } from "@/hooks/use-home-content";
+import { performanceDescription } from "@shared/homeContent";
 
 const schemaData = [
   {
@@ -152,39 +155,6 @@ const schemaData = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "시드글로우 (SeedGlow)",
-    "url": "https://seedglow.co.kr",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "ratingCount": "9",
-      "reviewCount": "9",
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "GovTech 스타트업 대표" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "사업 영역에 대한 깊은 이해와 날카로운 시각으로 방향성을 짚어주셨습니다. 정책 데이터 플랫폼의 확장성과 투자자 관점에서의 설득 포인트를 명확히 구조화해 주셔서 많은 인사이트를 얻었습니다.",
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Lifestyle 스타트업 대표" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "구체적인 실행 전략을 정리해주시는 게 너무 좋았어요. 어떤 부분이 강점이 되고, 어떤 부분은 보완해야 하는지를 현실적으로 제시해주셔서 바로 실행 가능한 과제들을 도출할 수 있었습니다.",
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "로컬 F&B 스타트업 대표" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "로컬 브랜드의 막막함 속에서 길을 찾게 해주신 민주님, 사업 구조를 정리하고 전략을 세우는 과정에서 성심껏 도움을 주셨습니다.",
-      },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -200,7 +170,7 @@ const schemaData = [
         "name": "시드글로우의 컨설팅 실적은 어떻게 되나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "전국 300팀 이상의 로컬 스타트업 컨설팅, 26팀 투자 유치 성공, 누적 50억 원 이상의 투자 유치 연계, 40회 이상의 창업 강의 및 IR 심사 실적을 보유하고 있습니다.",
+          "text": performanceDescription(null),
         },
       },
       {
@@ -216,8 +186,16 @@ const schemaData = [
 ];
 
 export default function Home() {
+  const { data } = useHomeContent();
   useEffect(() => {
-    schemaData.forEach((schema, index) => {
+    document.getElementById("schema-live-content")?.remove();
+    const schemas = structuredClone(schemaData);
+    const faq = schemas.find((schema) => schema["@type"] === "FAQPage");
+    if (faq?.mainEntity) {
+      const question = faq.mainEntity.find((entry) => entry.name === "시드글로우의 컨설팅 실적은 어떻게 되나요?");
+      if (question) question.acceptedAnswer.text = performanceDescription(data?.stats.historyRounded ?? null);
+    }
+    schemas.forEach((schema, index) => {
       const id = `schema-${index}`;
       if (!document.getElementById(id)) {
         const script = document.createElement("script");
@@ -228,12 +206,12 @@ export default function Home() {
       }
     });
     return () => {
-      schemaData.forEach((_, index) => {
+      schemas.forEach((_, index) => {
         const el = document.getElementById(`schema-${index}`);
         if (el) el.remove();
       });
     };
-  }, []);
+  }, [data?.stats.historyRounded]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -243,6 +221,7 @@ export default function Home() {
         <TargetAudienceSection />
         <ServicesSection />
         <AboutSection />
+        <HistorySection />
         <ImageSlider />
         <PartnersSection />
         <SuccessStories />
