@@ -1,5 +1,5 @@
 {
-  "historyStatus": "ready",
+  "historyStatus": "stale",
   "publishedHistoryRows": 72,
   "historyMetricBefore": "40+",
   "historyMetricAfter": "70+",
@@ -9,7 +9,7 @@
   "partnersTitleBefore": "40+ 협력기관과 함께합니다",
   "partnersTitleAfter": "60+ 협력기관과 함께합니다",
   "reviewStatus": "ready",
-  "publishedReviews": 8,
+  "publishedReviews": 42,
   "reviewKeys": [
     "keyword",
     "body",
@@ -37,9 +37,9 @@
       "orderUnchanged": true
     },
     "reviews": {
-      "sourceRows": 8,
-      "renderedRows": 8,
-      "displayedRows": 8,
+      "sourceRows": 42,
+      "renderedRows": 42,
+      "displayedRows": 42,
       "missing": 0,
       "extras": 0,
       "changedFields": 0,
