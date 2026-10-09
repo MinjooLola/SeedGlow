@@ -12,7 +12,6 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { resumeSiteDescription } from "@/data/resumeExperiences";
 import { founderIntro } from "@/data/founderIntro";
-import HistorySection from "@/components/HistorySection";
 import { useHomeContent } from "@/hooks/use-home-content";
 import { performanceDescription } from "@shared/homeContent";
 
@@ -236,7 +235,6 @@ export default function Home() {
         <TargetAudienceSection />
         <ServicesSection />
         <AboutSection />
-        <HistorySection />
         <ImageSlider />
         <PartnersSection />
         <SuccessStories />

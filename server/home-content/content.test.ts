@@ -107,6 +107,21 @@ test("RSS filters case-insensitively, keeps metadata only and refuses arbitrary 
   });
 });
 
+test("archive keeps previously seen records when they leave the latest RSS window", async () => {
+  const directory = await mkdtemp(path.join(tmpdir(), "seedglow-archive-retention-"));
+  let newest = "123";
+  const fetcher = (async () => new Response(rss().replace("/minjoo_lola/123", `/minjoo_lola/${newest}`))) as Fetcher;
+  try {
+    const service = createHomeContentService({
+      url: () => undefined, directory, fetcher, historicalArchive: async () => [],
+    });
+    assert.equal((await service.get()).archive.items.length, 1);
+    newest = "125";
+    const updated = (await service.get(true)).archive.items;
+    assert.deepEqual(updated.map((item) => new URL(item.url).pathname), ["/minjoo_lola/125", "/minjoo_lola/123"]);
+  } finally { await rm(directory, { recursive: true, force: true }); }
+});
+
 test("one-hour cache, counters, FALSE updates, outage fallback, disk restore, and privacy", async () => {
   const directory = await mkdtemp(path.join(tmpdir(), "seedglow-test-cache-"));
   let clock = 1_700_000_000_000;
@@ -133,7 +148,7 @@ test("one-hour cache, counters, FALSE updates, outage fallback, disk restore, an
       ["좋은 점", "후기 전문\n공백  유지", "익명", "TRUE", "PRIVATE_DATE_MARKER", "PRIVATE_RAW_MARKER", "PRIVATE_LINE_MARKER", "PRIVATE_ROW_MARKER", "PRIVATE_NOTE_MARKER"],
     ]));
   }) as Fetcher;
-  const options = { url: (kind: string) => csvUrl(kind), directory, fetcher, now: () => clock };
+  const options = { url: (kind: string) => csvUrl(kind), directory, fetcher, now: () => clock, historicalArchive: async () => [] };
   try {
     const service = createHomeContentService(options);
     const first = await service.get();

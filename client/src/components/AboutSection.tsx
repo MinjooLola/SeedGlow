@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import HistorySection from "@/components/HistorySection";
 import { profile as profileImage } from "@/assets/home/images";
 import { founderIntro } from "@/data/founderIntro";
 
@@ -74,7 +75,7 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
-
+        <HistorySection embedded />
       </div>
     </section>
   );

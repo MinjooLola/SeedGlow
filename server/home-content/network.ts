@@ -1,13 +1,14 @@
 export type Fetcher = typeof fetch;
 
-function isAllowed(url: URL, kind: "csv" | "rss" | "image") {
+function isAllowed(url: URL, kind: "csv" | "rss" | "image" | "blog") {
   if (url.protocol !== "https:" || url.username || url.password || (url.port && url.port !== "443")) return false;
   if (kind === "rss") return url.hostname === "rss.blog.naver.com";
+  if (kind === "blog") return url.hostname === "m.blog.naver.com" && /^\/minjoo_lola\/\d+$/.test(url.pathname);
   if (kind === "csv") return url.hostname === "docs.google.com" || url.hostname.endsWith(".googleusercontent.com");
   return url.hostname.endsWith(".pstatic.net") || url.hostname.endsWith(".naver.net");
 }
 
-export async function fetchSource(url: string, kind: "csv" | "rss" | "image", fetcher: Fetcher = fetch) {
+export async function fetchSource(url: string, kind: "csv" | "rss" | "image" | "blog", fetcher: Fetcher = fetch) {
   const signal = AbortSignal.timeout(15_000);
   let target = new URL(url);
   if (kind === "csv" && (target.hostname !== "docs.google.com" || !target.pathname.startsWith("/spreadsheets/") ||
@@ -16,7 +17,10 @@ export async function fetchSource(url: string, kind: "csv" | "rss" | "image", fe
   }
   for (let redirects = 0; redirects <= 4; redirects++) {
     if (!isAllowed(target, kind)) throw new Error("허용되지 않은 데이터 출처입니다.");
-    const response = await fetcher(target, { signal, redirect: "manual" });
+    const response = await fetcher(target, {
+      signal, redirect: "manual",
+      ...(kind === "blog" ? { headers: { "User-Agent": "Mozilla/5.0 (compatible; SeedGlowArchive/1.0; +https://seedglow.co.kr)" } } : {}),
+    });
     if ([301, 302, 303, 307, 308].includes(response.status)) {
       const location = response.headers.get("location");
       await response.body?.cancel();

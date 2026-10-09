@@ -78,13 +78,21 @@ test("real React views match published rows, counts, ordering and unabridged rev
     assert.ok(rendered.includes(escapeHtml(longBody)));
     assert.ok(rendered.includes("마지막 문장") && rendered.includes("지속적 파트너십"));
     const history = rendered.match(/<section id="history"[\s\S]*?<\/section>/)?.[0] ?? "";
-    let previous = -1;
     content.history.items.forEach((item, index) => {
       const position = history.indexOf(`data-testid="history-item-${index}"`);
-      assert.ok(position > previous, `History source order changed at ${index}`);
-      previous = position;
+      assert.ok(position >= 0, `History missing at ${index}`);
       assert.ok(history.includes(escapeHtml(item.text)));
     });
+    for (const label of ["강의", "컨설팅", "심사"]) {
+      const indices = content.history.items.flatMap((item, index) => item.category === label ? [index] : []);
+      const section = history.split(`data-history-group="${label}"`)[1].split('data-history-group=')[0];
+      let previous = -1;
+      indices.forEach((index) => {
+        const position = section.indexOf(`data-testid="history-item-${index}"`);
+        assert.ok(position > previous, `History order within ${label} changed`);
+        previous = position;
+      });
+    }
     const reviews = rendered.match(/<section id="success"[\s\S]*?<\/section>/)?.[0] ?? "";
     assert.ok(!/line-clamp|truncate|더보기/.test(reviews));
     assert.ok(reviews.includes("lg:grid-cols-3") && reviews.includes("whitespace-pre-wrap"));

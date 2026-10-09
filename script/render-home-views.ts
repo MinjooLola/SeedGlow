@@ -70,18 +70,27 @@ export function compareRenderedRows(rendered: string, content: HomeContent) {
     let missing = 0;
     let changedFields = 0;
     source.forEach((item, index) => {
-      const record = records.find((match) => Number(match[2]) === index);
-      if (!record) { missing++; return; }
+      const matchingRecords = records.filter((match) => Number(match[2]) === index);
+      if (!matchingRecords.length) { missing++; return; }
+      matchingRecords.forEach((record) => {
       fields.forEach((field) => {
         const expected = item[field];
         const value = record[3].match(new RegExp(`data-home-field="${String(field)}"[^>]*>([\\s\\S]*?)<\\/[^>]+>`))?.[1];
         const actual = value === undefined ? "" : textContent(value);
         if (actual !== expected) changedFields++;
       });
+      });
     });
     const extras = records.filter((record) => Number(record[2]) >= source.length).length;
-    const orderUnchanged = records.every((record, index) => Number(record[2]) === index);
-    return { sourceRows: source.length, renderedRows: records.length, missing, extras, changedFields, orderUnchanged };
+    const orderUnchanged = prefix === "history-item"
+      ? Array.from(rendered.matchAll(/data-history-group="[^"]+"[^>]*>([\s\S]*?)(?=<div[^>]*data-history-group=|<\/section>)/g))
+        .every((block) => {
+          const indices = Array.from(block[1].matchAll(/data-testid="history-item-(\d+)"/g), (match) => Number(match[1]));
+          return indices.every((index, position) => position === 0 || index > indices[position - 1]);
+        })
+      : records.every((record, index) => Number(record[2]) === index);
+    return { sourceRows: source.length, renderedRows: new Set(records.map((record) => record[2])).size,
+      displayedRows: records.length, missing, extras, changedFields, orderUnchanged };
   }
   return {
     history: content.history.updatedAt === null ? null : compare("history-item", content.history.items, ["period", "text", "category"]),

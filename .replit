@@ -4,6 +4,7 @@ hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
 
 [nix]
 channel = "stable-24_05"
+packages = ["chromium"]
 
 [deployment]
 deploymentTarget = "autoscale"
@@ -52,3 +53,10 @@ integrations = ["javascript_mem_db:1.0.0"]
 [userenv]
 
 [userenv.shared]
+HOME_HISTORY_CSV_URL = "https://docs.google.com/spreadsheets/d/1U6U0zdHF8Pm8xAIZXhuhtnDHS49hqqNCRU6ovV2s4qw/edit"
+HOME_PARTNERS_CSV_URL = "https://docs.google.com/spreadsheets/d/1U6U0zdHF8Pm8xAIZXhuhtnDHS49hqqNCRU6ovV2s4qw/edit"
+HOME_REVIEWS_CSV_URL = "https://docs.google.com/spreadsheets/d/1U6U0zdHF8Pm8xAIZXhuhtnDHS49hqqNCRU6ovV2s4qw/edit"
+
+[postMerge]
+path = "script/post-merge.sh"
+timeoutMs = 180000

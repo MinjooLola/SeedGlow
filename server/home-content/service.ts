@@ -8,6 +8,7 @@ import {
 } from "./sources";
 import { fetchSource, readLimitedBytes, type Fetcher } from "./network";
 import { isAuthenticatedSheetUrl, loadSheetHistory, loadSheetReviews, loadSheetPartners, type SheetsProxy } from "./sheets";
+import { loadHistoricalArchive, mergeArchive } from "./archive-history";
 
 type SourceKind = "history" | "reviews" | "partners";
 const keys: Record<SourceKind, string> = {
@@ -20,6 +21,7 @@ export function createHomeContentService(options: {
   fetcher?: Fetcher;
   now?: () => number;
   sheetsProxy?: SheetsProxy;
+  historicalArchive?: () => Promise<ArchiveItem[]>;
 } = {}) {
   const url = options.url ?? ((kind: SourceKind) => process.env[keys[kind]]);
   const directory = options.directory ?? path.resolve(".cache/home-content");
@@ -31,7 +33,14 @@ export function createHomeContentService(options: {
     loadSheetReviews(source, options.sheetsProxy) : loadReviews(source, fetcher), reviewSchema, directory, now);
   const partners = new LastGoodCache("partners", () => url("partners"), (source) => isAuthenticatedSheetUrl(source) ?
     loadSheetPartners(source, options.sheetsProxy) : loadPartners(source, fetcher), partnerSchema, directory, now);
-  const archive = new LastGoodCache("archive", () => RSS_URL, (source) => loadArchive(source, fetcher), archiveSchema, directory, now);
+  const archive: LastGoodCache<ArchiveItem> = new LastGoodCache("archive", () => RSS_URL, async (source) => {
+    const [recent, historical] = await Promise.all([
+      loadArchive(source, fetcher),
+      options.historicalArchive ? options.historicalArchive() : loadHistoricalArchive(fetcher),
+    ]);
+    // RSS is a moving window: preserve previously observed public records too.
+    return mergeArchive(recent, mergeArchive(archive.peek().items, historical));
+  }, archiveSchema, directory, now);
   const imageCache = new Map<string, { body: Buffer; type: string; updatedAt: number }>();
 
   function compose(

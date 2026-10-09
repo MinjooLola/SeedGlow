@@ -1,15 +1,16 @@
 import { Badge } from "@/components/ui/badge";
 import ContentFeedStatus from "@/components/ContentFeedStatus";
 import { useHomeContent } from "@/hooks/use-home-content";
+import { groupHistory } from "@/data/historyPresentation";
 
-export default function HistorySection() {
+export default function HistorySection({ embedded = false }: { embedded?: boolean }) {
   const { data, isLoading, isError } = useHomeContent();
   const history = data?.history;
 
   return (
-    <section id="history" className="py-20 md:py-28 bg-card">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+    <section id="history" className={embedded ? "scroll-mt-24" : "scroll-mt-24 py-20 md:py-28 bg-card"}>
+      <div className={embedded ? "" : "max-w-7xl mx-auto px-4 md:px-6"}>
+        <div className={embedded ? "sr-only" : "text-center mb-12"}>
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
             HISTORY
           </Badge>
@@ -37,17 +38,21 @@ export default function HistorySection() {
           <>
             <ContentFeedStatus feed={history} isError={isError} />
             {(history.status === "ready" || history.status === "stale") && history.items.length > 0 && (
-              <div className="divide-y divide-border/70 border-y border-border/70">
-                {history.items.map((item, index) => (
-                  <article
-                    key={`${item.period}-${item.text}-${index}`}
-                    className="grid grid-cols-1 gap-2 py-4 md:grid-cols-[8rem_minmax(0,1fr)_auto] md:items-center md:gap-6"
-                    data-testid={`history-item-${index}`}
-                  >
-                    <p data-home-field="period" className="text-xs font-medium text-muted-foreground whitespace-pre-wrap">{item.period}</p>
-                    <p data-home-field="text" className="text-sm leading-relaxed text-foreground break-keep whitespace-pre-wrap">{item.text}</p>
-                    <Badge data-home-field="category" variant="secondary" className="w-fit text-xs whitespace-pre-wrap">{item.category}</Badge>
-                  </article>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {groupHistory(history.items).map(({ label, items }) => (
+                  <div key={label} className="p-6" data-history-group={label}>
+                    <h3 className="font-bold text-base mb-4">{label}</h3>
+                    <div aria-label={label} className="space-y-1.5">
+                      {items.map(({ item, index }) => (
+                        <article key={index} data-testid={`history-item-${index}`}
+                          className="text-xs text-muted-foreground leading-relaxed break-keep">
+                          <span data-home-field="text" className="whitespace-pre-wrap">{item.text}</span>
+                          <span data-home-field="period" className="block text-[11px] text-muted-foreground/70 whitespace-pre-wrap">{item.period}</span>
+                          <span data-home-field="category" className="sr-only whitespace-pre-wrap">{item.category}</span>
+                        </article>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             )}

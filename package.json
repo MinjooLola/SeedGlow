@@ -11,7 +11,7 @@
     "images:optimize": "tsx script/optimize-home-images.ts",
     "test:home-images": "tsx --test script/home-images.test.ts",
     "verify:home-images:browser": "tsx script/verify-home-images-browser.ts",
-    "test:home-content": "tsx --test server/home-content/content.test.ts server/home-content/view.test.ts server/home-content/sheets.test.ts",
+    "test:home-content": "tsx --test server/home-content/content.test.ts server/home-content/view.test.ts server/home-content/sheets.test.ts server/home-content/archive-history.test.ts",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
@@ -55,7 +55,7 @@
     "drizzle-orm": "^0.39.3",
     "drizzle-zod": "^0.7.0",
     "embla-carousel-react": "^8.6.0",
-    "express": "^4.21.2",
+    "express": "^4.22.3",
     "express-session": "^1.18.1",
     "fast-xml-parser": "^5.11.2",
     "framer-motion": "^11.13.1",
@@ -66,6 +66,7 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "pg": "^8.16.3",
+    "proxy-addr": "^2.0.8",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",

@@ -9,7 +9,7 @@
   "partnersTitleBefore": "40+ 협력기관과 함께합니다",
   "partnersTitleAfter": "60+ 협력기관과 함께합니다",
   "reviewStatus": "ready",
-  "publishedReviews": 3,
+  "publishedReviews": 8,
   "reviewKeys": [
     "keyword",
     "body",
@@ -17,7 +17,7 @@
   ],
   "emailOrPhoneFoundInPublishedReviews": false,
   "archiveStatus": "ready",
-  "archivePosts": 17,
+  "archivePosts": 44,
   "latestArchiveTitle": "로컬 창업팀의 시장 진입 전략(GTM) 전략 | 시드글로우 로컬 창업 강의·심사·컨설팅",
   "latestArchiveDate": "Tue, 29 Sep 2026 23:49:41 +0900",
   "skHyLocalExpectedCategory": "강의",
@@ -30,14 +30,16 @@
     "history": {
       "sourceRows": 72,
       "renderedRows": 72,
+      "displayedRows": 93,
       "missing": 0,
       "extras": 0,
       "changedFields": 0,
       "orderUnchanged": true
     },
     "reviews": {
-      "sourceRows": 3,
-      "renderedRows": 3,
+      "sourceRows": 8,
+      "renderedRows": 8,
+      "displayedRows": 8,
       "missing": 0,
       "extras": 0,
       "changedFields": 0,
@@ -46,6 +48,7 @@
     "partners": {
       "sourceRows": 63,
       "renderedRows": 63,
+      "displayedRows": 63,
       "missing": 0,
       "extras": 0,
       "changedFields": 0,
