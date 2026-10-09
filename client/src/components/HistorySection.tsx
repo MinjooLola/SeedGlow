@@ -44,9 +44,9 @@ export default function HistorySection() {
                     className="grid grid-cols-1 gap-2 py-4 md:grid-cols-[8rem_minmax(0,1fr)_auto] md:items-center md:gap-6"
                     data-testid={`history-item-${index}`}
                   >
-                    <p className="text-xs font-medium text-muted-foreground whitespace-pre-wrap">{item.period}</p>
-                    <p className="text-sm leading-relaxed text-foreground break-keep whitespace-pre-wrap">{item.text}</p>
-                    <Badge variant="secondary" className="w-fit text-xs whitespace-pre-wrap">{item.category}</Badge>
+                    <p data-home-field="period" className="text-xs font-medium text-muted-foreground whitespace-pre-wrap">{item.period}</p>
+                    <p data-home-field="text" className="text-sm leading-relaxed text-foreground break-keep whitespace-pre-wrap">{item.text}</p>
+                    <Badge data-home-field="category" variant="secondary" className="w-fit text-xs whitespace-pre-wrap">{item.category}</Badge>
                   </article>
                 ))}
               </div>

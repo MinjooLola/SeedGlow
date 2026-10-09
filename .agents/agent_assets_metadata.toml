@@ -14,3 +14,17 @@ mtime_ms = 1791538446884
 storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:91d28105-9194-4892-b0ed-2ee9e2ed8b7e/b883141a-7634-49dd-83db-67d22d0ec22c/3eb3abe1-5563-4e28-b227-5269ef426b08"
 storage_version_token = "1791538624355045"
 content_type = "text/html"
+
+[[outputs]]
+id = "F3yI7BFlGQAubqF7p6MST"
+uri = "file://reports/home-content-connection-report.html"
+type = "html"
+title = "시드글로우 구글시트 연결·검증 보고"
+description = "문자열 대조 결과, 수정 항목과 파일 목록, 원문 확인 사항 및 공유 이미지 미리보기를 담았습니다."
+logical_id = "500afe2f-9b71-47ed-a620-432a6c71fc43"
+content_hash = "sha256:c0d7f5ace9f994897d1bbf474140f2f2760ddff145e67fc1c3db77b95a3c04aa"
+size = 473283
+mtime_ms = 1791545300870
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:91d28105-9194-4892-b0ed-2ee9e2ed8b7e/500afe2f-9b71-47ed-a620-432a6c71fc43/035e89a3-fbb6-4113-a5d0-931f82c90d90"
+storage_version_token = "1791545386440793"
+content_type = "text/html"

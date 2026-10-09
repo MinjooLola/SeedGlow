@@ -75,14 +75,14 @@ export default function SuccessStories() {
                       <div className="flex items-start gap-3 mb-4">
                         <Quote className="w-6 h-6 text-primary flex-shrink-0" aria-hidden="true" />
                         {review.keyword && (
-                          <Badge variant="secondary" className="text-xs whitespace-pre-wrap">{review.keyword}</Badge>
+                          <Badge data-home-field="keyword" variant="secondary" className="text-xs whitespace-pre-wrap">{review.keyword}</Badge>
                         )}
                       </div>
                       <blockquote className="text-white leading-relaxed text-sm flex-1 whitespace-pre-wrap break-keep">
-                        "{review.body}"
+                        "<span data-home-field="body">{review.body}</span>"
                       </blockquote>
                       <p className="text-amber-300/70 text-xs mt-5 pt-4 border-t border-amber-700/30 italic">
-                        <cite className="whitespace-pre-wrap">- {review.display}</cite>
+                        <cite data-home-field="display" className="whitespace-pre-wrap">{review.display}</cite>
                       </p>
                     </div>
                   </article>

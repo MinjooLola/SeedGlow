@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import TargetAudienceSection from "@/components/TargetAudienceSection";
@@ -187,7 +187,22 @@ const schemaData = [
 
 export default function Home() {
   const { data } = useHomeContent();
+  const initialAnchorHandled = useRef(false);
   useEffect(() => {
+    if (!data || initialAnchorHandled.current) return;
+    initialAnchorHandled.current = true;
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+  }, [data]);
+  useEffect(() => {
+    for (const selector of ['meta[property="og:image"]', 'meta[name="twitter:image"]']) {
+      const meta = document.querySelector<HTMLMetaElement>(selector);
+      if (meta) {
+        const url = new URL(meta.content, window.location.href);
+        url.searchParams.set("history", String(data?.stats.historyRounded ?? "pending"));
+        meta.content = url.href;
+      }
+    }
     document.getElementById("schema-live-content")?.remove();
     const schemas = structuredClone(schemaData);
     const faq = schemas.find((schema) => schema["@type"] === "FAQPage");

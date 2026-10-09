@@ -3,6 +3,7 @@ import { z } from "zod";
 import type { ArchiveItem, HistoryItem, PartnerItem, ReviewItem } from "../../shared/homeContent";
 import { readProjectedCsv } from "./csv";
 import { fetchSource, readLimitedBytes, type Fetcher } from "./network";
+import { validateHeaders, historyRow, reviewRow, partnerRow, sheetLayouts } from "./rows";
 
 export const RSS_URL = "https://rss.blog.naver.com/minjoo_lola.xml";
 export const historySchema = z.object({ period: z.string(), text: z.string(), category: z.string() }).strict();
@@ -10,8 +11,6 @@ export const reviewSchema = z.object({ keyword: z.string(), body: z.string(), di
 export const partnerSchema = z.object({ name: z.string(), excludedFromCount: z.boolean().nullable() }).strict();
 export const archiveSchema = z.object({ title: z.string(), date: z.string(), imageUrl: z.string().nullable(), url: z.string() }).strict();
 
-const isTrue = (text: string) => text.trim().toUpperCase() === "TRUE";
-const isFalse = (text: string) => text.trim().toUpperCase() === "FALSE";
 export class CategoryMismatchError extends Error {
   constructor(public readonly categories: string[]) {
     super("RSS에서 seedglow 카테고리를 찾지 못했습니다. 카테고리 확인이 필요합니다.");
@@ -27,9 +26,7 @@ async function csvRows<T>(
   let hasHeader = false;
   await readProjectedCsv(response, columns, (row) => {
     if (!hasHeader) {
-      for (const column of columns) {
-        if (row[column]?.replace(/^\uFEFF/, "").trim() !== headers[column]) throw new Error("CSV 열 이름 또는 순서가 요청한 양식과 다릅니다.");
-      }
+      validateHeaders(row, columns, headers);
       hasHeader = true;
       return;
     }
@@ -42,22 +39,13 @@ async function csvRows<T>(
 }
 
 export const loadHistory = (url: string, fetcher: Fetcher = fetch): Promise<HistoryItem[]> =>
-  csvRows(url, [0, 1, 2, 3], { 0: "기간", 1: "내용", 2: "구분", 3: "게시" }, (row) =>
-    isTrue(row[3]) ? { period: row[0], text: row[1], category: row[2] } : null, fetcher);
+  csvRows(url, sheetLayouts.history.columns, sheetLayouts.history.headers, historyRow, fetcher);
 
 export const loadReviews = (url: string, fetcher: Fetcher = fetch): Promise<ReviewItem[]> =>
-  csvRows(url, [0, 1, 2, 3], { 0: "키워드", 1: "후기 본문(게시용)", 2: "표기", 3: "게시" }, (row) => {
-    if (!isTrue(row[3])) return null;
-    // Reject an unsafe publication instead of modifying or truncating the review.
-    if (row.slice(0, 3).some((text) => /[\w.+-]+@[\w.-]+\.[a-z]{2,}|\b01[016789][ -]?\d{3,4}[ -]?\d{4}\b|\+82[ -]?\d{1,2}[ -]?\d{3,4}[ -]?\d{4}/i.test(text))) {
-      throw new Error("후기 게시용 열에 연락처가 포함되어 있습니다. 시트에서 익명화가 필요합니다.");
-    }
-    return { keyword: row[0], body: row[1], display: row[2] };
-  }, fetcher);
+  csvRows(url, sheetLayouts.reviews.columns, sheetLayouts.reviews.headers, reviewRow, fetcher);
 
 export const loadPartners = (url: string, fetcher: Fetcher = fetch): Promise<PartnerItem[]> =>
-  csvRows(url, [0, 1, 3], { 0: "기관명", 1: "게시", 3: "집계제외" }, (row) =>
-    isTrue(row[1]) ? { name: row[0], excludedFromCount: isTrue(row[3]) ? true : isFalse(row[3]) ? false : null } : null, fetcher);
+  csvRows(url, sheetLayouts.partners.columns, sheetLayouts.partners.headers, partnerRow, fetcher);
 
 function xmlText(value: unknown): string {
   if (typeof value === "string") return value;

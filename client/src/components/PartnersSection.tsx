@@ -44,7 +44,7 @@ export default function PartnersSection() {
                     className="px-4 py-2 rounded-md bg-background border border-border text-sm font-medium text-muted-foreground"
                     data-testid={`partner-${index}`}
                   >
-                    <span className="whitespace-pre-wrap">{partner.name}</span>
+                    <span data-home-field="name" className="whitespace-pre-wrap">{partner.name}</span>
                   </div>
                 ))}
               </div>

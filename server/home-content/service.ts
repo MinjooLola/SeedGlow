@@ -7,6 +7,7 @@ import {
   loadArchive, loadHistory, loadPartners, loadReviews,
 } from "./sources";
 import { fetchSource, readLimitedBytes, type Fetcher } from "./network";
+import { isAuthenticatedSheetUrl, loadSheetHistory, loadSheetReviews, loadSheetPartners, type SheetsProxy } from "./sheets";
 
 type SourceKind = "history" | "reviews" | "partners";
 const keys: Record<SourceKind, string> = {
@@ -18,14 +19,18 @@ export function createHomeContentService(options: {
   directory?: string;
   fetcher?: Fetcher;
   now?: () => number;
+  sheetsProxy?: SheetsProxy;
 } = {}) {
   const url = options.url ?? ((kind: SourceKind) => process.env[keys[kind]]);
   const directory = options.directory ?? path.resolve(".cache/home-content");
   const fetcher = options.fetcher ?? fetch;
   const now = options.now ?? Date.now;
-  const history = new LastGoodCache("history", () => url("history"), (source) => loadHistory(source, fetcher), historySchema, directory, now);
-  const reviews = new LastGoodCache("reviews", () => url("reviews"), (source) => loadReviews(source, fetcher), reviewSchema, directory, now);
-  const partners = new LastGoodCache("partners", () => url("partners"), (source) => loadPartners(source, fetcher), partnerSchema, directory, now);
+  const history = new LastGoodCache("history", () => url("history"), (source) => isAuthenticatedSheetUrl(source) ?
+    loadSheetHistory(source, options.sheetsProxy) : loadHistory(source, fetcher), historySchema, directory, now);
+  const reviews = new LastGoodCache("reviews", () => url("reviews"), (source) => isAuthenticatedSheetUrl(source) ?
+    loadSheetReviews(source, options.sheetsProxy) : loadReviews(source, fetcher), reviewSchema, directory, now);
+  const partners = new LastGoodCache("partners", () => url("partners"), (source) => isAuthenticatedSheetUrl(source) ?
+    loadSheetPartners(source, options.sheetsProxy) : loadPartners(source, fetcher), partnerSchema, directory, now);
   const archive = new LastGoodCache("archive", () => RSS_URL, (source) => loadArchive(source, fetcher), archiveSchema, directory, now);
   const imageCache = new Map<string, { body: Buffer; type: string; updatedAt: number }>();
 
@@ -49,8 +54,8 @@ export function createHomeContentService(options: {
 
   return {
     peek() { return compose(history.peek(), reviews.peek(), partners.peek(), archive.peek()); },
-    async get() {
-      const [h, r, p, a] = await Promise.all([history.get(), reviews.get(), partners.get(), archive.get()]);
+    async get(refresh = false) {
+      const [h, r, p, a] = await Promise.all([history.get(refresh), reviews.get(refresh), partners.get(refresh), archive.get(refresh)]);
       return compose(h, r, p, a);
     },
     async image(post: string) {

@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { resumeSiteDescription } from "../client/src/data/resumeExperiences";
 import { escapeHtml } from "../client/src/data/resumeMarkup";
 import { homeContentService } from "./home-content/service";
+import { shareImage } from "./home-content/share-image";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -11,6 +12,11 @@ export async function registerRoutes(
 ): Promise<Server> {
   // Warm asynchronously: the homepage and health checks must not wait on external services.
   void homeContentService.get();
+  app.get(["/og-image.png", "/og-image.jpg"], async (_req, res, next) => {
+    try {
+      res.set("Content-Type", "image/png").set("Cache-Control", "public, max-age=3600").send(await shareImage());
+    } catch (error) { next(error); }
+  });
   app.get("/api/home-content", async (_req, res) => {
     res.set("Cache-Control", "no-store").json(await homeContentService.get());
   });

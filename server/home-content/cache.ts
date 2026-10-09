@@ -4,6 +4,7 @@ import path from "node:path";
 import type { ZodType } from "zod";
 import type { ContentFeed } from "../../shared/homeContent";
 import { CategoryMismatchError } from "./sources";
+import { PublicSourceError } from "./rows";
 
 export const CACHE_TTL_MS = 60 * 60 * 1000;
 const RETRY_MS = 60_000;
@@ -44,7 +45,7 @@ export class LastGoodCache<T> {
       { items: [], status: "unconfigured", updatedAt: null, message: "구글 시트 CSV 주소가 아직 설정되지 않았습니다." };
   }
 
-  async get(): Promise<ContentFeed<T>> {
+  async get(refresh = false): Promise<ContentFeed<T>> {
     const url = this.url();
     if (!url) return this.peek();
     const key = this.key(url);
@@ -54,13 +55,13 @@ export class LastGoodCache<T> {
       this.slots.set(key, slot);
     }
     if (slot.pending) return slot.pending;
-    if (slot.restored && ((slot.updatedAt !== undefined && this.now() - slot.updatedAt < CACHE_TTL_MS) || this.now() < slot.retryAt)) return this.snapshot(slot);
+    if (!refresh && slot.restored && ((slot.updatedAt !== undefined && this.now() - slot.updatedAt < CACHE_TTL_MS) || this.now() < slot.retryAt)) return this.snapshot(slot);
     const current = slot;
-    current.pending = this.refresh(url, key, current);
+    current.pending = this.refresh(url, key, current, refresh);
     try { return await current.pending; } finally { current.pending = undefined; }
   }
 
-  private async refresh(url: string, key: string, slot: Slot<T>): Promise<ContentFeed<T>> {
+  private async refresh(url: string, key: string, slot: Slot<T>, refresh: boolean): Promise<ContentFeed<T>> {
     if (!slot.restored) {
       slot.restored = true;
       try {
@@ -72,7 +73,7 @@ export class LastGoodCache<T> {
           slot.updatedAt = saved.updatedAt;
         }
       } catch { /* A missing or invalid cache does not replace live source data. */ }
-      if (slot.updatedAt !== undefined && this.now() - slot.updatedAt < CACHE_TTL_MS) return this.snapshot(slot);
+      if (!refresh && slot.updatedAt !== undefined && this.now() - slot.updatedAt < CACHE_TTL_MS) return this.snapshot(slot);
     }
     try {
       const items = this.itemSchema.array().parse(await this.loader(url));
@@ -90,7 +91,8 @@ export class LastGoodCache<T> {
         console.warn(`[home-content] ${this.kind}: disk cache unavailable; last successful data remains in memory.`);
       }
     } catch (error) {
-      slot.error = error instanceof CategoryMismatchError ? error.message : "외부 데이터를 갱신하지 못했습니다. 마지막 성공 데이터를 유지합니다.";
+      const reason = error instanceof CategoryMismatchError || error instanceof PublicSourceError ? error.message : "외부 데이터를 갱신하지 못했습니다.";
+      slot.error = slot.items ? `${reason} 마지막 성공 데이터를 유지합니다.` : reason;
       slot.categories = error instanceof CategoryMismatchError ? error.categories : undefined;
       slot.retryAt = this.now() + RETRY_MS;
     }

@@ -1,8 +1,10 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { homeContentService } from "../server/home-content/service";
+import { compareRenderedRows, renderPublicViews } from "./render-home-views";
 
 async function verify() {
-  const content = await homeContentService.get();
+  const content = await homeContentService.get(process.argv.includes("--refresh"));
+  const stringComparison = compareRenderedRows(await renderPublicViews(content), content);
   const newest = content.archive.items.reduce<(typeof content.archive.items)[number] | null>((latest, item) =>
     latest === null || Date.parse(item.date) > Date.parse(latest.date) ? item : latest, null);
   const reviewText = content.reviews.items.map(({ keyword, body, display }) => `${keyword}\n${body}\n${display}`).join("\n");
@@ -38,10 +40,16 @@ async function verify() {
       content.reviews.status === "unconfigured" ? "HOME_REVIEWS_CSV_URL" : null,
       content.partners.status === "unconfigured" ? "HOME_PARTNERS_CSV_URL" : null,
     ].filter(Boolean),
+    stringComparison,
+    consultantNameMentionNeedsConfirmation: content.reviews.updatedAt === null ? null :
+      content.reviews.items.some((review) => review.body.includes("민주님")),
   };
   mkdirSync("reports", { recursive: true });
   writeFileSync("reports/home-content-verification.json", JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));
+  if (Object.values(stringComparison).some((result) => result && (result.missing || result.extras || result.changedFields || !result.orderUnchanged))) {
+    process.exitCode = 1;
+  }
 }
 
 verify().catch((error) => { console.error(error); process.exitCode = 1; });
