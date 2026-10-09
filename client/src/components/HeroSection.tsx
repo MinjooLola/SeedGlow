@@ -46,7 +46,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex-1 flex items-center">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-32 md:py-40 w-full">
           <div className="max-w-2xl">
-            <p className="text-xs md:text-sm text-primary font-medium tracking-wide uppercase mb-6" data-testid="text-hero-tagline">
+            <p className="text-sm text-primary font-medium tracking-wide uppercase mb-6" data-testid="text-hero-tagline">
               Local Startup Growth Partner
             </p>
             

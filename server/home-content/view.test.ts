@@ -44,11 +44,11 @@ test("real React views match published rows, counts, ordering and unabridged rev
           import Partners from "./client/src/components/PartnersSection";
           import Archive from "./client/src/components/ArchiveSection";
           import Hero from "./client/src/components/HeroSection";
-          export default function Views({content}) {
+          export default function Views({content,expanded=false}) {
             const client = new QueryClient({defaultOptions:{queries:{retry:false,staleTime:Infinity}}});
             client.setQueryData(["/api/home-content"],content);
             return React.createElement(QueryClientProvider,{client},React.createElement("main",null,
-              React.createElement(Hero),React.createElement(History),React.createElement(Reviews),
+              React.createElement(Hero),React.createElement(History),React.createElement(Reviews,{defaultExpanded:expanded}),
               React.createElement(Partners),React.createElement(Archive)));
           }`,
       },
@@ -78,6 +78,7 @@ test("real React views match published rows, counts, ordering and unabridged rev
     assert.ok(rendered.includes(escapeHtml(longBody)));
     assert.ok(rendered.includes("마지막 문장") && rendered.includes("지속적 파트너십"));
     const history = rendered.match(/<section id="history"[\s\S]*?<\/section>/)?.[0] ?? "";
+    assert.ok(!history.includes('data-home-field="period"') && !history.includes("2026.04-12"));
     content.history.items.forEach((item, index) => {
       const position = history.indexOf(`data-testid="history-item-${index}"`);
       assert.ok(position >= 0, `History missing at ${index}`);
@@ -101,6 +102,18 @@ test("real React views match published rows, counts, ordering and unabridged rev
     assert.ok(reviews.indexOf(escapeHtml(longBody)) < reviews.indexOf("두 번째 후기"));
     assert.ok(!/[\w.+-]+@[\w.-]+\.[a-z]{2,}|\b01[016789][ -]?\d{3,4}[ -]?\d{4}\b/i.test(reviews));
     assert.ok(!rendered.includes("https://blogfiles.") && rendered.includes("/api/archive-image?post=123"));
+
+    const manyReviews = structuredClone(content);
+    manyReviews.reviews.items = Array.from({ length: 9 }, (_, index) => ({
+      keyword: `키워드 ${index}`, body: `후기 ${index} 원문 그대로`, display: "익명 참여자",
+    }));
+    const folded = renderToStaticMarkup(createElement(Views, { content: manyReviews }));
+    assert.equal((folded.match(/data-testid="card-testimonial-/g) ?? []).length, 6);
+    assert.ok(folded.includes('aria-expanded="false"') && folded.includes('aria-controls="consulting-reviews"'));
+    assert.ok(!folded.includes("후기 8 원문 그대로"));
+    const expanded = renderToStaticMarkup(createElement(Views, { content: manyReviews, expanded: true }));
+    assert.equal((expanded.match(/data-testid="card-testimonial-/g) ?? []).length, 9);
+    assert.ok(expanded.includes("후기 8 원문 그대로") && expanded.includes("지속적 파트너십"));
 
     const unavailable = structuredClone(content);
     unavailable.history = { status: "unconfigured", updatedAt: null, items: [] };

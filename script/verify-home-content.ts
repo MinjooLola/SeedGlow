@@ -13,13 +13,17 @@ async function verify() {
   );
   const report = {
     historyStatus: content.history.status,
+    historySourceTab: "이력_3열보기",
+    historyDatesDisplayed: false,
+    historyColumnCounts: Object.fromEntries(["강의", "컨설팅", "심사"].map(category =>
+      [category, content.history.items.filter(item => item.category === category).length])),
     publishedHistoryRows: content.stats.historyCount,
-    historyMetricBefore: "40+",
+    historyMetricBefore: "70+",
     historyMetricAfter: content.stats.historyRounded === null ? "설정·확인 대기" : `${content.stats.historyRounded}+`,
     partnerStatus: content.partners.status,
     allPublishedPartnerChips: content.partners.updatedAt === null ? null : content.partners.items.length,
     countedPartnerChips: content.stats.partnersCount,
-    partnersTitleBefore: "40+ 협력기관과 함께합니다",
+    partnersTitleBefore: "60+ 협력기관과 함께합니다",
     partnersTitleAfter: content.stats.partnersRounded === null ? "설정·확인 대기" : `${content.stats.partnersRounded}+ 협력기관과 함께합니다`,
     reviewStatus: content.reviews.status,
     publishedReviews: content.reviews.updatedAt === null ? null : content.reviews.items.length,

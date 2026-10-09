@@ -27,7 +27,7 @@ export default function ContentFeedStatus({
     return (
       <p
         role="status"
-        className="mb-5 text-center text-xs text-muted-foreground"
+        className="mb-5 text-center text-sm text-muted-foreground"
       >
         {feed.message || "최근 업데이트가 지연되고 있어 이전에 공개된 내용을 보여드립니다."}
         {feed.categories && <span className="block mt-2">RSS 카테고리: {feed.categories.join(", ") || "없음"}</span>}

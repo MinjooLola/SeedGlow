@@ -145,7 +145,7 @@ function GrowthGraphHorizontal() {
             
             <ul className="text-left space-y-1 mb-4">
               {step.details.map((detail, i) => (
-                <li key={i} className="text-xs text-amber-100/80 flex items-start gap-2">
+                <li key={i} className="text-sm text-amber-100/80 flex items-start gap-2">
                   <span className="text-primary mt-0.5">-</span>
                   {detail}
                 </li>
@@ -153,10 +153,10 @@ function GrowthGraphHorizontal() {
             </ul>
 
             <div className="pt-3 border-t border-amber-700/30 text-left">
-              <p className="text-xs font-medium text-white mb-2">결과물</p>
+              <p className="text-sm font-medium text-white mb-2">결과물</p>
               <ul className="space-y-1">
                 {step.results.map((result, i) => (
-                  <li key={i} className="text-xs text-amber-200/60">
+                  <li key={i} className="text-sm text-amber-200/75">
                     - {result}
                   </li>
                 ))}
@@ -225,7 +225,7 @@ export default function ServicesSection() {
                   <activity.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="font-bold text-lg text-white mb-3">{activity.title}</h4>
-                <p className="text-amber-200/70 text-xs md:text-sm leading-relaxed text-center">
+                <p className="text-amber-200/80 text-sm leading-relaxed text-center">
                   {activity.lines.map((line, i) => (
                     <span key={i} className="block">{line}</span>
                   ))}

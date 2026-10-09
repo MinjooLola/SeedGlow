@@ -7,7 +7,7 @@ import {
   loadArchive, loadHistory, loadPartners, loadReviews,
 } from "./sources";
 import { fetchSource, readLimitedBytes, type Fetcher } from "./network";
-import { isAuthenticatedSheetUrl, loadSheetHistory, loadSheetReviews, loadSheetPartners, type SheetsProxy } from "./sheets";
+import { isAuthenticatedSheetUrl, loadSheetHistoryColumns, loadSheetReviews, loadSheetPartners, type SheetsProxy } from "./sheets";
 import { loadHistoricalArchive, mergeArchive } from "./archive-history";
 
 type SourceKind = "history" | "reviews" | "partners";
@@ -27,8 +27,9 @@ export function createHomeContentService(options: {
   const directory = options.directory ?? path.resolve(".cache/home-content");
   const fetcher = options.fetcher ?? fetch;
   const now = options.now ?? Date.now;
-  const history = new LastGoodCache("history", () => url("history"), (source) => isAuthenticatedSheetUrl(source) ?
-    loadSheetHistory(source, options.sheetsProxy) : loadHistory(source, fetcher), historySchema, directory, now);
+  // A different sheet/layout must not restore the old auto-classified snapshot.
+  const history = new LastGoodCache("history-three-columns", () => url("history"), (source) => isAuthenticatedSheetUrl(source) ?
+    loadSheetHistoryColumns(source, options.sheetsProxy) : loadHistory(source, fetcher), historySchema, directory, now);
   const reviews = new LastGoodCache("reviews", () => url("reviews"), (source) => isAuthenticatedSheetUrl(source) ?
     loadSheetReviews(source, options.sheetsProxy) : loadReviews(source, fetcher), reviewSchema, directory, now);
   const partners = new LastGoodCache("partners", () => url("partners"), (source) => isAuthenticatedSheetUrl(source) ?

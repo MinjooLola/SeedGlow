@@ -22,6 +22,24 @@ export function validateHeaders(row: string[], columns: number[], headers: Recor
 export const historyRow = (row: string[]): HistoryItem | null =>
   isTrue(row[3]) ? { period: row[0], text: row[1], category: row[2] } : null;
 
+export const historyColumnsLayout = {
+  title: "이력_3열보기",
+  columns: [0, 1, 2],
+  headers: { 0: "강의", 1: "컨설팅", 2: "심사" },
+};
+
+// Only remove the sheet's trailing date annotation, not years in course names
+// or other bracketed wording. Display and counts come from actual cells.
+export function historyColumnRow(row: string[]): HistoryItem[] {
+  const categories = ["강의", "컨설팅", "심사"];
+  return categories.flatMap((category, index) => {
+    const raw = row[index] ?? "";
+    if (!raw.trim() || /^\s*\d+\s*건\s*$/.test(raw)) return [];
+    const text = raw.replace(/\s*\[(?:19|20)\d{2}(?:\.\d{1,2})?(?:[~-]\d{1,2})?\]\s*$/, "");
+    return [{ text, period: "", category }];
+  });
+}
+
 export function reviewRow(row: string[]): ReviewItem | null {
   if (!isTrue(row[3])) return null;
   if (row.slice(0, 3).some((text) => /[\w.+-]+@[\w.-]+\.[a-z]{2,}|\b01[016789][ -]?\d{3,4}[ -]?\d{4}\b|\+82[ -]?\d{1,2}[ -]?\d{3,4}[ -]?\d{4}/i.test(text))) {

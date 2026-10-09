@@ -2,15 +2,36 @@ import { Badge } from "@/components/ui/badge";
 import ContentFeedStatus from "@/components/ContentFeedStatus";
 import { useHomeContent } from "@/hooks/use-home-content";
 import { Quote } from "lucide-react";
+import { useRef, useState } from "react";
 
 const partnershipQuote = {
   body: "투자자 관점에서 우리의 강점을 어떻게 강조해야 하는지, 또 그것을 어떻게 장표화해야 할지 명확히 구조화해주셔서 큰 인사이트를 얻을 수 있었습니다. 덕분에 당장 실행해야 할 것과 방향성, 그리고 우리의 IR을 어떻게 매력적으로 만들지 정리할 수 있었고, 더 잘 어필할 수 있다는 자신감도 많이 얻었습니다! 무엇보다 발표 이후에도 지속적으로 업데이트되는 내용과 고민들을 함께 점검하며 관계를 이어가고자 하시는 모습에서 큰 감동을 받았습니다. 혹시 IR을 준비하고 계시다면, 꼭 한 번 의견 들어보시길 추천드립니다.",
   display: "8년차 GovTech 스타트업, 투자 IR 준비 중",
 };
 
-export default function SuccessStories() {
+const INITIAL_REVIEW_COUNT = 6;
+
+export default function SuccessStories({ defaultExpanded = false }: { defaultExpanded?: boolean }) {
   const { data, isLoading, isError } = useHomeContent();
   const reviews = data?.reviews;
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const visibleReviews = reviews?.items
+    ? isExpanded ? reviews.items : reviews.items.slice(0, INITIAL_REVIEW_COUNT)
+    : [];
+  const hasMoreReviews = (reviews?.items.length ?? 0) > INITIAL_REVIEW_COUNT;
+
+  const toggleReviews = () => {
+    if (isExpanded) {
+      setIsExpanded(false);
+      requestAnimationFrame(() => {
+        toggleRef.current?.focus();
+        toggleRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      return;
+    }
+    setIsExpanded(true);
+  };
 
   return (
     <section id="success" className="py-20 md:py-28 lg:py-36 bg-gradient-to-b from-amber-900 to-amber-950">
@@ -22,7 +43,7 @@ export default function SuccessStories() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             컨설팅 후기
           </h2>
-          <p className="text-amber-200/80 text-sm md:text-lg max-w-2xl mx-auto break-keep">
+          <p className="text-amber-200/80 text-[15px] md:text-lg max-w-2xl mx-auto break-keep">
             SeedGlow와 함께 성장하고 있는 팀들의 이야기
           </p>
         </div>
@@ -31,12 +52,12 @@ export default function SuccessStories() {
           <div className="p-7 md:p-9 rounded-md bg-amber-900/50 border border-amber-700/50 flex flex-col">
             <div className="flex items-start gap-3 mb-4">
               <Quote className="w-6 h-6 text-primary flex-shrink-0" aria-hidden="true" />
-              <Badge variant="secondary" className="text-xs">지속적 파트너십</Badge>
+              <Badge variant="secondary" className="text-sm">지속적 파트너십</Badge>
             </div>
-            <blockquote className="text-white leading-relaxed text-sm md:text-base whitespace-pre-wrap break-keep">
+            <blockquote className="text-white leading-relaxed text-[15px] md:text-base whitespace-pre-wrap break-keep">
               "{partnershipQuote.body}"
             </blockquote>
-            <p className="text-amber-300/70 text-xs mt-5 pt-4 border-t border-amber-700/30 italic">
+            <p className="text-amber-300/80 text-sm mt-5 pt-4 border-t border-amber-700/30 italic">
               <cite>- {partnershipQuote.display}</cite>
             </p>
           </div>
@@ -64,8 +85,8 @@ export default function SuccessStories() {
               emptyLabel="아직 공개된 후기가 없습니다."
             />
             {(reviews.status === "ready" || reviews.status === "stale") && reviews.items.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {reviews.items.map((review, index) => (
+              <div id="consulting-reviews" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {visibleReviews.map((review, index) => (
                   <article
                     key={`${review.display}-${index}`}
                     className="min-w-0"
@@ -75,18 +96,33 @@ export default function SuccessStories() {
                       <div className="flex items-start gap-3 mb-4">
                         <Quote className="w-6 h-6 text-primary flex-shrink-0" aria-hidden="true" />
                         {review.keyword && (
-                          <Badge data-home-field="keyword" variant="secondary" className="text-xs whitespace-pre-wrap">{review.keyword}</Badge>
+                          <Badge data-home-field="keyword" variant="secondary" className="text-sm whitespace-pre-wrap">{review.keyword}</Badge>
                         )}
                       </div>
-                      <blockquote className="text-white leading-relaxed text-sm flex-1 whitespace-pre-wrap break-keep">
+                      <blockquote className="text-white leading-relaxed text-[15px] flex-1 whitespace-pre-wrap break-keep">
                         "<span data-home-field="body">{review.body}</span>"
                       </blockquote>
-                      <p className="text-amber-300/70 text-xs mt-5 pt-4 border-t border-amber-700/30 italic">
+                      <p className="text-amber-300/80 text-sm mt-5 pt-4 border-t border-amber-700/30 italic">
                         <cite data-home-field="display" className="whitespace-pre-wrap">{review.display}</cite>
                       </p>
                     </div>
                   </article>
                 ))}
+              </div>
+            )}
+            {(reviews.status === "ready" || reviews.status === "stale") && hasMoreReviews && (
+              <div className="mt-8 flex justify-center">
+                <button
+                  ref={toggleRef}
+                  type="button"
+                  onClick={toggleReviews}
+                  data-testid="button-reviews-toggle"
+                  aria-expanded={isExpanded}
+                  aria-controls="consulting-reviews"
+                  className="rounded-md border border-amber-700/70 bg-amber-900/40 px-5 py-2.5 text-sm font-medium text-amber-50 transition-colors hover:border-amber-500/70 hover:bg-amber-900/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-amber-950"
+                >
+                  {isExpanded ? "접기" : `더보기 (${reviews.items.length - INITIAL_REVIEW_COUNT})`}
+                </button>
               </div>
             )}
           </>

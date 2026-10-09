@@ -6,6 +6,7 @@ import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import PartnersSection from "@/components/PartnersSection";
 import SuccessStories from "@/components/SuccessStories";
+import InterviewSection from "@/components/InterviewSection";
 import ImageSlider from "@/components/ImageSlider";
 import ArchiveSection from "@/components/ArchiveSection";
 import ContactSection from "@/components/ContactSection";
@@ -237,6 +238,7 @@ export default function Home() {
         <AboutSection />
         <ImageSlider />
         <PartnersSection />
+        <InterviewSection />
         <SuccessStories />
         <ArchiveSection />
         <ContactSection />

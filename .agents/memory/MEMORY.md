@@ -1,4 +1,4 @@
-- [홈페이지 이력 표시](homepage-history-presentation.md) — 대표 소개 아래 기존 강의·컨설팅·심사별 목록 유지; 시트 원문과 그룹 안 행 순서를 보존한다.
+- [홈페이지 이력 표시](homepage-history-presentation.md) — 대표 소개 아래 3개 목록 유지; 이력_3열보기의 분류·순서를 따르고 날짜는 표시하지 않는다.
 - [홈페이지 콘텐츠 운영](homepage-content-ownership.md) — 운영자 시트·블로그 자동 반영, 후기 익명성과 게시용 원문 보존 원칙.
 - [병합 후 의존성 보안 검사](merge-dependency-security.md) — 실행 중인 앱이 정상이어도 잠금 파일의 오래된 의존성이 재설치 때 차단될 수 있다.
 - [시트 변경 재실행 안전성](sheet-write-idempotence.md) — 승인된 항목이 이미 목표 상태라면 재작성하지 않고 현재 상태와 표시 결과를 검증한다.

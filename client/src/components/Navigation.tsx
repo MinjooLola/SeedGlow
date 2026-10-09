@@ -11,6 +11,7 @@ const navItems: NavItem[] = [
   { label: "서비스", href: "#services" },
   { label: "회사소개", href: "#about" },
   { label: "컨설팅 후기", href: "#success" },
+  { label: "인터뷰", href: "#interviews" },
   { label: "아카이브", href: "#archive" },
   { label: "문의하기", href: "#contact" },
 ];
@@ -65,13 +66,13 @@ export default function Navigation() {
             />
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1 lg:gap-4 xl:gap-6">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className={`text-sm font-medium transition-colors hover-elevate active-elevate-2 px-3 py-2 rounded-md ${
+                className={`text-sm font-medium transition-colors hover-elevate active-elevate-2 px-2 py-2 rounded-md ${
                   isScrolled
                     ? "text-foreground"
                     : "text-white/90 hover:text-white"

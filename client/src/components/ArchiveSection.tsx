@@ -81,7 +81,7 @@ export default function ArchiveSection() {
                             <h3 className="text-sm font-medium text-foreground break-keep group-hover:text-primary transition-colors">
                               {item.title}
                             </h3>
-                            <p className="text-xs text-muted-foreground mt-2">
+                            <p className="text-sm text-muted-foreground mt-2">
                               {Number.isNaN(Date.parse(item.date)) ? item.date :
                                 new Date(item.date).toLocaleDateString("ko-KR", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" })}
                             </p>

@@ -27,7 +27,7 @@ export async function renderPublicViews(content: HomeContent) {
             const client=new QueryClient({defaultOptions:{queries:{retry:false,staleTime:Infinity}}});
             client.setQueryData(["/api/home-content"],content);
             return React.createElement(QueryClientProvider,{client},React.createElement("main",null,
-              React.createElement(Hero),React.createElement(History),React.createElement(Reviews),
+              React.createElement(Hero),React.createElement(History),React.createElement(Reviews,{defaultExpanded:true}),
               React.createElement(Partners),React.createElement(Archive)));
           }`,
       },
@@ -93,7 +93,7 @@ export function compareRenderedRows(rendered: string, content: HomeContent) {
       displayedRows: records.length, missing, extras, changedFields, orderUnchanged };
   }
   return {
-    history: content.history.updatedAt === null ? null : compare("history-item", content.history.items, ["period", "text", "category"]),
+    history: content.history.updatedAt === null ? null : compare("history-item", content.history.items, ["text", "category"]),
     reviews: content.reviews.updatedAt === null ? null : compare("card-testimonial", content.reviews.items, ["keyword", "body", "display"]),
     partners: content.partners.updatedAt === null ? null : compare("partner", content.partners.items, ["name"]),
   };

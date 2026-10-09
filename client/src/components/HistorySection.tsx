@@ -45,9 +45,8 @@ export default function HistorySection({ embedded = false }: { embedded?: boolea
                     <div aria-label={label} className="space-y-1.5">
                       {items.map(({ item, index }) => (
                         <article key={index} data-testid={`history-item-${index}`}
-                          className="text-xs text-muted-foreground leading-relaxed break-keep">
+                          className="text-sm text-muted-foreground leading-relaxed break-keep">
                           <span data-home-field="text" className="whitespace-pre-wrap">{item.text}</span>
-                          <span data-home-field="period" className="block text-[11px] text-muted-foreground/70 whitespace-pre-wrap">{item.period}</span>
                           <span data-home-field="category" className="sr-only whitespace-pre-wrap">{item.category}</span>
                         </article>
                       ))}

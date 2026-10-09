@@ -1,12 +1,19 @@
 {
-  "historyStatus": "stale",
-  "publishedHistoryRows": 72,
-  "historyMetricBefore": "40+",
+  "historyStatus": "ready",
+  "historySourceTab": "이력_3열보기",
+  "historyDatesDisplayed": false,
+  "historyColumnCounts": {
+    "강의": 29,
+    "컨설팅": 23,
+    "심사": 19
+  },
+  "publishedHistoryRows": 71,
+  "historyMetricBefore": "70+",
   "historyMetricAfter": "70+",
   "partnerStatus": "ready",
   "allPublishedPartnerChips": 63,
   "countedPartnerChips": 62,
-  "partnersTitleBefore": "40+ 협력기관과 함께합니다",
+  "partnersTitleBefore": "60+ 협력기관과 함께합니다",
   "partnersTitleAfter": "60+ 협력기관과 함께합니다",
   "reviewStatus": "ready",
   "publishedReviews": 42,
@@ -28,9 +35,9 @@
   "unconfiguredVariables": [],
   "stringComparison": {
     "history": {
-      "sourceRows": 72,
-      "renderedRows": 72,
-      "displayedRows": 93,
+      "sourceRows": 71,
+      "renderedRows": 71,
+      "displayedRows": 71,
       "missing": 0,
       "extras": 0,
       "changedFields": 0,

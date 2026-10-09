@@ -35,10 +35,10 @@ historyAdditions.forEach(({ text, categories }) => add(text, categories.map((cat
 ] .forEach(([text, groups]) => add(text as string, groups as Group[]));
 
 export function presentationGroups(item: HistoryItem): readonly Group[] {
-  // Real specific categories take precedence over legacy presentation mappings.
+  // The sheet's explicit category is authoritative; legacy mapping is only for
+  // older combined-category records that predate the three-column source.
   if (item.category !== "강의·컨설팅·심사") {
-    const explicit = historyGroups.filter((group) => item.category.includes(group));
-    if (explicit.length) return explicit;
+    return historyGroups.filter((group) => item.category === group);
   }
   return known.get(normalize(item.text)) ?? [];
 }

@@ -1,6 +1,6 @@
 import { ReplitConnectors } from "@replit/connectors-sdk";
 import type { HistoryItem, PartnerItem, ReviewItem } from "../../shared/homeContent";
-import { sheetLayouts, validateHeaders, historyRow, reviewRow, partnerRow, PublicSourceError, type SheetKind } from "./rows";
+import { sheetLayouts, historyColumnsLayout, historyColumnRow, validateHeaders, historyRow, reviewRow, partnerRow, PublicSourceError, type SheetKind } from "./rows";
 
 export type SheetsProxy = (endpoint: string) => Promise<Response>;
 interface ValueRange { values?: unknown[][] }
@@ -31,7 +31,8 @@ function cell(value: unknown) {
 }
 
 async function loadSheet<T>(
-  kind: SheetKind, raw: string, transform: (row: string[]) => T | null, suppliedProxy?: SheetsProxy,
+  kind: SheetKind, raw: string, transform: (row: string[]) => T | T[] | null, suppliedProxy?: SheetsProxy,
+  layout: { title: string; columns: number[]; headers: Record<number, string> } = sheetLayouts[kind],
 ): Promise<T[]> {
   if (!isAuthenticatedSheetUrl(raw)) throw new PublicSourceError("Google Sheets 편집 주소가 필요합니다.");
   const url = new URL(raw);
@@ -48,7 +49,6 @@ async function loadSheet<T>(
     }
     return response.json();
   }
-  const layout = sheetLayouts[kind];
   const base = `/v4/spreadsheets/${encodeURIComponent(id)}`;
   const metadata = await request<SheetMetadata>(`${base}?fields=sheets.properties(title,gridProperties.rowCount)`);
   const target = metadata.sheets?.find((sheet) => sheet.properties?.title === layout.title)?.properties;
@@ -89,12 +89,15 @@ async function loadSheet<T>(
   for (let first = 2; first <= rowCount!; first += 1000) {
     for (const row of await rows(first, Math.min(first + 999, rowCount!))) {
       const item = transform(row);
-      if (item !== null) items.push(item);
+      if (Array.isArray(item)) items.push(...item);
+      else if (item !== null) items.push(item);
     }
   }
   return items;
 }
 
 export const loadSheetHistory = (url: string, proxy?: SheetsProxy): Promise<HistoryItem[]> => loadSheet("history", url, historyRow, proxy);
+export const loadSheetHistoryColumns = (url: string, proxy?: SheetsProxy): Promise<HistoryItem[]> =>
+  loadSheet("history", url, historyColumnRow, proxy, historyColumnsLayout);
 export const loadSheetReviews = (url: string, proxy?: SheetsProxy): Promise<ReviewItem[]> => loadSheet("reviews", url, reviewRow, proxy);
 export const loadSheetPartners = (url: string, proxy?: SheetsProxy): Promise<PartnerItem[]> => loadSheet("partners", url, partnerRow, proxy);
