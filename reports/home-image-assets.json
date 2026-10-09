@@ -1,0 +1,316 @@
+[
+  {
+    "name": "hero",
+    "source": "attached_assets/제목_없는_디자인_1767953447116.png",
+    "originalBytes": 1157461,
+    "originalWidth": 1299,
+    "originalHeight": 1690,
+    "originalSha256": "3b72f73fa7bfc994710efb4aa9648bd70e36fa80c1feb8fb4b1b2ad21de31761",
+    "variants": [
+      {
+        "file": "client/src/assets/home/hero-480.webp",
+        "width": 480,
+        "height": 624,
+        "bytes": 9384
+      },
+      {
+        "file": "client/src/assets/home/hero-768.webp",
+        "width": 768,
+        "height": 999,
+        "bytes": 17492
+      },
+      {
+        "file": "client/src/assets/home/hero-1024.webp",
+        "width": 1024,
+        "height": 1332,
+        "bytes": 26658
+      },
+      {
+        "file": "client/src/assets/home/hero-1299.webp",
+        "width": 1299,
+        "height": 1690,
+        "bytes": 38212
+      }
+    ]
+  },
+  {
+    "name": "profile",
+    "source": "attached_assets/김민주_프로필_240525_1765811099605.png",
+    "originalBytes": 6959624,
+    "originalWidth": 3840,
+    "originalHeight": 5760,
+    "originalSha256": "c3192ddc2aecde11360249ac84b20ed3651de42bd382d81e96433ead0fe985a0",
+    "variants": [
+      {
+        "file": "client/src/assets/home/profile-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 11058
+      },
+      {
+        "file": "client/src/assets/home/profile-640.webp",
+        "width": 640,
+        "height": 960,
+        "bytes": 34998
+      },
+      {
+        "file": "client/src/assets/home/profile-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 74902
+      }
+    ]
+  },
+  {
+    "name": "slide1",
+    "source": "attached_assets/3_1767890854722.jpg",
+    "originalBytes": 3128854,
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "originalSha256": "ab179f57e7187e0f05757135809f49a085f9ad3543cce235a1517964addaa25f",
+    "variants": [
+      {
+        "file": "client/src/assets/home/slide1-300.webp",
+        "width": 300,
+        "height": 225,
+        "bytes": 12372
+      },
+      {
+        "file": "client/src/assets/home/slide1-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 36318
+      },
+      {
+        "file": "client/src/assets/home/slide1-900.webp",
+        "width": 900,
+        "height": 675,
+        "bytes": 71972
+      }
+    ]
+  },
+  {
+    "name": "slide2",
+    "source": "attached_assets/GTJ01322_1767890854737.jpg",
+    "originalBytes": 14414119,
+    "originalWidth": 6796,
+    "originalHeight": 4531,
+    "originalSha256": "fe0d32923e6bc80c0aa0939109de729bbb450d29fcf479b707da7eb19fe0347c",
+    "variants": [
+      {
+        "file": "client/src/assets/home/slide2-300.webp",
+        "width": 300,
+        "height": 200,
+        "bytes": 11068
+      },
+      {
+        "file": "client/src/assets/home/slide2-600.webp",
+        "width": 600,
+        "height": 400,
+        "bytes": 26624
+      },
+      {
+        "file": "client/src/assets/home/slide2-900.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 45214
+      }
+    ]
+  },
+  {
+    "name": "slide3",
+    "source": "attached_assets/KakaoTalk_20250523_104833739_03_1767890854743.jpg",
+    "originalBytes": 10437671,
+    "originalWidth": 6000,
+    "originalHeight": 4000,
+    "originalSha256": "36fcd8519ce07b34135043731805247c153bc8cad578adc488ed49425b598042",
+    "variants": [
+      {
+        "file": "client/src/assets/home/slide3-300.webp",
+        "width": 300,
+        "height": 200,
+        "bytes": 11154
+      },
+      {
+        "file": "client/src/assets/home/slide3-600.webp",
+        "width": 600,
+        "height": 400,
+        "bytes": 29130
+      },
+      {
+        "file": "client/src/assets/home/slide3-900.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 55934
+      }
+    ]
+  },
+  {
+    "name": "slide4",
+    "source": "attached_assets/KakaoTalk_20250523_104936309_01_1767890854746.jpg",
+    "originalBytes": 6717440,
+    "originalWidth": 3936,
+    "originalHeight": 2624,
+    "originalSha256": "e8f0850dc6a546efc20de23997f5240308a7d321db7bc5c13cccc5dacb082d0f",
+    "variants": [
+      {
+        "file": "client/src/assets/home/slide4-300.webp",
+        "width": 300,
+        "height": 200,
+        "bytes": 5890
+      },
+      {
+        "file": "client/src/assets/home/slide4-600.webp",
+        "width": 600,
+        "height": 400,
+        "bytes": 14866
+      },
+      {
+        "file": "client/src/assets/home/slide4-900.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 26026
+      }
+    ]
+  },
+  {
+    "name": "slide5",
+    "source": "attached_assets/KakaoTalk_20250523_104936309_02_1767890854749.jpg",
+    "originalBytes": 2565424,
+    "originalWidth": 3024,
+    "originalHeight": 4032,
+    "originalSha256": "25134f0ae443ab2e747feb2ae47a3a5ceabea681277a5912a6d690a2c66bb9b5",
+    "variants": [
+      {
+        "file": "client/src/assets/home/slide5-300.webp",
+        "width": 300,
+        "height": 400,
+        "bytes": 15990
+      },
+      {
+        "file": "client/src/assets/home/slide5-600.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 43334
+      },
+      {
+        "file": "client/src/assets/home/slide5-900.webp",
+        "width": 900,
+        "height": 1200,
+        "bytes": 85372
+      }
+    ]
+  },
+  {
+    "name": "slide6",
+    "source": "attached_assets/KakaoTalk_20250523_104936309_03_1767890854752.jpg",
+    "originalBytes": 1984101,
+    "originalWidth": 2856,
+    "originalHeight": 2144,
+    "originalSha256": "91c37c66d46e074b57425bcee872e561765457055c44f6b894cf8628ddea105b",
+    "variants": [
+      {
+        "file": "client/src/assets/home/slide6-300.webp",
+        "width": 300,
+        "height": 225,
+        "bytes": 9338
+      },
+      {
+        "file": "client/src/assets/home/slide6-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 24432
+      },
+      {
+        "file": "client/src/assets/home/slide6-900.webp",
+        "width": 900,
+        "height": 676,
+        "bytes": 41226
+      }
+    ]
+  },
+  {
+    "name": "slide7",
+    "source": "attached_assets/KakaoTalk_20251210_233230339_1767890854755.jpg",
+    "originalBytes": 87679,
+    "originalWidth": 966,
+    "originalHeight": 725,
+    "originalSha256": "a04e8f66ba3428c74b0e0c19f02ebb3cfb8ed5639afe464d60c6df42cb47dfaa",
+    "variants": [
+      {
+        "file": "client/src/assets/home/slide7-300.webp",
+        "width": 300,
+        "height": 225,
+        "bytes": 10686
+      },
+      {
+        "file": "client/src/assets/home/slide7-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 30776
+      },
+      {
+        "file": "client/src/assets/home/slide7-900.webp",
+        "width": 900,
+        "height": 675,
+        "bytes": 57676
+      }
+    ]
+  },
+  {
+    "name": "slide8",
+    "source": "attached_assets/M4J01775_1767890854762.jpg",
+    "originalBytes": 3402183,
+    "originalWidth": 4434,
+    "originalHeight": 2956,
+    "originalSha256": "e17e80c7c23fbe6070103fcc1314304c66024505ac769b965f4722e400cddabb",
+    "variants": [
+      {
+        "file": "client/src/assets/home/slide8-300.webp",
+        "width": 300,
+        "height": 200,
+        "bytes": 7372
+      },
+      {
+        "file": "client/src/assets/home/slide8-600.webp",
+        "width": 600,
+        "height": 400,
+        "bytes": 17152
+      },
+      {
+        "file": "client/src/assets/home/slide8-900.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 28738
+      }
+    ]
+  },
+  {
+    "name": "slide9",
+    "source": "attached_assets/M4J01778_1767890854765.jpg",
+    "originalBytes": 2783757,
+    "originalWidth": 4060,
+    "originalHeight": 2707,
+    "originalSha256": "a10cd9fe2d2e53058cf5352566f8a118bf6c06589f7c5a3a073ac3dc00ff90e0",
+    "variants": [
+      {
+        "file": "client/src/assets/home/slide9-300.webp",
+        "width": 300,
+        "height": 200,
+        "bytes": 5156
+      },
+      {
+        "file": "client/src/assets/home/slide9-600.webp",
+        "width": 600,
+        "height": 400,
+        "bytes": 11100
+      },
+      {
+        "file": "client/src/assets/home/slide9-900.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 18668
+      }
+    ]
+  }
+]

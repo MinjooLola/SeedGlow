@@ -37,7 +37,48 @@
 
 FALSE 확인 방법: 게시 행 하나를 FALSE로 저장하고, 현재 서버 캐시의 1시간 만료 및 다음 1분 자동 조회 후 해당 행과 집계가 함께 사라지는지 확인합니다.
 
-## 검증
+
+## 홈페이지 사진 최적화
+
+원본 사진은 `attached_assets/`에 그대로 보존합니다. 홈페이지는
+`client/src/assets/home/`의 WebP 사본만 사용합니다. 기존 비율·크롭·사진 순서는
+유지하며 슬라이더는 300/600/900px, 프로필은 320/640/960px,
+첫 화면 사진은 480/768/1024/1299px 중 화면과 픽셀 밀도에 맞게 선택합니다.
+첫 화면은 우선 로딩하고, 프로필과 활동 사진은 지연 로딩합니다.
+
+원본 사진을 교체한 경우 아래 명령으로 사본과 이미지 목록을 다시 생성하고
+생성된 파일을 함께 커밋합니다. 빌드나 서버 실행 때 원본을 다시 가공하지 않습니다.
+
+```sh
+npm run images:optimize
+npm run test:home-images
+```
+
+`reports/home-image-assets.json`에는 원본 해시·크기와 각 사본의 크기가 기록됩니다.
+테스트는 원본 보존, 이미지 디코딩, 비율, 파일 크기와 로딩 설정을 확인합니다.
+
+실행 중인 사이트의 모바일 3x·PC 1x/2x 확인:
+
+```sh
+IMAGE_TEST_URL=https://사이트주소 BROWSER_EXECUTABLE=/설치된/chromium npm run verify:home-images:browser
+```
+
+Playwright 기본 브라우저가 설치되어 있다면 `BROWSER_EXECUTABLE`은 생략합니다.
+결과와 화면 캡처는 `reports/`에 저장합니다. 네트워크 속도 측정이 아니라 실제
+이미지 선택·정상 표시·요청 용량·지연 로딩과 슬라이더 동작을 확인하는 검사입니다.
+
+## 콘텐츠 검증
+
+```sh
+npm run check
+npm run test:home-content
+npm run build
+npx tsx script/verify-home-content.ts
+```
+
+마지막 명령은 실제 연결된 공개 데이터의 행 수·집계·최신 아카이브 제목을 `reports/home-content-verification.json`에 기록합니다. 환경변수 미설정 값은 0이 아닌 확인 대기로 보고합니다.
+
+## 콘텐츠 검증
 
 ```sh
 npm run check

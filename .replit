@@ -52,6 +52,3 @@ integrations = ["javascript_mem_db:1.0.0"]
 [userenv]
 
 [userenv.shared]
-HOME_HISTORY_CSV_URL = "https://docs.google.com/spreadsheets/d/1U6U0zdHF8Pm8xAIZXhuhtnDHS49hqqNCRU6ovV2s4qw/edit?gid=1965240858#gid=1965240858"
-HOME_REVIEWS_CSV_URL = "https://docs.google.com/spreadsheets/d/1U6U0zdHF8Pm8xAIZXhuhtnDHS49hqqNCRU6ovV2s4qw/edit?gid=1965240858#gid=1965240858"
-HOME_PARTNERS_CSV_URL = "https://docs.google.com/spreadsheets/d/1U6U0zdHF8Pm8xAIZXhuhtnDHS49hqqNCRU6ovV2s4qw/edit?gid=1965240858#gid=1965240858"

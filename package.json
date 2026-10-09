@@ -8,12 +8,16 @@
     "build": "tsx script/build.ts",
     "start": "NODE_ENV=production node dist/index.cjs",
     "check": "tsc",
+    "images:optimize": "tsx script/optimize-home-images.ts",
+    "test:home-images": "tsx --test script/home-images.test.ts",
+    "verify:home-images:browser": "tsx script/verify-home-images-browser.ts",
     "test:home-content": "tsx --test server/home-content/content.test.ts server/home-content/view.test.ts server/home-content/sheets.test.ts",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@jridgewell/trace-mapping": "^0.3.25",
+    "@playwright/test": "^1.64.0",
     "@radix-ui/react-accordion": "^1.2.4",
     "@radix-ui/react-alert-dialog": "^1.1.7",
     "@radix-ui/react-aspect-ratio": "^1.1.3",

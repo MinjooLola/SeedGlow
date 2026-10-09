@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import profileImage from "@assets/김민주_프로필_240525_1765811099605.png";
+import { profile as profileImage } from "@/assets/home/images";
 import { founderIntro } from "@/data/founderIntro";
 
 export default function AboutSection() {
@@ -34,9 +34,14 @@ export default function AboutSection() {
         <div className="flex flex-col md:flex-row gap-8 lg:gap-12 mb-20">
           <div className="w-full md:w-1/3 flex-shrink-0">
             <img
-              src={profileImage}
+              src={profileImage.src}
+              srcSet={profileImage.srcSet}
+              sizes="(min-width: 1024px) 320px, (min-width: 768px) calc((100vw - 48px) / 3), (min-width: 352px) 320px, calc(100vw - 32px)"
+              width={profileImage.width}
+              height={profileImage.height}
               alt="시드글로우 김민주 대표 프로필 사진 - 로컬 스타트업 컨설턴트"
               loading="lazy"
+              decoding="async"
               className="w-full max-w-xs mx-auto rounded-md object-cover"
             />
           </div>

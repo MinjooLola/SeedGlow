@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@assets/제목_없는_디자인_1767953447116.png";
+import { hero as heroImage } from "@/assets/home/images";
 import { useHomeContent } from "@/hooks/use-home-content";
 
 const fixedMetrics = [
@@ -26,11 +26,17 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-950/95 via-amber-900/80 to-transparent" />
         <div className="absolute right-0 top-0 bottom-0 w-3/5 md:w-1/2 lg:w-2/5">
+          {/* React 18 requires the lowercase fetchpriority HTML attribute. */}
           <img
-            src={heroImage}
+            src={heroImage.src}
+            srcSet={heroImage.srcSet}
+            sizes="(min-width: 1024px) max(40vw, 77vh), (min-width: 768px) max(50vw, 77vh), max(60vw, 77vh)"
+            width={heroImage.width}
+            height={heroImage.height}
             alt="시드글로우 김민주 대표 - 로컬 스타트업 컨설턴트"
             loading="eager"
-            decoding="sync"
+            {...{ fetchpriority: "high" }}
+            decoding="async"
             className="w-full h-full object-cover object-[50%_20%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-amber-950 via-amber-900/60 to-transparent" />

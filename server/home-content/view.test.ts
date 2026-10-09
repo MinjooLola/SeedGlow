@@ -53,7 +53,7 @@ test("real React views match published rows, counts, ordering and unabridged rev
           }`,
       },
       bundle: true, format: "cjs", platform: "node", jsx: "automatic", write: false,
-      outdir: temporary, outExtension: { ".js": ".cjs" }, loader: { ".png": "file" },
+      outdir: temporary, outExtension: { ".js": ".cjs" }, loader: { ".png": "file", ".webp": "file" },
       alias: { "@": path.join(root, "client/src"), "@shared": path.join(root, "shared"), "@assets": path.join(root, "attached_assets") },
       plugins: [{
         name: "shared-react-runtime",

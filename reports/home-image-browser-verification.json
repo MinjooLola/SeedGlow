@@ -1,0 +1,929 @@
+[
+  {
+    "screen": {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "dpr": 3
+    },
+    "initiallyRequestedImages": [
+      "/@fs/home/runner/workspace/attached_assets/Frame_1_1767061064709.png",
+      "/src/assets/home/hero-1299.webp"
+    ],
+    "pictures": [
+      {
+        "alt": "시드글로우 김민주 대표 - 로컬 스타트업 컨설턴트",
+        "source": "/src/assets/home/hero-1299.webp",
+        "complete": true,
+        "naturalWidth": 649,
+        "renderedWidth": 234,
+        "renderedHeight": 844,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 김민주 대표 프로필 사진 - 로컬 스타트업 컨설턴트",
+        "source": "/src/assets/home/profile-960.webp",
+        "complete": true,
+        "naturalWidth": 320,
+        "renderedWidth": 320,
+        "renderedHeight": 480,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 1",
+        "source": "/src/assets/home/slide1-900.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 2",
+        "source": "/src/assets/home/slide2-900.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 3",
+        "source": "/src/assets/home/slide3-900.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 4",
+        "source": "/src/assets/home/slide4-900.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 5",
+        "source": "/src/assets/home/slide5-900.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 6",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 7",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 8",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 9",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 1",
+        "source": "/src/assets/home/slide1-900.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 2",
+        "source": "/src/assets/home/slide2-900.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 3",
+        "source": "/src/assets/home/slide3-900.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 4",
+        "source": "/src/assets/home/slide4-900.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 5",
+        "source": "/src/assets/home/slide5-900.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 6",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 7",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 8",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 9",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      }
+    ],
+    "assets": [
+      {
+        "source": "/src/assets/home/hero-1299.webp",
+        "width": 1299,
+        "height": 1690,
+        "bytes": 38212
+      },
+      {
+        "source": "/src/assets/home/profile-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 74902
+      },
+      {
+        "source": "/src/assets/home/slide1-900.webp",
+        "width": 900,
+        "height": 675,
+        "bytes": 71972
+      },
+      {
+        "source": "/src/assets/home/slide2-900.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 45214
+      },
+      {
+        "source": "/src/assets/home/slide3-900.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 55934
+      },
+      {
+        "source": "/src/assets/home/slide4-900.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 26026
+      },
+      {
+        "source": "/src/assets/home/slide5-900.webp",
+        "width": 900,
+        "height": 1200,
+        "bytes": 85372
+      }
+    ],
+    "resources": [
+      {
+        "source": "/@fs/home/runner/workspace/attached_assets/Frame_1_1767061064709.png",
+        "encodedBodySize": 137653,
+        "transferSize": 137953
+      },
+      {
+        "source": "/src/assets/home/hero-1299.webp",
+        "encodedBodySize": 38212,
+        "transferSize": 38512
+      },
+      {
+        "source": "/src/assets/home/profile-960.webp",
+        "encodedBodySize": 74902,
+        "transferSize": 75202
+      },
+      {
+        "source": "/src/assets/home/slide1-900.webp",
+        "encodedBodySize": 71972,
+        "transferSize": 72272
+      },
+      {
+        "source": "/src/assets/home/slide3-900.webp",
+        "encodedBodySize": 55934,
+        "transferSize": 56234
+      },
+      {
+        "source": "/src/assets/home/slide2-900.webp",
+        "encodedBodySize": 45214,
+        "transferSize": 45514
+      },
+      {
+        "source": "/src/assets/home/slide4-900.webp",
+        "encodedBodySize": 26026,
+        "transferSize": 26326
+      },
+      {
+        "source": "/src/assets/home/slide5-900.webp",
+        "encodedBodySize": 85372,
+        "transferSize": 85672
+      },
+      {
+        "source": "/api/archive-image",
+        "encodedBodySize": 21880,
+        "transferSize": 22180
+      }
+    ],
+    "errors": []
+  },
+  {
+    "screen": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "dpr": 1
+    },
+    "initiallyRequestedImages": [
+      "/@fs/home/runner/workspace/attached_assets/Frame_1_1767061064709.png",
+      "/src/assets/home/hero-1024.webp"
+    ],
+    "pictures": [
+      {
+        "alt": "시드글로우 김민주 대표 - 로컬 스타트업 컨설턴트",
+        "source": "/src/assets/home/hero-1024.webp",
+        "complete": true,
+        "naturalWidth": 770,
+        "renderedWidth": 576,
+        "renderedHeight": 1000,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 김민주 대표 프로필 사진 - 로컬 스타트업 컨설턴트",
+        "source": "/src/assets/home/profile-320.webp",
+        "complete": true,
+        "naturalWidth": 320,
+        "renderedWidth": 320,
+        "renderedHeight": 480,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 1",
+        "source": "/src/assets/home/slide1-300.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 2",
+        "source": "/src/assets/home/slide2-300.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 3",
+        "source": "/src/assets/home/slide3-300.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 4",
+        "source": "/src/assets/home/slide4-300.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 5",
+        "source": "/src/assets/home/slide5-300.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 6",
+        "source": "/src/assets/home/slide6-300.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 7",
+        "source": "/src/assets/home/slide7-300.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 8",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 9",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 1",
+        "source": "/src/assets/home/slide1-300.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 2",
+        "source": "/src/assets/home/slide2-300.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 3",
+        "source": "/src/assets/home/slide3-300.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 4",
+        "source": "/src/assets/home/slide4-300.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 5",
+        "source": "/src/assets/home/slide5-300.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 6",
+        "source": "/src/assets/home/slide6-300.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 7",
+        "source": "/src/assets/home/slide7-300.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 8",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 9",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      }
+    ],
+    "assets": [
+      {
+        "source": "/src/assets/home/hero-1024.webp",
+        "width": 1024,
+        "height": 1332,
+        "bytes": 26658
+      },
+      {
+        "source": "/src/assets/home/profile-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 11058
+      },
+      {
+        "source": "/src/assets/home/slide1-300.webp",
+        "width": 300,
+        "height": 225,
+        "bytes": 12372
+      },
+      {
+        "source": "/src/assets/home/slide2-300.webp",
+        "width": 300,
+        "height": 200,
+        "bytes": 11068
+      },
+      {
+        "source": "/src/assets/home/slide3-300.webp",
+        "width": 300,
+        "height": 200,
+        "bytes": 11154
+      },
+      {
+        "source": "/src/assets/home/slide4-300.webp",
+        "width": 300,
+        "height": 200,
+        "bytes": 5890
+      },
+      {
+        "source": "/src/assets/home/slide5-300.webp",
+        "width": 300,
+        "height": 400,
+        "bytes": 15990
+      },
+      {
+        "source": "/src/assets/home/slide6-300.webp",
+        "width": 300,
+        "height": 225,
+        "bytes": 9338
+      },
+      {
+        "source": "/src/assets/home/slide7-300.webp",
+        "width": 300,
+        "height": 225,
+        "bytes": 10686
+      }
+    ],
+    "resources": [
+      {
+        "source": "/@fs/home/runner/workspace/attached_assets/Frame_1_1767061064709.png",
+        "encodedBodySize": 137653,
+        "transferSize": 137953
+      },
+      {
+        "source": "/src/assets/home/hero-1024.webp",
+        "encodedBodySize": 26658,
+        "transferSize": 26958
+      },
+      {
+        "source": "/src/assets/home/profile-320.webp",
+        "encodedBodySize": 11058,
+        "transferSize": 11358
+      },
+      {
+        "source": "/src/assets/home/slide1-300.webp",
+        "encodedBodySize": 12372,
+        "transferSize": 12672
+      },
+      {
+        "source": "/src/assets/home/slide2-300.webp",
+        "encodedBodySize": 11068,
+        "transferSize": 11368
+      },
+      {
+        "source": "/src/assets/home/slide5-300.webp",
+        "encodedBodySize": 15990,
+        "transferSize": 16290
+      },
+      {
+        "source": "/src/assets/home/slide6-300.webp",
+        "encodedBodySize": 9338,
+        "transferSize": 9638
+      },
+      {
+        "source": "/src/assets/home/slide3-300.webp",
+        "encodedBodySize": 11154,
+        "transferSize": 11454
+      },
+      {
+        "source": "/src/assets/home/slide4-300.webp",
+        "encodedBodySize": 5890,
+        "transferSize": 6190
+      },
+      {
+        "source": "/src/assets/home/slide7-300.webp",
+        "encodedBodySize": 10686,
+        "transferSize": 10986
+      },
+      {
+        "source": "/api/archive-image",
+        "encodedBodySize": 21880,
+        "transferSize": 22180
+      },
+      {
+        "source": "/api/archive-image",
+        "encodedBodySize": 105936,
+        "transferSize": 106236
+      },
+      {
+        "source": "/api/archive-image",
+        "encodedBodySize": 17138,
+        "transferSize": 17438
+      }
+    ],
+    "errors": []
+  },
+  {
+    "screen": {
+      "name": "desktop-retina",
+      "width": 1440,
+      "height": 1000,
+      "dpr": 2
+    },
+    "initiallyRequestedImages": [
+      "/@fs/home/runner/workspace/attached_assets/Frame_1_1767061064709.png",
+      "/src/assets/home/hero-1299.webp"
+    ],
+    "pictures": [
+      {
+        "alt": "시드글로우 김민주 대표 - 로컬 스타트업 컨설턴트",
+        "source": "/src/assets/home/hero-1299.webp",
+        "complete": true,
+        "naturalWidth": 770,
+        "renderedWidth": 576,
+        "renderedHeight": 1000,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 김민주 대표 프로필 사진 - 로컬 스타트업 컨설턴트",
+        "source": "/src/assets/home/profile-640.webp",
+        "complete": true,
+        "naturalWidth": 320,
+        "renderedWidth": 320,
+        "renderedHeight": 480,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 1",
+        "source": "/src/assets/home/slide1-600.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 2",
+        "source": "/src/assets/home/slide2-600.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 3",
+        "source": "/src/assets/home/slide3-600.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 4",
+        "source": "/src/assets/home/slide4-600.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 5",
+        "source": "/src/assets/home/slide5-600.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 6",
+        "source": "/src/assets/home/slide6-600.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": true
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 7",
+        "source": "/src/assets/home/slide7-600.webp",
+        "complete": true,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 8",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 9",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 1",
+        "source": "/src/assets/home/slide1-600.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 2",
+        "source": "/src/assets/home/slide2-600.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 3",
+        "source": "/src/assets/home/slide3-600.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 4",
+        "source": "/src/assets/home/slide4-600.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 5",
+        "source": "/src/assets/home/slide5-600.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 6",
+        "source": "/src/assets/home/slide6-600.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 7",
+        "source": "/src/assets/home/slide7-600.webp",
+        "complete": false,
+        "naturalWidth": 300,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 8",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      },
+      {
+        "alt": "시드글로우 컨설팅 및 강의 활동 사진 9",
+        "source": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "renderedWidth": 300,
+        "renderedHeight": 200,
+        "visible": false
+      }
+    ],
+    "assets": [
+      {
+        "source": "/src/assets/home/hero-1299.webp",
+        "width": 1299,
+        "height": 1690,
+        "bytes": 38212
+      },
+      {
+        "source": "/src/assets/home/profile-640.webp",
+        "width": 640,
+        "height": 960,
+        "bytes": 34998
+      },
+      {
+        "source": "/src/assets/home/slide1-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 36318
+      },
+      {
+        "source": "/src/assets/home/slide2-600.webp",
+        "width": 600,
+        "height": 400,
+        "bytes": 26624
+      },
+      {
+        "source": "/src/assets/home/slide3-600.webp",
+        "width": 600,
+        "height": 400,
+        "bytes": 29130
+      },
+      {
+        "source": "/src/assets/home/slide4-600.webp",
+        "width": 600,
+        "height": 400,
+        "bytes": 14866
+      },
+      {
+        "source": "/src/assets/home/slide5-600.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 43334
+      },
+      {
+        "source": "/src/assets/home/slide6-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 24432
+      },
+      {
+        "source": "/src/assets/home/slide7-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 30776
+      }
+    ],
+    "resources": [
+      {
+        "source": "/@fs/home/runner/workspace/attached_assets/Frame_1_1767061064709.png",
+        "encodedBodySize": 137653,
+        "transferSize": 137953
+      },
+      {
+        "source": "/src/assets/home/hero-1299.webp",
+        "encodedBodySize": 38212,
+        "transferSize": 38512
+      },
+      {
+        "source": "/src/assets/home/profile-640.webp",
+        "encodedBodySize": 34998,
+        "transferSize": 35298
+      },
+      {
+        "source": "/src/assets/home/slide3-600.webp",
+        "encodedBodySize": 29130,
+        "transferSize": 29430
+      },
+      {
+        "source": "/src/assets/home/slide4-600.webp",
+        "encodedBodySize": 14866,
+        "transferSize": 15166
+      },
+      {
+        "source": "/src/assets/home/slide2-600.webp",
+        "encodedBodySize": 26624,
+        "transferSize": 26924
+      },
+      {
+        "source": "/src/assets/home/slide1-600.webp",
+        "encodedBodySize": 36318,
+        "transferSize": 36618
+      },
+      {
+        "source": "/src/assets/home/slide5-600.webp",
+        "encodedBodySize": 43334,
+        "transferSize": 43634
+      },
+      {
+        "source": "/src/assets/home/slide6-600.webp",
+        "encodedBodySize": 24432,
+        "transferSize": 24732
+      },
+      {
+        "source": "/src/assets/home/slide7-600.webp",
+        "encodedBodySize": 30776,
+        "transferSize": 31076
+      },
+      {
+        "source": "/api/archive-image",
+        "encodedBodySize": 21880,
+        "transferSize": 22180
+      },
+      {
+        "source": "/api/archive-image",
+        "encodedBodySize": 105936,
+        "transferSize": 106236
+      },
+      {
+        "source": "/api/archive-image",
+        "encodedBodySize": 17138,
+        "transferSize": 17438
+      },
+      {
+        "source": "/src/assets/home/slide8-600.webp",
+        "encodedBodySize": 17152,
+        "transferSize": 17452
+      }
+    ],
+    "errors": []
+  }
+]
