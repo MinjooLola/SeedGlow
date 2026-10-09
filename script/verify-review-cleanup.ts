@@ -24,8 +24,8 @@ assert.equal(comparison.changedFields, 0);
 assert.equal(comparison.orderUnchanged, true);
 const report = {
   sourceTab: "홈_후기", sourcePublishedReviews: raw.length,
-  uniqueDisplayedReviews: audit.items.length, initialCards: 4,
-  moreCards: Math.max(0, audit.items.length - 4), sheetWrites: 0,
+  uniqueDisplayedReviews: audit.items.length, initialCards: 5,
+  moreCards: Math.max(0, audit.items.length - 5), sheetWrites: 0,
   overlappingFixedCardRemoved: true,
   mergedDuplicates: audit.exclusions.map(({ index, retainedIndex, reason }) => ({
     omitted: raw[index].keyword, kept: raw[retainedIndex].keyword, reason,

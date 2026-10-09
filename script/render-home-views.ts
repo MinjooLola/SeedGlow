@@ -6,6 +6,7 @@ import { build } from "esbuild";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import type { HomeContent } from "../shared/homeContent";
+import { presentReviews } from "../client/src/data/reviewPresentation";
 
 export async function renderPublicViews(content: HomeContent) {
   const root = process.cwd();
@@ -94,7 +95,7 @@ export function compareRenderedRows(rendered: string, content: HomeContent) {
   }
   return {
     history: content.history.updatedAt === null ? null : compare("history-item", content.history.items, ["text", "category"]),
-    reviews: content.reviews.updatedAt === null ? null : compare("card-testimonial", content.reviews.items, ["keyword", "body", "display"]),
+    reviews: content.reviews.updatedAt === null ? null : compare("card-testimonial", presentReviews(content.reviews.items), ["keyword", "body", "display"]),
     partners: content.partners.updatedAt === null ? null : compare("partner", content.partners.items, ["name"]),
   };
 }

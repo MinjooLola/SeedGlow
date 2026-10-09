@@ -16,7 +16,7 @@
   "partnersTitleBefore": "60+ 협력기관과 함께합니다",
   "partnersTitleAfter": "60+ 협력기관과 함께합니다",
   "reviewStatus": "ready",
-  "publishedReviews": 42,
+  "publishedReviews": 37,
   "reviewKeys": [
     "keyword",
     "body",
@@ -44,9 +44,9 @@
       "orderUnchanged": true
     },
     "reviews": {
-      "sourceRows": 42,
-      "renderedRows": 42,
-      "displayedRows": 42,
+      "sourceRows": 37,
+      "renderedRows": 37,
+      "displayedRows": 37,
       "missing": 0,
       "extras": 0,
       "changedFields": 0,

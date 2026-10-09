@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { deduplicateReviews, reviewFingerprint } from "./review-deduplication";
 import type { ReviewItem } from "../../shared/homeContent";
+import { presentReviews, featuredReviewDisplay } from "../../client/src/data/reviewPresentation";
 
 const canonical: ReviewItem = { keyword: "완전한 후기", body: "정확한 방향과 실행 계획을 모두 얻었습니다.", display: "- 익명 참여자" };
 const excerpt: ReviewItem = { keyword: "발췌본", body: "정확한 방향을 얻었습니다.", display: "익명 참여자" };
@@ -34,4 +35,14 @@ test("exact repeated content ignores harmless spacing but not different authors 
   const sameTopic = { ...canonical, body: "실행 계획 외에도 다른 것을 배웠습니다." };
   assert.deepEqual(deduplicateReviews([canonical, repeated, otherAuthor, sameTopic]).items,
     [canonical, otherAuthor, sameTopic]);
+});
+
+test("featured GovTech review moves first without duplicates, rewriting or disturbing other order", () => {
+  const other = { ...canonical, body: "다른 후기" };
+  const featured = { ...canonical, display: `- ${featuredReviewDisplay}` };
+  const source = [excerpt, other, featured, canonical];
+  assert.deepEqual(presentReviews(source), [featured, excerpt, other, canonical]);
+  assert.deepEqual(source, [excerpt, other, featured, canonical]);
+  assert.deepEqual(presentReviews([canonical]), [canonical]);
+  assert.deepEqual(presentReviews([featured, canonical]), [featured, canonical]);
 });

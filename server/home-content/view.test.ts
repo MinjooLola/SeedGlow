@@ -108,12 +108,19 @@ test("real React views match published rows, counts, ordering and unabridged rev
       keyword: `키워드 ${index}`, body: `후기 ${index} 원문 그대로`, display: "익명 참여자",
     }));
     const folded = renderToStaticMarkup(createElement(Views, { content: manyReviews }));
-    assert.equal((folded.match(/data-testid="card-testimonial-/g) ?? []).length, 4);
+    assert.equal((folded.match(/data-testid="card-testimonial-/g) ?? []).length, 5);
     assert.ok(folded.includes('aria-expanded="false"') && folded.includes('aria-controls="consulting-reviews"'));
     assert.ok(!folded.includes("후기 8 원문 그대로"));
     const expanded = renderToStaticMarkup(createElement(Views, { content: manyReviews, expanded: true }));
     assert.equal((expanded.match(/data-testid="card-testimonial-/g) ?? []).length, 9);
     assert.ok(expanded.includes("후기 8 원문 그대로") && !expanded.includes("지속적 파트너십"));
+
+    manyReviews.reviews.items[7].display = "- 8년차 GovTech 스타트업, 투자 IR 준비 중";
+    const featuredView = renderToStaticMarkup(createElement(Views, { content: manyReviews }));
+    const featuredCard = featuredView.match(/data-testid="card-testimonial-0"[\s\S]*?<\/article>/)?.[0] ?? "";
+    assert.ok(featuredCard.includes("후기 7 원문 그대로"));
+    assert.equal((featuredView.match(/후기 7 원문 그대로/g) ?? []).length, 1);
+    assert.equal((featuredView.match(/data-testid="card-testimonial-/g) ?? []).length, 5);
 
     const unavailable = structuredClone(content);
     unavailable.history = { status: "unconfigured", updatedAt: null, items: [] };

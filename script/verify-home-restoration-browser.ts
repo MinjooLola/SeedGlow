@@ -2,6 +2,7 @@ import { chromium } from "@playwright/test";
 import assert from "node:assert/strict";
 import { historicalArchiveIds, archivePostId } from "../server/home-content/archive-history";
 import { ReplitConnectors } from "@replit/connectors-sdk";
+import { presentReviews, isFeaturedReview } from "../client/src/data/reviewPresentation";
 
 const url = process.env.REPLIT_DEV_DOMAIN && `https://${process.env.REPLIT_DEV_DOMAIN}`;
 assert.ok(url, "개발 미리보기 주소가 필요합니다.");
@@ -44,16 +45,29 @@ try {
     assert.ok(content.history.items.every((item: { period: string }) => item.period === ""));
     const historyText = page.locator('#history [data-home-field="text"]').first();
     assert.ok(await historyText.evaluate(node => parseFloat(getComputedStyle(node).fontSize) >= 14));
-    assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), Math.min(4, content.reviews.items.length));
+    assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), Math.min(5, content.reviews.items.length));
+    const featuredCard = page.getByTestId("card-testimonial-0");
+    assert.ok(isFeaturedReview({ display: await featuredCard.locator('[data-home-field="display"]').innerText() }));
+    const gridBox = (await page.locator("#consulting-reviews").boundingBox())!;
+    const featuredBox = (await featuredCard.boundingBox())!;
+    assert.ok(Math.abs(gridBox.width - featuredBox.width) < 2, "맨 위 후기는 가로 전체 폭이어야 합니다.");
+    if (viewport.width >= 768) {
+      for (const [left, right] of [[1, 2], [3, 4]]) {
+        const leftBox = (await page.getByTestId(`card-testimonial-${left}`).boundingBox())!;
+        const rightBox = (await page.getByTestId(`card-testimonial-${right}`).boundingBox())!;
+        assert.ok(Math.abs(leftBox.y - rightBox.y) < 2 && rightBox.x > leftBox.x,
+          "전체 폭 후기 아래 4개가 빈칸 없이 2열 2줄로 배치되어야 합니다.");
+      }
+    }
     const reviewToggle = page.getByTestId("button-reviews-toggle");
     await reviewToggle.click();
     assert.equal(await reviewToggle.getAttribute("aria-expanded"), "true");
     assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), content.reviews.items.length);
     assert.deepEqual(await page.locator('#consulting-reviews [data-home-field="body"]').allTextContents(),
-      content.reviews.items.map((item: { body: string }) => item.body));
+      presentReviews(content.reviews.items).map((item: { body: string }) => item.body));
     assert.equal(await page.getByText("지속적 파트너십", { exact: true }).count(), 0);
     await reviewToggle.click();
-    assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), 4);
+    assert.equal(await page.locator('[data-testid^="card-testimonial-"]').count(), 5);
     assert.equal(await reviewToggle.getAttribute("aria-expanded"), "false");
 
     const interviewLinks = page.locator('[data-testid^="link-interview-"]');
@@ -92,7 +106,7 @@ try {
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     assert.deepEqual(errors, []);
     console.log(JSON.stringify({ viewport, historyRows: new Set(sourceIndices).size,
-      reviews: content.reviews.items.length, collapsedReviews: 4, fixedPartnership: 0,
+      reviews: content.reviews.items.length, collapsedReviews: 5, fixedPartnership: 0,
       historyColumnCounts: expectedGroups.map(group => ({ category: group.category, count: group.texts.length })),
       historyDatesHidden: true, interviews: 2, expandedArchive: postIds.length,
       olderArchivePresent: historicalArchiveIds.length, photosUncropped: true, collapsedArchive: 6, errors }));
