@@ -18,7 +18,7 @@ export async function registerRoutes(
     } catch (error) { next(error); }
   });
   app.get("/api/home-content", async (_req, res) => {
-    res.set("Cache-Control", "no-store").json(await homeContentService.get());
+    res.set("Cache-Control", "no-store").json(await homeContentService.getFast());
   });
   app.get("/api/archive-image", async (req, res) => {
     if (typeof req.query.post !== "string") return res.sendStatus(400);

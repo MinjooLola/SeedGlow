@@ -1,0 +1,1104 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "kind": "history-three-columns",
+      "sourceHash": "0c341c510086dc9c884f2c2dc39d6f7475ba86468175e17fab642f9ede7b5793",
+      "updatedAt": 1791610405887,
+      "items": [
+        {
+          "period": "",
+          "text": "명지대학교 학생창업 기초교육 지역기반산업 아이디어 창업 사례 강연",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "이화여자대학교 2026 임팩트 창업아카데미 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "서울창조경제혁신센터 로컬 소상공인 기업진단·컨설팅 운영 용역 심사",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "한양대학교 L.A.C. 임팩트 비즈니스와 로컬 창업 특강",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "구례 청년마을 창업교육 나물창업패키지 컨설팅 및 강의",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "세종창조경제혁신센터 소상공인도약지원사업 발표평가 심사 및 IR 컨설팅",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "한림대학교 2026-2 로컬창업비즈니스플랜 교과목 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "제주더큰내일센터 기업 컨설팅, 역량UP교육 변화이론 강의",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "KAIST 우주연구원 기술인재 창업교육 프로그램(STEP) IR 심사 및 컨설팅",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "한림대학교 로컬창업 사업모델 고도화 교육 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "전남대학교 창업중심대학사업단 예비 기술창업 기업 컨설팅 및 투자유치 IR 전략 강의",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "충주 교통대학교 지역정주형 특화산업 챌린지 IR 피칭 심사",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "세종창조경제혁신센터 로컬창업 강의 및 조직문화 워크숍",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "영천청년창업센터 발표역량강화프로그램 IR 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "행정안전부 청년마을 만들기 지원사업 연합 팀 심사",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "경상북도경제진흥원 청년창업 지역정착 지원사업 창업실무교육 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "한국문화예술위원회 해커톤 프로그램 아이디어 고도화 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "영천시 청년창업지원센터 청년창업 특화거리 조성사업 심사, 컨설팅, 강의",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "대한상공회의소 SOVAC 로컬 커리어 세션 패널토크",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "제주청년창업사관학교 입교기업 IR 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "고양국제박람회재단 창업리그 제안서 입찰 운영위원회 심사 및 강의",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "카카오·제주대학교 제주임팩트챌린지 프로그램 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "성남산업진흥원 스타트업 점프업 스쿨 기술창업 전략 컨설팅 및 강의",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "제주대학교 창업지원단 초기창업패키지 사업계획서 IR 심사 및 컨설팅",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "인천관광공사 인천 관광 스타트업 육성사업 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "대구콘텐츠코리아랩 콘텐츠창업지원프로그램 BM 진단 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "경기콘텐츠진흥원 인디시네마조각투자 콘텐츠 기업 심사",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "현대차 정몽구재단 CMK 캠퍼스프러너 사업 PMF 및 시장진입 전략 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "경북문화재단 콘텐츠진흥원 콘텐츠IP기업 비즈니스전략 BM컨설팅 및 강의",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "중소벤처기업부 소상공인 생활문화혁신지원사업 심사 및 컨설팅",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "한림대학교 2026-2 로컬창업비즈니스플랜 e러닝 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "경북콘텐츠코리아랩 콘텐츠업 지원사업 BM 진단 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "농림축산식품부한국농어촌공사 농촌창업경진대회 심사, 현장실사, 컨설팅",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "한국사회적기업진흥원 로컬브랜드의 경쟁력을 높이는 방법 강연",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "충북글로벌창업이민센터 한국 비즈니스 문화 및 창업 전략 컨설팅 및 강의",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "중소벤처기업부 강한소상공인 지원사업 로컬 분과 심사 및 IR 강의",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "경북문화재단 콘텐츠진흥원 1인창조기업 브랜딩 및 마케팅 전략 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "행정안전부 청년마을 만들기 사업 호남권역(김제,고창,구례) 전담 컨설턴트",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "중소벤처기업부 모두의창업 로컬 트랙 심사 및 컨설팅 (제주, 대구경북, 서울)",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "컴퍼니엑스 오늘전통 초기창업 판로개척 IR 전략 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "강동구 해냄센터 비즈니스모델 고도화 및 투자유치전략 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "대구대학교 로컬창업지원센터 CEO끝장내기 캠프 심사 및 강의",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "사회적협동조합 menTory 로컬 넥스트 스테이지, 창업실험실 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "대구광역시 달서구 사회적경제지원센터 대기업CSR 진입 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "대구대학교 사업계획서 작성 스프린트캠프 심사 및 컨설팅",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "한국룬드벡 조직문화 협업역량강화 워크숍 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "제주대학교 예비창업팀 비즈니스모델 고도화 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "SK하이닉스 하이로컬이천 프로그램 IR 심사 및 로컬 창업 강연",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "대전창조경제혁신센터 소셜임팩트랩 초기창업기업 BM고도화 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "해양수산부 해양수산 액셀러레이팅 프로그램 창업 기업 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "경상북도경제진흥원 경북 창업기업 IR 피칭데이 심사 및 컨설팅",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "SK하이닉스 하이로컬이천 로컬 기업 투자 사례 및 LIPS 전략",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "동덕여자대학교 학생창업팀 비즈니스모델 고도화 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "동국대학교 학생창업팀 IR 심사 및 비즈니스모델 고도화 강연",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "제주더큰내일센터 탐나는인재 창업실무과정 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "안동시 창업경진대회 예비초기창업자 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "제주창조경제혁신센터 인베스터데이 IR 심사",
+          "category": "심사"
+        },
+        {
+          "period": "",
+          "text": "강원도립대학교 지역 창업 생태계 전문가 특강 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "대구광역시대구테크노파크 로컬벤처 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "강원도립대학교 기업가정신과 창업입문 비즈니스 전략 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "사회적협동조합 menTory 실전 IR 피칭 컨설팅 및 강연",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "제주대학교 학생창업팀 로컬 창업 비즈니스모델 개발 전략 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "중소벤처기업부 장인학교 1~2기 IR피칭 컨설팅 및 강연",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "울산문화관광재단 비즈니스모델 개발 전략 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "서울시립대학교 기후테크해커톤 외국인창업팀 컨설팅",
+          "category": "컨설팅"
+        },
+        {
+          "period": "",
+          "text": "대구창조경제혁신센터 로컬 창업 비즈니스 전략 강의",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "안산시 공무원 디자인씽킹 문제해결 워크숍 강연",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "대구대학교 학생창업팀 인큐베이팅 캠프 강연",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "경북경제진흥원 K-로컬창업스쿨 사업기획 및 BM 고도화 특강",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "연세대학교 글로벌MBA 제주 스타트업 투자전략 강연",
+          "category": "강의"
+        },
+        {
+          "period": "",
+          "text": "중소벤처기업부 강한소상공인 OT 사업기획 고도화 강연",
+          "category": "강의"
+        }
+      ]
+    },
+    {
+      "kind": "reviews",
+      "sourceHash": "0c341c510086dc9c884f2c2dc39d6f7475ba86468175e17fab642f9ede7b5793",
+      "updatedAt": 1791610406139,
+      "items": [
+        {
+          "keyword": "실행 과제 도출",
+          "body": "방향과 컨텐츠등 지금 하려는 것에 대한 고민을 잘 들어주시고 구체적인 실행 전략을 정리해주시는게 너무 좋았어요. 어떤 부분이 강점이 되고, 어떤 부분은 보완해야 하는지를 현실적으로 제시해주셔서 바로 실행 가능한 과제들을 도출할 수 있었던 것이 큰 도움이 되었습니다. 추상적일 수 있는 것들을 잘 정리해주셔서 좀더 구체적으로 생각해볼 수 있게 되었어요.",
+          "display": "- 2년차 Lifestyle 스타트업, 제품 피봇 진행 중"
+        },
+        {
+          "keyword": "로컬 브랜드 전략",
+          "body": "로컬 브랜드의 막막함 속에서 길을 찾게 해주신 민주님, 사업 구조를 정리하고 전략을 세우는 과정에서 성심껏 도움을 주셨습니다.",
+          "display": "- 6년차 로컬 F&B 스타트업, 프리 시리즈 A 후속 투자 유치 성공"
+        },
+        {
+          "keyword": "피칭 보완점 진단",
+          "body": "새로 스타트업을 시작하고 새로운 곳에서 피칭을 하는 단계라 보완하고 보강할 부분이 많았는데, 건설적인 피드백을 많이 받아 좋았습니다. 해외 시장 진출에서 막막했던 부분도 잘 짚어 주셨습니다.",
+          "display": "- 초기 매출 단계 · 콘텐츠 스타트업"
+        },
+        {
+          "keyword": "IR 전략 비교 분석",
+          "body": "실제 IR을 많이 경험하셔서 어떤 부분을 전략으로 가져가야 할지 잘 알려 주셨어요. 스타트업이라 IR을 계속 다니는데 번번이 떨어졌거든요. 부족한 제 IR을 합격한 기업과 비교해서 짚어 주시니 도움이 많이 되었어요.",
+          "display": "- 초기 매출 단계 · 헬스케어 스타트업"
+        },
+        {
+          "keyword": "투자자 설득 구조화",
+          "body": "단순히 조언을 주시는 차원을 넘어, 해당 사업 영역에 대한 깊은 이해와 날카로운 시각으로 방향성을 짚어 주셨습니다. 특히 저희가 고민하던 정책 데이터 플랫폼의 확장성과 투자자 관점에서의 설득 포인트를 명확히 구조화해 주셔서 많은 인사이트를 얻었습니다. 어떤 부분이 강점이 되고 어떤 부분을 보완해야 하는지 현실적으로 제시해 주셔서 바로 실행할 수 있는 과제를 도출할 수 있었습니다. \n\n투자자 관점에서 우리의 강점을 어떻게 강조하고 장표로 만들지 정리할 수 있었고, 덕분에 IR을 더 매력적으로 어필할 수 있다는 자신감도 얻었습니다. 해당 사업에 대한 깊은 인사이트와 날카로운 피드백 덕분에 IR에 강점을 자연스럽게 녹여낼 수 있었고, 전략의 방향성도 한층 선명해졌습니다. 발표 이후에도 업데이트되는 내용과 고민을 함께 점검하며 관계를 이어 가려는 모습에서 큰 감동을 받았습니다. IR을 준비하고 계신다면 꼭 한 번 의견을 들어 보시길 추천드립니다.",
+          "display": "- 8년차 GovTech 스타트업, 투자 IR 준비 중"
+        },
+        {
+          "keyword": "투자·자금조달 단계 이해",
+          "body": "PoC, PMF처럼 수치로 감을 잡기 어려운 부분과 투자 유치 시점처럼 정성적으로 판단하기 어려운 부분을 논리적으로 잘 설명해 주셔서 좋았습니다. 다양한 대안을 알려 주셔서 그중 저에게 맞는 대안이 무엇일지 고민해 보는 계기가 되었습니다. 잘 몰랐던 자금 조달도 단계별로 알 수 있었습니다.",
+          "display": "- 1년차 Sports 스타트업, 정부지원사업 참여 중"
+        },
+        {
+          "keyword": "아이템 모순 발견",
+          "body": "저희 아이템의 모순을 발견해 주셔서, 이 피드백이 더 성장할 수 있는 발판이 되었다고 생각합니다. 생각지도 못한 핵심 고객에 대한 문제점도 발견할 수 있었습니다.",
+          "display": "- 예비창업 단계 · 제조 스타트업"
+        },
+        {
+          "keyword": "본질 학습",
+          "body": "본질 자체를 계속 배울 수 있어 좋았습니다. 현실은 혹독하고 길은 좁지만, 멘토링 덕분에 더욱 힘을 낼 수 있었습니다.",
+          "display": "- 예비창업 단계 · 제조, 디자인 스타트업"
+        },
+        {
+          "keyword": "IR 강조점·지표 정리",
+          "body": "IR 피칭에서 어떤 부분을 강조해야 할지 조언해 주신 점이 유익했습니다. 예비창업패키지 선정에 필요한 지표를 어떻게 마련하면 좋을지도 상세히 알려 주셔서 도움이 되었습니다. 혼자 준비하며 막막했는데, IR에서 무엇을 강조해야 하는지 확실히 정리되었고 이제 무엇을 해야 하는지도 명확해져서 정말 큰 도움을 받았습니다. 감사합니다.",
+          "display": "- 예비창업 단계 · 소프트웨어 스타트업"
+        },
+        {
+          "keyword": "현안 중심 진단",
+          "body": "데이터 축적 등 현재 기업의 현안 중심으로 진행되는 컨설팅이 만족스러웠습니다. 현안 진단과 협업 자원 발굴을 위해 구체적으로 고민하는 시간을 가지며 해결책을 찾을 수 있을 것 같습니다.",
+          "display": "- 성장 단계 · 커뮤니티, 로컬 스타트업"
+        },
+        {
+          "keyword": "맞춤형 사업 설계",
+          "body": "개념 위주의 교육이 아니라 저희 기업의 업력과 가능성을 바탕으로 실제적인 디자인을 해 주셔서, 더 도전적인 생각을 갖게 되었습니다. 가능성의 현실을 디자인할 수 있는 시간이었습니다.",
+          "display": "- 성장 단계 · 문화예술콘텐츠 , 교육 스타트업"
+        },
+        {
+          "keyword": "임팩트 접근 전략",
+          "body": "임팩트의 접근 방식에 대한 이론이 잘 정립되어 있어 좋았습니다. CSR은 철저한 사전 조사에서 시작한다는 점을 알게 되었습니다.",
+          "display": "- 초기 매출 단계 · 헬스케어 스타트업"
+        },
+        {
+          "keyword": "실질 사업 피드백",
+          "body": "실질적인 사업 피드백을 들을 수 있어서 좋았습니다. 지금 저희가 무엇을 해야 하는지 구체적으로 알려 주셔서 좋았습니다.",
+          "display": "- 예비창업 단계 · IT 스타트업"
+        },
+        {
+          "keyword": "방향 재정의",
+          "body": "제 아이템에 매몰되어 있었는데, 객관적인 시점에서 한 번 재평가하고 방향을 재정의할 필요가 있다고 생각해 신청했습니다. 앞으로 나아갈 방향에 대해 많은 도움을 받았고, 다른 시각에서 아이템을 바라보며 방향을 재정의할 수 있어 의미 있는 시간이었습니다.",
+          "display": "- 예비창업 단계 · 셀프케어 스타트업"
+        },
+        {
+          "keyword": "준비 과제 점검",
+          "body": "궁금했던 부분과 지금 준비해야 할 부분을 알아 가는 시간이었습니다. 방향성을 다시 정리할 수 있어 의미 있었습니다.",
+          "display": "- 예비창업 단계 · 제조 스타트업"
+        },
+        {
+          "keyword": "IR 자료 개선",
+          "body": "IR 자료에서 생각은 하고 있었지만 어떻게 개선할지 고민이던 부분을 더 명확한 방향으로 알려 주셔서 많은 도움이 되었습니다. 이전보다 훨씬 뚜렷하게 볼 수 있게 되었습니다.",
+          "display": "- 예비창업 단계 · 푸드 웰니스 스타트업"
+        },
+        {
+          "keyword": "아이디어 구체화",
+          "body": "예비창업자라 모르는 것투성이였는데, 놓치고 있던 부분까지 세세하게 피드백해 주셔서 많은 도움이 되었습니다. 막연했던 사업 아이디어가 구체화되고 정리되어 사업 계획의 완성도가 전체적으로 높아졌습니다.",
+          "display": "- 예비창업 단계 · F&B 스타트업"
+        },
+        {
+          "keyword": "브랜드 방향 발견",
+          "body": "등잔 밑이 어둡다'는 말처럼, 브랜드를 시작할 때부터 마음속에 품고 있던 생각이 우리 브랜드의 중요한 기준이 될 수 있다는 것을 스스로는 발견하지 못하고 있었습니다. 컨설팅을 통해 그 부분을 발견할 수 있었고, 구체적인 제품 방향과 차별성으로 이어지는 데 큰 도움이 되었습니다. 브랜드의 방향성을 만들어 주기보다, 이미 내 안에 있던 방향을 발견하게 해 주는 훌륭한 컨설팅이었습니다.",
+          "display": "- 초기창업 단계 · 화장품 스타트업"
+        },
+        {
+          "keyword": "고객 인터뷰·자금 계획",
+          "body": "고객을 직접 만나 인터뷰하는 방법과 사업화 자금 소요 방법을 배울 수 있었습니다. 국가 사업 자금 소요 방법은 처음이라 계획 잡기가 막막했는데, 자금 소요와 자금 조달 전략에 실마리를 얻었습니다.",
+          "display": "- 예비창업 단계 · 헬스케어 스타트업"
+        },
+        {
+          "keyword": "발표 흐름·예상 질의",
+          "body": "흐름을 연결해서 강조할 포인트를 알려 주셨습니다. 예상 질의응답도 알려 주셔서 미리 준비하는 데 도움이 많이 될 것 같습니다.",
+          "display": "- 성장 단계 · 제조/푸드 스타트업"
+        },
+        {
+          "keyword": "발표 전달력",
+          "body": "긴 페이지를 효율적으로 발표할 수 있도록 팁을 주셔서 도움이 되었습니다.",
+          "display": "- 성장 단계 · 식품제조 스타트업"
+        },
+        {
+          "keyword": "IR 피칭 입문",
+          "body": "IR 피칭에 무지했는데 많은 도움을 받았습니다. 막막했던 성장 방향을 정리하는 데 큰 도움이 되었습니다.",
+          "display": "- 스케일업 단계 · 푸드 스타트업"
+        },
+        {
+          "keyword": "자신감 회복",
+          "body": "스케일업을 통해 부족한 부분을 채워 나갔고 자신감이 생겼습니다. 컨설팅을 통해 제가 고수가 되었습니다.",
+          "display": "- 성장 단계 · 식품 스타트업"
+        },
+        {
+          "keyword": "상세 평가 피드백",
+          "body": "디테일하게 평가해 주셔서 감사합니다. 좋은 피드백 덕분에 발표를 잘 마칠 수 있었습니다.",
+          "display": "- 성장 단계 · 농식품 스타트업"
+        },
+        {
+          "keyword": "IR 자료 구성",
+          "body": "컨설팅이 2회 구성인데 6회 받은 것처럼 전체적인 IR 자료 구성과 평가지표에 따른 세세한 구성까지 짜 주셔서 너무 좋았습니다. 늦은 시간과 주말까지 애써 주셔서 감사합니다. 전문가와 함께여서 든든했습니다.",
+          "display": "- 성장 단계 · 농식품/ 로컬 스타트업"
+        },
+        {
+          "keyword": "전문가 코칭",
+          "body": "프로다운 상세한 지도였습니다. 연구만 해 온 저에게 새로운 깨달음을 주셔서 감사했습니다.",
+          "display": "- 성장 단계 · 농식품 스타트업"
+        },
+        {
+          "keyword": "전문 컨설팅",
+          "body": "컨설팅 교육의 끝판왕입니다.",
+          "display": "- 성장 단계 · 제조 스타트업"
+        },
+        {
+          "keyword": "발표 스킬·시장 진입",
+          "body": "구체적인 발표 스킬과 함께 짚어야 할 포인트를 잘 알려 주셔서 도움이 많이 되었습니다. 막막했던 시장 진입 전략에도 실마리를 얻었습니다.",
+          "display": "- 성장 단계 · F&B 스타트업"
+        },
+        {
+          "keyword": "정체성·성장 방향",
+          "body": "저희 기업의 강점과 약점을 세심하게 분석하고 코칭해 주셨습니다. 성장 단계에서 기업의 정체성과 성장 방향을 다시 한번 짚어 주셔서 더 명확하게 이야기할 수 있게 되었습니다. 감사합니다.",
+          "display": "- 성장 단계 · 농식품 스타트업"
+        },
+        {
+          "keyword": "약점 파악 피드백",
+          "body": "저의 약한 부분을 잘 파악해 주셨고, 피드백이 도움이 되었습니다. 발표 자료를 만드는 데도 많은 도움이 되었습니다.",
+          "display": "- 스케일업 단계 · 농식품 스타트업"
+        },
+        {
+          "keyword": "맞춤형 코칭",
+          "body": "부족한 부분을 잘 알아봐 주시고 대표의 성향에 맞게 코칭해 주셨습니다. 방향성이 잡히는 느낌을 받았습니다.",
+          "display": "- 초기창업 단계 · 바이오/환경 스타트업"
+        },
+        {
+          "keyword": "브랜딩·수익 모델",
+          "body": "브랜딩, 기획, 마케팅까지 저희 창업 단계에 알맞게 컨설팅해 주시고 아이디어를 끌어내 주셔서 많은 도움이 되었습니다. 대표님과 이야기를 나누며 애매하던 것들이 정리되었고, 앞으로 어떤 방향으로 나아가야 할지, 계획을 어떻게 세울지 더 뚜렷해졌습니다. 수익 모델과 관련된 부분에서도 큰 도움이 되었습니다. 어려워서 모른 체하던 이론들도 쉽게 풀어 설명해 주셔서 어떤 부분을 공부해야 할지 많은 참고가 되었습니다. 컨설팅 내용을 참고해 많이 발전해 보겠습니다.",
+          "display": "- 초기창업 단계 · 콘텐츠 스타트업"
+        },
+        {
+          "keyword": "스토리텔링 구성",
+          "body": "PPT 작성과 발표 후 질문에 대한 피드백이 무척 도움이 되었습니다. 제목 설정부터 함께 고민해 주시고 발표 내용의 스토리텔링 구성에도 많은 도움을 주셨습니다.",
+          "display": "- 예비창업 단계 · 바이오 스타트업"
+        },
+        {
+          "keyword": "실행 계획 수립",
+          "body": "꼼꼼하게 봐 주셔서 감사합니다. 콘텐츠와 마케팅을 직접 진행하고 있는데 많은 도움이 되었어요. 어떻게 시작해야 할지 감도 오지 않던 일이었는데, 덕분에 계획을 세워 차근차근 시작해 볼 수 있게 되었어요.",
+          "display": "- 초기창업 단계 · 플랫폼 스타트업"
+        },
+        {
+          "keyword": "사업화 방향 설정",
+          "body": "구체적으로 답변해 주시고 사업화할 방안을 함께 고민해 주셔서 감사합니다. 시작은 했지만 나아갈 방향을 잡지 못하고 있었는데, 그 방향에 대한 힌트를 얻을 수 있는 시간이었습니다.",
+          "display": "- 초기 매출 단계 · 콘텐츠 스타트업"
+        },
+        {
+          "keyword": "건설적 피드백",
+          "body": "해외 시장 진출에 있어 막막한 부분을 잘 상기 시켜주셨습니다. 새로 스타트업을 시작하고 새로운 곳에서 피칭을 할 때 여러가지 보완하고 보강해야할 건설적인 피드백이 많아서 좋았습니다.",
+          "display": "1년차 Contents 스타트업, 미국 VC 투자 IR 준비 중"
+        },
+        {
+          "keyword": "실전 IR 노하우",
+          "body": "최근 IR을 많이 하고 다니는데, 계속 좋은 결과를 얻지 못했거든요. 부족한 저의 IR을 현재 합격한 기업과 비교해서 잘 얘기해주시니 도움이 많이 되었어요. 실제 IR을 많이 들어가보셔서 어떤 부분을 전략으로 나가야 할 지 잘 알려주셨어요!!",
+          "display": "1년차 HealthTech 스타트업, IR 및 정부지원사업 준비 중"
+        },
+        {
+          "keyword": "PMF 검증 전략",
+          "body": "잘 몰랐던 자금 조달 부분에 대해 단계별로 알 수 있었고, poc, pmf 등 수치적으로 감을 잡기 어려운 부분, 투자 유치 시점 등 정성적으로 감을 잡기 어려운 부분을 논리적으로 잘 설명해주셔서 좋았습니다. 다양한 대안을 들어서 알려주셔서 그 중 저에게 맞는 대안이 무엇일지 고민해보는 계기가 되었습니다.",
+          "display": "1년차 Sports 스타트업, 정부지원사업 참여 중"
+        },
+        {
+          "keyword": "브랜드 고도화",
+          "body": "사실 신청 전까지 고민을 많이 했는데요. 오늘 대표님의 이야기가 제가 브랜드를 고도화하는데 많은 도움이 될 것 같아 잘한 선택이라고 제 스스로를 칭찬해 주고 싶습니다.",
+          "display": "로컬 Lifestyle 분야 예비 창업가"
+        },
+        {
+          "keyword": "글로벌 진출 전략",
+          "body": "짧은 상담 시간에도 불구하고 저희 스타트업의 핵심을 꿰뚫는 진심 어린 조언을 해주셔서 진심으로 감사드립니다. 당시 제가 가진 방향성에 대한 질문에 대표님의 조언은 마치 '파란 지시등'처럼 명확한 길을 제시해주셨습니다. 덕분에 저희 솔루션이 글로벌 마켓을 대상으로 하는 콘텐츠인 만큼 해외 시장으로 '직진'해야겠다는 확신을 얻게 되었습니다.",
+          "display": "1년차 에듀테크 스타트업, 이전 회사 Exit 후 신규 비즈니스 IR 준비 중"
+        }
+      ]
+    },
+    {
+      "kind": "partners",
+      "sourceHash": "0c341c510086dc9c884f2c2dc39d6f7475ba86468175e17fab642f9ede7b5793",
+      "updatedAt": 1791610405895,
+      "items": [
+        {
+          "name": "해양수산부",
+          "excludedFromCount": false
+        },
+        {
+          "name": "경상북도경제진흥원",
+          "excludedFromCount": false
+        },
+        {
+          "name": "제주대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "동국대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "동덕여자대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "울산문화관광재단",
+          "excludedFromCount": false
+        },
+        {
+          "name": "대구창조경제혁신센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "안동시",
+          "excludedFromCount": false
+        },
+        {
+          "name": "제주창조경제혁신센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "대구광역시",
+          "excludedFromCount": false
+        },
+        {
+          "name": "대구테크노파크",
+          "excludedFromCount": false
+        },
+        {
+          "name": "사회적협동조합 menTory",
+          "excludedFromCount": false
+        },
+        {
+          "name": "중소벤처기업부",
+          "excludedFromCount": false
+        },
+        {
+          "name": "안산시",
+          "excludedFromCount": false
+        },
+        {
+          "name": "대구대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "경북경제진흥원",
+          "excludedFromCount": false
+        },
+        {
+          "name": "연세대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "서울시립대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "엠와이소셜컴퍼니(MYSC)",
+          "excludedFromCount": false
+        },
+        {
+          "name": "한국외국어대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "대구콘텐츠기업지원센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "현대모비스",
+          "excludedFromCount": false
+        },
+        {
+          "name": "한국임업진흥원",
+          "excludedFromCount": false
+        },
+        {
+          "name": "제주도시재생지원센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "고려대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "행정안전부",
+          "excludedFromCount": false
+        },
+        {
+          "name": "제주더큰내일센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "유디임팩트",
+          "excludedFromCount": false
+        },
+        {
+          "name": "창업진흥원",
+          "excludedFromCount": false
+        },
+        {
+          "name": "한림대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "충북글로벌창업이민센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "강원도립대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "경북콘텐츠코리아랩",
+          "excludedFromCount": false
+        },
+        {
+          "name": "강동구 해냄센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "대구광역시 달서구 사회적경제지원센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "농림축산식품부",
+          "excludedFromCount": false
+        },
+        {
+          "name": "한국농어촌공사",
+          "excludedFromCount": false
+        },
+        {
+          "name": "이화여자대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "서울창조경제혁신센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "명지대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "한양대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "전남대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "세종창조경제혁신센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "영천청년창업센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "대한상공회의소",
+          "excludedFromCount": false
+        },
+        {
+          "name": "카카오",
+          "excludedFromCount": false
+        },
+        {
+          "name": "한국문화예술위원회",
+          "excludedFromCount": false
+        },
+        {
+          "name": "제주청년창업사관학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "성남산업진흥원",
+          "excludedFromCount": false
+        },
+        {
+          "name": "인천관광공사",
+          "excludedFromCount": false
+        },
+        {
+          "name": "KAIST 우주연구원",
+          "excludedFromCount": false
+        },
+        {
+          "name": "현대차 정몽구재단",
+          "excludedFromCount": false
+        },
+        {
+          "name": "충주 교통대학교",
+          "excludedFromCount": false
+        },
+        {
+          "name": "고양국제박람회재단",
+          "excludedFromCount": false
+        },
+        {
+          "name": "대구콘텐츠코리아랩",
+          "excludedFromCount": false
+        },
+        {
+          "name": "한국사회적기업진흥원",
+          "excludedFromCount": false
+        },
+        {
+          "name": "경북문화재단 콘텐츠진흥원",
+          "excludedFromCount": false
+        },
+        {
+          "name": "컴퍼니엑스",
+          "excludedFromCount": false
+        },
+        {
+          "name": "경기콘텐츠진흥원",
+          "excludedFromCount": false
+        },
+        {
+          "name": "한국룬드벡",
+          "excludedFromCount": false
+        },
+        {
+          "name": "대전창조경제혁신센터",
+          "excludedFromCount": false
+        },
+        {
+          "name": "SK하이닉스",
+          "excludedFromCount": false
+        },
+        {
+          "name": "그외 다수",
+          "excludedFromCount": true
+        }
+      ]
+    },
+    {
+      "kind": "archive",
+      "sourceHash": "173cccd8febbad6dbcfc32cd3587beede5c013571d257ccf44544fae1daf9616",
+      "updatedAt": 1791610406130,
+      "items": [
+        {
+          "title": "로컬 창업팀의 시장 진입 전략(GTM) 전략 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Tue, 29 Sep 2026 23:49:41 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA5MjlfMTE4/MDAxNzkwNjkzOTc4NzE3.hOzVd_pfPSM86KgpWzZcideI6tbDVWSjoN9bGGq3Cawg.QhGxczJFs_w1R6PqkpM4VUsG7br7YK_6os3C2k7KhgIg.JPEG/IMG_2211.JPG?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224426477758?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "로컬 소상공인 브랜딩 전략 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Fri, 18 Sep 2026 12:07:18 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA5MThfMTEg/MDAxNzg5NzAwNzUxODIz.rxyTkEzI8tyaSX7JWDBX1NHVE9s3D41e6naMy2zUeuEg.YaXpX1s4iuLAp_4wKsZIL_AD9pOKGholPyzcgrQM81Yg.PNG/%BF%A1%B5%E0%BA%ED%B7%EB_2%C8%B8%C2%F7_0910%283%29_.png?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224415897736?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "고객의 지갑을 여는 비즈니스모델 설계 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Sun, 13 Sep 2026 23:55:33 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA5MTRfMTAy/MDAxNzg5MzExOTA4MjE4.A7vtKfjnvPXeoYiV6_DvWPujh-hZZ9vx4yxgAQjTd08g.2YoPYgO-JvtKUCluwHNqr67lvtYCohmsUlCBPPANp4og.JPEG/900_1782794697820.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224410580424?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "창업가가 놓치는 '영향력'의 재정의 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Wed, 09 Sep 2026 06:59:13 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA5MDlfMyAg/MDAxNzg4OTA0MTk2ODgx.nsBxeOaacKH7lRXwwNY1Cp0hrNrnIn6fzToOmLdqHr0g.ciuaEAfskPqutgm7iZ__3U904TceMqE0GBxosduuE5Eg.JPEG/1782272319868.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224405538948?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "AI 시대, 창업을 시작하고 싶다면 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Sat, 22 Aug 2026 23:58:51 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA4MjNfNDUg/MDAxNzg3NDExMTEwOTAw.-TXJAMRnGb9FAaM-XAjy-H1HO0U4gNpRam0KD-SuNzAg.tu7YJxYUu1TWIdrZdcMj_4obb8JHu_NIONGadRQfNW8g.JPEG/900_20260728_092254.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224386980365?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "로컬 창업팀이 투자를 위해 놓치지 말아야할 것들 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Mon, 10 Aug 2026 23:57:34 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA4MTFfMTI1/MDAxNzg2Mzc0MTYyMjA3.-qTZXssvltLas4olWzmAuMVDMq3dpkev2NllmqC3kwMg.mERZd0brJjeuChzkFzzhhEbXcfUGPaogEeDArDoDsL4g.JPEG/900_1781775940884.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224374542343?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "'잘 만든 콘텐츠'와 '돈이 되는 사업'은 다르다 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Tue, 28 Jul 2026 08:20:51 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA3MjhfMjgz/MDAxNzg1MTk0MDUzMzk2.n-B6T-P7-wqlZ7Tvr0UMcNdIoXttqOc3AAno91AcUiYg.FpNhhK42nVE65sWxyEBs8sW--izcRYmlYSgDRZlca4wg.JPEG/DSC07412.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224360095382?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "'아이디어'가 '사업'이 되지 못하는 3가지 이유 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Fri, 24 Jul 2026 23:59:15 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA3MjRfMTg3/MDAxNzg0OTA0Nzg3Nzgw.dWWjgXzlh71CwDESrwWBw2QCUpUpeDC9ptZ2nGLAQf0g.xjkSBg9NgQK97qDOcHMpRw2k9OXB_HP2unfNEI0dCtgg.JPEG/KakaoTalk_20260724_235022669_01.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224357047912?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "로컬푸드 창업, 지원사업 제출 전에 알아야 할 3가지",
+          "date": "Thu, 23 Jul 2026 23:59:19 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA3MjRfNTUg/MDAxNzg0ODIwMjgyMDI1.WLnUngCohZBylyoiozWHsxdPm2RW_nKxePYAKrioACsg.1NAykhKPw3dA63124VhdeR2bg4g06_YGBhbVcglS3kYg.PNG/900_1784820270867.png?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224355989237?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "설득의 전략, 매력적인 IR 만들기 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Sun, 21 Jun 2026 23:42:04 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA2MjFfMTMw/MDAxNzgyMDUyNzgwMTIz.QaMxdmGCdWN5IWpgASxEFcxUdmzPe0Wf6yxpL0h6Xu0g.9qffoVPnJBG2xuSlXZUFLn_E4sUam2LEbt9KWjNnEGIg.JPEG/A7C02360.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224322845394?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "지역을 기회로 보는 법 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Sat, 20 Jun 2026 23:59:08 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA2MjBfOSAg/MDAxNzgxOTQ4NjQ2OTQx.CcrUlCM2uUTA7Uo_TIHJ5BJ8C0l4ukbnGRKCg3Zedmgg.Sfq9KgsVxIr-HisHQ_SyGggDZ-c_Tn0cFlVRtNBK1QIg.JPEG/900_1779868191528.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224322106512?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "서울만의 '로컬리티'를 살리는 방법 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Fri, 29 May 2026 23:58:20 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA1MzBfNSAg/MDAxNzgwMDY4MTgyODcz.XeDVExkegd6ydR400LEmNiUroCY5bjfx2yVMQBU6bGYg.Lj7VAXWJOaeCfAOMzCqJe1vKLeHRdULqH32aGZQUitcg.PNG/%BD%C3%B5%E5%B1%DB%B7%CE%BF%EC%C0%C7_%BB%E7%BA%BB.png?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224300518496?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "청년마을과 비즈니스, 지역 창업의 과제 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Thu, 21 May 2026 23:57:25 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA1MjJfMjA3/MDAxNzc5Mzc1ODQwNDUy.f2L-AXSpyLIjLxOAfdfqWJnfsLPqmpVCjebVIFKE2E8g.CLfsdWs8eWcaEKS4kJdBJO0__hdpty67DjEvRrU4BZIg.JPEG/900_20260429_150217.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224292909388?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "로컬 창업가의 3가지 유형 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Fri, 15 May 2026 23:58:56 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA1MTZfMjc3/MDAxNzc4ODU3NzI1MDMw.3NTiiB48iCWOFJ7d8vP6KFQKa4NMoOCwKKaK-ibUpqgg.kIjZv2X-067chayvGaRtW2js2UK-J7t8Q4jT0jHv6mog.JPEG/1776239425353.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224286905536?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "\"제 아이템 될까요?\" 창업자들이 가장 많이 묻는 질문에 대한 생각 | 시드글로우 로컬 창업 강의·심사·컨설팅",
+          "date": "Fri, 08 May 2026 12:33:29 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA1MDhfMTg4/MDAxNzc4MjExMDcxMDA5.pQiS3H12he_DW3ZLbKB8sDnuRD1d4yrBwtPaq4igO94g.ibmwPXtXS3kXyWJRMCoxLAkxkRsb-XUR4GMu7WJEvHAg.JPEG/KakaoTalk_20260508_122824051_03.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224278770640?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "사회적 기업도 결국 비즈니스다 | 시드글로우 로컬 창업 교육·심사·컨설팅",
+          "date": "Thu, 23 Apr 2026 23:49:35 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA0MjNfODEg/MDAxNzc2OTU1Njg1ODM1.V_-E91C2ftLw5RTD26FDJKTIDYi6-Ho8Z2X6vG2eumAg.z8oV9BG9u4eYkWTpG5dwtCEuXmASXVjuCJ71hfyaHacg.JPEG/KakaoTalk_20260423_234610975_08.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224263060127?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "창업이 아이디어에서 끝나지 않도록 | 시드글로우 로컬 창업 교육·심사·컨설팅",
+          "date": "Thu, 16 Apr 2026 08:56:51 +0900",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjA0MTZfNiAg/MDAxNzc2Mjk3MjE5NTQz.UCOlRiQQNoNr1akX4oK5DrZPskdZw0KYsrw-EYh7apEg.7h2r0LthWrrtPCsBi035tLl8WsGXdWdXV7l29dASpBcg.JPEG/KakaoTalk_20260214_231137404_17.jpg?type=s3",
+          "url": "https://blog.naver.com/minjoo_lola/224254082820?fromRss=true&trackingCode=rss"
+        },
+        {
+          "title": "[시드글로우] 로컬에서 창업하면 망한다? | 로컬 창업 강의&멘토링",
+          "date": "2026-01-09T10:27:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjAxMDlfMTQg/MDAxNzY3OTIyMDM0NDE0.XHsocIIhQaB9v3v2QJNv5XmdoDh84mRCy_ZOHSRopOMg.QgAUh_RdG_fjLbgjRPJXoZL9BLFG8frVZjwkYlelRK0g.JPEG/900%A3%DF1767921997270.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224140176030"
+        },
+        {
+          "title": "[시드글로우] AI 시대의 창업 마인드셋: 무료로, 빠르게 실패하기 | 창업 강의&IR 심사",
+          "date": "2026-01-06T09:04:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNjAxMDhfMTc2/MDAxNzY3ODIwNjU3Mjgw.YjVn5qqODoDIjIshxxqwczubQOje5u9Hvp6Q_8ex4Qcg.DHxcGehGUj_gm2lGvwXkg2edbZ6MF8bvkmDUH1waPfcg.JPEG/900%A3%DF1767820458017.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224135981717"
+        },
+        {
+          "title": "[로컬 컨퍼런스] 지역 생태계 설계 원칙: De-Risking과 Re-Risking의 균형 / 소셜임팩트챕터(SIC)",
+          "date": "2025-12-19T23:39:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTEyMTlfMjE0/MDAxNzY2MTQ3MTAxNTk5.SEiyob3hM5cXFvvOEGCp0FxaS-hGAehH4EdOhku5Uiog.NJg_1UNBR7x7bVgNeQykue4gRHXtLxz3i-v9RLWVm_Yg.JPEG/KakaoTalk_20251219_062444881_21.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224115990311"
+        },
+        {
+          "title": "[로컬 스타트업 컨설팅] '투자 언어'를 배워야 한다 / 경북 청년 창업기업 IR 피칭대회",
+          "date": "2025-12-10T23:24:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTEyMTBfNzYg/MDAxNzY1Mzc2NDkzODIx.-teU0otpCC4iwbxaDBco28ikmZftrRx0UwoFTO63jPcg.sHoJMCyLYjoSZvxEBIjMRzpjFpp9P2YrbtPG9VJQX94g.JPEG/KakaoTalk_20251210_231450547_04.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224105341988"
+        },
+        {
+          "title": "[로컬 스타트업 강의] 반려동물 스타트업, 5,680억 달러 시장에서 살아남는 법 / 비즈니스 모델 개발 전략",
+          "date": "2025-12-04T10:22:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTEyMDRfODAg/MDAxNzY0ODA5NDY1MzQ0.PXcmvg0i66TMyLJqgbdnTxdSMbms4XThc3Pm5xhrjb4g.LnVKefuU5EKmGTgCPDyT-dqTKDnrJ_RAt29ys3E9IfAg.JPEG/KakaoTalk_20251124_152427218_12.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224097733932"
+        },
+        {
+          "title": "[로컬 비즈니스 강의] F&B 스타트업 투자 전략 in 제주",
+          "date": "2025-11-25T22:11:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTExMjVfMTEw/MDAxNzY0MDc2MTc2ODcz.KnDnx2k6xDA4MJljaQVscXBf0-ZXojzPZqnsKEtUs_kg.ctgMthjCOGA7aoYc9lmNDIOQm-LRIcpzCE6S8tpR-0gg.JPEG/M4J01787.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224088060632"
+        },
+        {
+          "title": "[로컬 스타트업 강의] 지역의 고유성을 찾아서, 로컬 창업의 A-Z",
+          "date": "2025-11-23T10:24:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTExMjNfOTQg/MDAxNzYzODYwOTU3MjI5.SvFPftomlY9Mr_bWyv9Bu-RqdOW-Rlyy6868qzXRfHEg.Bpujsjo6SXfPlTkA797rkKYXnxQ0STbrO7rjm7bYCmog.JPEG/7.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224085069143"
+        },
+        {
+          "title": "[로컬 스타트업 컨설팅] 고객 개발 없는 기획서는 시장으로 가지 못한다",
+          "date": "2025-11-19T06:44:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTExMTlfMTAg/MDAxNzYzNTAxNzk2MjE3.rOGt-SlOIb8jAsqUSPJPO8zXZjNflIxPe2beDSRCt3Ag._Heg4PYpziaoFh5q-KPCldhqJshVND_b05AAWtqSq-Eg.PNG/image.png?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224080654830"
+        },
+        {
+          "title": "[로컬 스타트업 컨설팅]  &lsquo;문제의 깊이&rsquo;가 없는 기술은 매력이 없다",
+          "date": "2025-11-13T08:58:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTExMTNfMTkw/MDAxNzYyOTkxNDU2OTA4.U-fmL1Ds2NpRylNW4UDqMaEA8Y_sSajl9mEVH10W5v8g.26_p7i8UIMIsZs1DKYBE6tOVwi1FXNKjUbIJQJAN4pkg.PNG/image.png?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224074316632"
+        },
+        {
+          "title": "[로컬 스타트업 IR 심사] AI 전환(AX) 시대, 제주 창업생태계의 도전과 기회",
+          "date": "2025-11-11T11:28:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTExMTFfMzIg/MDAxNzYyODI4MjczNDMy.uw8T2cdXXVdIVve_meu79WLQcaFQ2JhzoI2zW2mQ9-wg.6zOvlChrYdBDaTgy016VcEy9522DFpvW6YhQt3FtAG0g.JPEG/3-2-1-1024x682.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224072062205"
+        },
+        {
+          "title": "[스타트업 컨설팅] 로컬창업가/1인브랜드 비즈니스모델 고도화 멘토링",
+          "date": "2025-10-28T07:52:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTEwMjhfMTIy/MDAxNzYxNjAzNjM4MzMw._98rKCrfytMcoHjgCKQviKF8wSTA1BPzpU7tSWd8HHQg.J-jA1hJejUSb11IIRoFyOceFPIzhDjJ55yrVkdT7X-Mg.JPEG/%B8%E0%C5%E4%B8%B5_%283%29.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224056086100"
+        },
+        {
+          "title": "[스타트업 IR 강의/컨설팅] 시장으로 투자자를 설득하는 법",
+          "date": "2025-10-21T07:59:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTEwMjFfMjQg/MDAxNzYxMDAxMTA1MDEy.zwlRIDeEgIyAZ0ZKQVk1dZkVB4NhcaAxi0QyiEjGSPQg.-73eiYLznOWwuLnP0YGOHPyEuSgpHK_yM7yQ9aSbI0Qg.PNG/251015_%BF%FE%B5%F9%C7%CD%2C_%C7%D8%B0%E1%B4%E7_%B8%E0%C5%E4%B8%B5.png?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224048238330"
+        },
+        {
+          "title": "[강의] 투자자를 사로잡는 IR 피칭 전략 (로컬 장인학교 in 제주)",
+          "date": "2025-10-14T09:02:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTEwMTRfMjk1/MDAxNzYwMzk5OTA5OTM4.-QJpJ6y4U22PwzDcXqktcoH9V1rpAm2x9WJjcRiuHz0g.WlnVNTBxguU9fj7Q9VmFF2D6h2VcuoGo0YA9gmPetXQg.PNG/image.png?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/224040470814"
+        },
+        {
+          "title": "[모더레이터] 로컬이 만드는 새로운 가능성, 2025 US:CODE 개발자x로컬 포럼",
+          "date": "2025-08-23T08:22:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTA4MjNfMjUz/MDAxNzU1OTA0OTU1MTY4.b1seR3-eJGkszmBDkwGaYeDwzdP8-ppVP6bNuhJ1LPog.w9UdDo3D5u7KHQDqI6lKOKk0BeZty8cCidjEdwBPbpog.JPEG/900%A3%DF1755769701623.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223980324962"
+        },
+        {
+          "title": "[강의] 로컬 대학생 예비 창업가 <AC가 보는 스타트업의 본질> 특강",
+          "date": "2025-08-08T16:10:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTA4MDhfMzAg/MDAxNzU0NjM2OTY4MDU2.qnVr97eBwUFzviXj1xv7ZGyRDdJYwtlVhqU6m6UCZIAg.aqYK7QiV9Z_KKQXqpM7LYXA7ZefY1GBtDE1_o3vvGPQg.JPEG/KakaoTalk_20250808_150726491_10.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223963766832"
+        },
+        {
+          "title": "[강의] 로컬 예비창업가 사업 기획 및 비즈니스 모델(BM) 고도화 특강",
+          "date": "2025-06-09T09:19:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTA2MDlfNDAg/MDAxNzQ5NDI4NDE3OTYx.LxD10iKryd4602lxxGmnHTWZevbDWSk88QuFX9qG--og.IJ7hdTVEYIKXGRofz70WtyNOVyOG7VCin078XvuWVVMg.JPEG/900%A3%DF1747963384211.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223892968987"
+        },
+        {
+          "title": "[강의] 제주 로컬 스타트업의 성장과 투자 전략",
+          "date": "2025-05-17T00:01:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTA1MTZfMTA4/MDAxNzQ3NDA3NTgzMzI5.X6XkfCWRJiB-AmthRe9m_EBb3q5GhVA0zlzub7t22jog.GeslaZ-YfQYSKz081xwzbB7-KOV2svtQ6xCjSerSgO4g.JPEG/900%A3%DFFB%A3%DFIMG%A3%DF1747407241235.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223868229706"
+        },
+        {
+          "title": "[컨설팅] 한국에서 창업하기, 외국인 예비 창업팀 대상 창업 멘토링",
+          "date": "2025-04-30T16:32:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTA0MzBfMjk0/MDAxNzQ1OTk4MjcyNjEw.lnYXlyWRsBJEjKaQ1Fx41Lq9mR5rPV2S1eepR09UZYYg.CghkuLt6uVtbKowJYCI1MAKujMjt62nw5cuexrFZ51Eg.JPEG/900%A3%DF20250426%A3%DF091808.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223851274688"
+        },
+        {
+          "title": "[강의] 비즈니스 모델 정립/사업기획 고도화 워크숍",
+          "date": "2025-04-09T23:36:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNTA0MDlfMTI4/MDAxNzQ0MjA5Mjg5NDg2.sq8-VqXiHx-16BZxJeZt6lepXjrmzSHjUQaIQqUuHO4g.vwP86j4UxhYHV6uHmM2bOH2kgCWfJ690vqbmzhcUnFEg.JPEG/900%A3%DF1744187308040%A3%AD4.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223827944431"
+        },
+        {
+          "title": "[심사/멘토링] 지역 문제를 비즈니스로 해결하는, 로컬임팩트캠퍼스",
+          "date": "2024-11-26T08:20:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNDExMjZfMjM2/MDAxNzMyNTc2NjQyNTE1.Ihj2TCksx4I8AN8k-ilbJ17crvzeKL0huyYvFue3GwMg.qN53QKjtIkrGyR0-HCk2vQpEjsntVE2Nh128VZnal8kg.JPEG/900%A3%DF1732576139397%A3%AD2.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223673051592"
+        },
+        {
+          "title": "[심사] 다시, 스페인어! (feat. 글로벌 임팩트 업 퓨처게임 데모데이)",
+          "date": "2024-11-25T06:48:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNDExMjVfMTU5/MDAxNzMyNDg0NTczMjQw.RuX0AjGCnOTjR3WYYbExtyvu1yuBuSxisDxEIzTxQvMg.qbD55kcr88VepFTBdPwEtldGbCtaduuBRjEjsSJ95f0g.JPEG/900%A3%DF1732484368717.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223671799877"
+        },
+        {
+          "title": "[강연] 로컬에서 만드는 소셜임팩트 / 도시재생청년인사이트 '도시의연결자들'",
+          "date": "2024-11-19T08:36:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNDExMTlfMTQ2/MDAxNzMxOTcyODc4NDg5.N16-KvgGBCkXsDdf-S8JA9GU8VOtS4SbfcrUV9IkPbwg.m4Y-F610NKZOKmk8ExUZlHJi--pPmNpm9lVUDbe6CbMg.JPEG/900%A3%DFFB%A3%DFIMG%A3%DF1731972811294.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223665777553"
+        },
+        {
+          "title": "[포럼/사회] 로컬브랜딩과 지역활력타운",
+          "date": "2024-11-18T08:39:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyNDExMThfMjM4/MDAxNzMxODg2NzgyMDg1.v0C5iix4zrGIZFQLwWrCQecRsEjFuwx_yOsNQE_v1P4g.Bm4jmffyi1neit57kGUN0bCaoU9oNVwAAN11HjUem1og.JPEG/900%A3%DFFB%A3%DFIMG%A3%DF1731883955412.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223664542880"
+        },
+        {
+          "title": "[클래스] 로컬에서 창업하기 : 사업계획서 작성법 / 서담채",
+          "date": "2023-09-12T07:05:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyMzA5MTJfMjQ0/MDAxNjk0NDY5OTUwMzk3.1z8ZaUrDg6UvMYu2q1ymAzzCNziwpKa1F2rO4SsFMdAg.LaO9Wv6kkl-wuLQ3oY-1cAi4W-CmAzqYN3v9iJlVpusg.JPEG.minjow1996/9%BF%F9%C3%A2%BE%F7%C5%AC%B7%A1%BD%BA%BD%E6%B3%D7%C0%CF.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/223208973374"
+        },
+        {
+          "title": "지역의 변화를 이끌어나가는 사람들, 2022 Y-Local Conference <로컬이 미래>",
+          "date": "2022-12-10T13:16:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyMjEyMTBfMTMx/MDAxNjcwNjQ2MDgxNTE1.ao_5HWUPtDXxU0TOag81cw17EcBKDtbDu-gS3H__QdUg.05zEjjQoROOLNsnLAdeqOkjpmvkKqcLtOQaY01rHjxgg.JPEG.minjow1996/20221207%A3%DF130806.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/222951578589"
+        },
+        {
+          "title": "도시에 살지만 지역을 사랑하는 '관계 인구'입니다, <로컬임팩트세미나: Z세대가 성장하는 로컬>",
+          "date": "2022-11-21T02:02:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyMjExMjFfMTg3/MDAxNjY4OTY0MTUxMzk4.W4__aqMBCSRXIn3UpgLoGkOdsAYYoDuXIQC8tPgRUi0g.9CngTomsXb83mzXA2BiS5_ex54u9ERyd_UvLVuqAHfcg.JPEG.minjow1996/Screenshot%A3%DF20221119%A3%AD203046%A3%DFKakaoTalk.jpg?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/222933952447"
+        },
+        {
+          "title": "로컬의 혁신가가 주도하여 지속적으로 혁신하는 도시재생의 발전방향에 대하여:: <도시재생 지역혁신 주체, 도전과 과제> 포럼",
+          "date": "2022-09-26T00:13:00+09:00",
+          "imageUrl": "https://blogthumb.pstatic.net/MjAyMjA5MjZfMTc4/MDAxNjY0MTE5MzA1NzQ5.vba7_q6GwnNXKMqwlx-e2PM15TG-HW8Ti4vQ9XyjnUAg.BHAdFwHCuLdQmhatFgBbjY0x8IHkMnPnWLk2K8Kb2TUg.PNG.minjow1996/1664119291039.png?type=w2",
+          "url": "https://blog.naver.com/minjoo_lola/222884164080"
+        }
+      ]
+    }
+  ]
+}

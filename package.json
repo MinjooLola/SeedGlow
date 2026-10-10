@@ -11,7 +11,7 @@
     "images:optimize": "tsx script/optimize-home-images.ts",
     "test:home-images": "tsx --test script/home-images.test.ts",
     "verify:home-images:browser": "tsx script/verify-home-images-browser.ts",
-    "test:home-content": "tsx --test server/home-content/content.test.ts server/home-content/view.test.ts server/home-content/sheets.test.ts server/home-content/archive-history.test.ts server/home-content/history-columns.test.ts server/home-content/review-deduplication.test.ts",
+    "test:home-content": "tsx --test server/home-content/content.test.ts server/home-content/view.test.ts server/home-content/sheets.test.ts server/home-content/archive-history.test.ts server/home-content/history-columns.test.ts server/home-content/review-deduplication.test.ts server/home-content/cache.test.ts",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {

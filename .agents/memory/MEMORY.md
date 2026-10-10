@@ -2,3 +2,4 @@
 - [홈페이지 콘텐츠 운영](homepage-content-ownership.md) — 운영자 시트·블로그 자동 반영, 후기 익명성과 게시용 원문 보존 원칙.
 - [병합 후 의존성 보안 검사](merge-dependency-security.md) — 실행 중인 앱이 정상이어도 잠금 파일의 오래된 의존성이 재설치 때 차단될 수 있다.
 - [시트 변경 재실행 안전성](sheet-write-idempotence.md) — 승인된 항목이 이미 목표 상태라면 재작성하지 않고 현재 상태와 표시 결과를 검증한다.
+- [공개 홈페이지 가용성](homepage-availability-checks.md) — 정적 페이지·미리보기 정상과 운영 콘텐츠 갱신 정상은 별개; 실제 API 응답 완료도 확인한다.

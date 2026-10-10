@@ -2,7 +2,8 @@ import path from "node:path";
 import { deduplicateReviews } from "./review-deduplication";
 import type { ArchiveItem, ContentFeed, HomeContent } from "../../shared/homeContent";
 import { roundDownToTens } from "../../shared/homeContent";
-import { LastGoodCache, CACHE_TTL_MS } from "./cache";
+import { LastGoodCache, CACHE_TTL_MS, type PackagedSnapshot } from "./cache";
+import packagedSnapshots from "./last-good.json";
 import {
   archiveSchema, historySchema, partnerSchema, reviewSchema, RSS_URL,
   loadArchive, loadHistory, loadPartners, loadReviews,
@@ -23,18 +24,26 @@ export function createHomeContentService(options: {
   now?: () => number;
   sheetsProxy?: SheetsProxy;
   historicalArchive?: () => Promise<ArchiveItem[]>;
+  snapshots?: PackagedSnapshot[];
+  loadTimeoutMs?: number;
+  responseWaitMs?: number;
 } = {}) {
   const url = options.url ?? ((kind: SourceKind) => process.env[keys[kind]]);
   const directory = options.directory ?? path.resolve(".cache/home-content");
   const fetcher = options.fetcher ?? fetch;
   const now = options.now ?? Date.now;
+  const cacheOptions = (kind: string) => ({
+    initialSnapshot: options.snapshots?.find(snapshot => snapshot.kind === kind),
+    timeoutMs: options.loadTimeoutMs,
+    responseWaitMs: options.responseWaitMs,
+  });
   // A different sheet/layout must not restore the old auto-classified snapshot.
   const history = new LastGoodCache("history-three-columns", () => url("history"), (source) => isAuthenticatedSheetUrl(source) ?
-    loadSheetHistoryColumns(source, options.sheetsProxy) : loadHistory(source, fetcher), historySchema, directory, now);
+    loadSheetHistoryColumns(source, options.sheetsProxy) : loadHistory(source, fetcher), historySchema, directory, now, cacheOptions("history-three-columns"));
   const reviews = new LastGoodCache("reviews", () => url("reviews"), (source) => isAuthenticatedSheetUrl(source) ?
-    loadSheetReviews(source, options.sheetsProxy) : loadReviews(source, fetcher), reviewSchema, directory, now);
+    loadSheetReviews(source, options.sheetsProxy) : loadReviews(source, fetcher), reviewSchema, directory, now, cacheOptions("reviews"));
   const partners = new LastGoodCache("partners", () => url("partners"), (source) => isAuthenticatedSheetUrl(source) ?
-    loadSheetPartners(source, options.sheetsProxy) : loadPartners(source, fetcher), partnerSchema, directory, now);
+    loadSheetPartners(source, options.sheetsProxy) : loadPartners(source, fetcher), partnerSchema, directory, now, cacheOptions("partners"));
   const archive: LastGoodCache<ArchiveItem> = new LastGoodCache("archive", () => RSS_URL, async (source) => {
     const [recent, historical] = await Promise.all([
       loadArchive(source, fetcher),
@@ -42,7 +51,7 @@ export function createHomeContentService(options: {
     ]);
     // RSS is a moving window: preserve previously observed public records too.
     return mergeArchive(recent, mergeArchive(archive.peek().items, historical));
-  }, archiveSchema, directory, now);
+  }, archiveSchema, directory, now, cacheOptions("archive"));
   const imageCache = new Map<string, { body: Buffer; type: string; updatedAt: number }>();
 
   function compose(
@@ -69,8 +78,14 @@ export function createHomeContentService(options: {
       const [h, r, p, a] = await Promise.all([history.get(refresh), reviews.get(refresh), partners.get(refresh), archive.get(refresh)]);
       return compose(h, r, p, a);
     },
+    async getFast() {
+      const [h, r, p, a] = await Promise.all([
+        history.getFast(), reviews.getFast(), partners.getFast(), archive.getFast(),
+      ]);
+      return compose(h, r, p, a);
+    },
     async image(post: string) {
-      const item = (await archive.get()).items.find((entry) => entry.url === post);
+      const item = (await archive.getFast()).items.find((entry) => entry.url === post);
       if (!item?.imageUrl) return null;
       const cached = imageCache.get(item.imageUrl);
       if (cached && now() - cached.updatedAt < CACHE_TTL_MS) return cached;
@@ -91,4 +106,4 @@ export function createHomeContentService(options: {
   };
 }
 
-export const homeContentService = createHomeContentService();
+export const homeContentService = createHomeContentService({ snapshots: packagedSnapshots.sources });
